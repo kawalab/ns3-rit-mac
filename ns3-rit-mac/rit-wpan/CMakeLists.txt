@@ -1,0 +1,38 @@
+build_lib(
+  LIBNAME rit-wpan
+  SOURCE_FILES
+    model/rit-wpan-mac.cc
+    model/rit-sub-header.cc
+    model/rit-wpan-precs.cc
+    model/rit-wpan-nwk.cc
+    model/rit-wpan-nwk-header.cc
+    model/rit-wpan-net-device.cc
+    model/time-drift-applier.cc
+    model/clock-drift-applier.cc
+    application/periodic-sender.cc
+    application/random-sender.cc
+    helper/periodic-sender-helper.cc
+    helper/random-sender-helper.cc
+    helper/rit-wpan-helper.cc
+    helper/rit-rank-helper.cc
+  HEADER_FILES
+    model/rit-wpan-mac.h
+    model/rit-sub-header.h
+    model/rit-wpan-precs.h
+    model/rit-wpan-nwk.h
+    model/rit-wpan-nwk-header.h
+    model/rit-wpan-net-device.h
+    model/time-drift-applier.h
+    model/clock-drift-applier.h
+    application/periodic-sender.h
+    application/random-sender.h
+    helper/periodic-sender-helper.h
+    helper/random-sender-helper.h
+    helper/rit-wpan-helper.h
+    helper/rit-rank-helper.h
+  LIBRARIES_TO_LINK
+    ${liblrwpan}
+  TEST_SOURCES
+    # test/periodic-sender-test.cc
+    test/rit-wpan-trx-test.cc
+)

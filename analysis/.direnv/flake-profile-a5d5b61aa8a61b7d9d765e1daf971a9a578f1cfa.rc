@@ -1,0 +1,2305 @@
+unset shellHook
+PATH=${PATH:-}
+nix_saved_PATH="$PATH"
+XDG_DATA_DIRS=${XDG_DATA_DIRS:-}
+nix_saved_XDG_DATA_DIRS="$XDG_DATA_DIRS"
+AR='ar'
+export AR
+AS='as'
+export AS
+BASH='/nix/store/ih68ar79msmj0496pgld4r3vqfr7bbin-bash-5.2p37/bin/bash'
+CC='gcc'
+export CC
+CONFIG_SHELL='/nix/store/ih68ar79msmj0496pgld4r3vqfr7bbin-bash-5.2p37/bin/bash'
+export CONFIG_SHELL
+CXX='g++'
+export CXX
+DETERMINISTIC_BUILD='1'
+export DETERMINISTIC_BUILD
+GETTEXTDATADIRS_FOR_BUILD='/nix/store/flpfkdzbac7071xlydh8f4qqq6dvnzx9-gettext-0.22.5/share/gettext:/nix/store/y3nxdc2x8hwivppzgx5hkrhacsh87l21-glib-2.84.3/share/gettext'
+export GETTEXTDATADIRS_FOR_BUILD
+HOSTTYPE='x86_64'
+HOST_PATH='/nix/store/mp7ba85zcqdj2sqwa29pql02s6nqpcxy-coreutils-9.7/bin:/nix/store/7fjnb79r7p38piiyn5xwgcj5w7fpfi02-findutils-4.10.0/bin:/nix/store/1pi99mlqimxmqm1jvllbcaj8v16w2nbv-diffutils-3.12/bin:/nix/store/x23s7lcvhf18zz3rj543680jgrj71vil-gnused-4.9/bin:/nix/store/8b4vn1iyn6kqiisjvlmv67d1c0p3j6wj-gnugrep-3.11/bin:/nix/store/n8825s8qprf8p70m0hq6pz7rvlnsxdjm-gawk-5.3.2/bin:/nix/store/7nilh5hvnfbsx3vn020pkjkgx9rgsizb-gnutar-1.35/bin:/nix/store/gqpd9ax2s6jjf7mjyv1q7bwbsycyaxic-gzip-1.14/bin:/nix/store/28z6bx9sg0lsr7wra22pbjsk6fzfphy4-bzip2-1.0.8-bin/bin:/nix/store/8dl5ryfna3hjqhvnkw7srm6wnka6agxl-gnumake-4.4.1/bin:/nix/store/ih68ar79msmj0496pgld4r3vqfr7bbin-bash-5.2p37/bin:/nix/store/kc8h52p4dfgajrg3qlgx246hl0znr213-patch-2.7.6/bin:/nix/store/cmv326slnswzsjm2sqgbz16hzzqvkfjy-xz-5.8.1-bin/bin:/nix/store/v5skl3bspzhm2y13vcxcrw8w29g6phi0-file-5.45/bin'
+export HOST_PATH
+IFS=' 	
+'
+IN_NIX_SHELL='impure'
+export IN_NIX_SHELL
+LD='ld'
+export LD
+LINENO='76'
+MACHTYPE='x86_64-pc-linux-gnu'
+NIX_BINTOOLS='/nix/store/2gkh9v7wrzjq6ws312c6z6ajwnjvwcmb-binutils-wrapper-2.44'
+export NIX_BINTOOLS
+NIX_BINTOOLS_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu='1'
+export NIX_BINTOOLS_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu
+NIX_BUILD_CORES='12'
+export NIX_BUILD_CORES
+NIX_CC='/nix/store/a0d7m3zn9p2dfa1h7ag9h2wzzr2w25sn-gcc-wrapper-14.2.1.20250322'
+export NIX_CC
+NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu='1'
+export NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu
+NIX_CFLAGS_COMPILE=' -frandom-seed=kfxrl553pr -isystem /nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/include -isystem /nix/store/74s0y3d6qjkfii4jpifjbkp2hrf7pr10-wireshark-qt-4.4.7-dev/include -isystem /nix/store/71k400gj4lhrjl47898shv9gkjh04b36-graphviz-12.2.1/include -isystem /nix/store/wkg70x83zky4l3l2hmarggq11jj8pgkv-libxml2-2.13.8-dev/include -isystem /nix/store/fkm8g9p5dp4kjxiy178qc834b0dwjfb1-libxslt-1.1.43-dev/include -isystem /nix/store/0225zs9jl9s2y3ai1arbg0h9z7z4bmfi-openssl-3.4.1-dev/include -isystem /nix/store/k6gi198r2cjjk70dnr1dwibgzf8gjbm2-sqlite-3.48.0-dev/include -isystem /nix/store/rxd3kdsc7k72198g58wk0qp3xdip5x5d-zlib-1.3.1-dev/include -isystem /nix/store/akn28bf4vh2q3p2czwkm37acmf33bvgd-libglvnd-1.7.0-dev/include -isystem /nix/store/zyj3yixsd4vjgbz8nsp5z9yfv6fhnw3d-vulkan-headers-1.4.313.0/include -isystem /nix/store/yfrv3rw3w96wxvgfga55dpb291v2x7cl-harfbuzz-10.2.0-dev/include -isystem /nix/store/7gpii8a6znikgs6q39gfh8007m081zpd-graphite2-1.3.14-dev/include -isystem /nix/store/y2jwi4a4pgmavi994lfdvc6nj45nxi4f-icu4c-76.1-dev/include -isystem /nix/store/b6y8k7i7bgkld9bgjjnsv5bqf2anq7yk-libjpeg-turbo-3.0.4-dev/include -isystem /nix/store/i2c4lj0hirk7i27xgib08zy0rdrkfi70-libpng-apng-1.6.46-dev/include -isystem /nix/store/5b3lilf2rmzgbkgw53r0bzhzgn6v4qrr-pcre2-10.44-dev/include -isystem /nix/store/mijswdfwx4yvqpfrxg6c0cs228w9v7ll-zstd-1.5.7-dev/include -isystem /nix/store/508aj2m7l24p200w67m5zyv0cgy70c76-libb2-0.98.1/include -isystem /nix/store/gfgzwp641q0y94fd6yfjd492bmvqmaif-md4c-0.5.2-dev/include -isystem /nix/store/x5zwzk8lpwvam3vninpdar8hr6qvaww3-double-conversion-3.3.1/include -isystem /nix/store/z4iv8z25l4jklbk6wq5r0vx6pjvs6hm7-libproxy-0.5.9-dev/include -isystem /nix/store/q8bx93bxxvbk89f58wi60wnqqnyj3lw9-dbus-1.14.10-dev/include -isystem /nix/store/bd7z19f32ww73wlrkpqdcma7ra67hs82-expat-2.7.1-dev/include -isystem /nix/store/y0n9h3hcv2wfp2rv03ii862lhycx5wij-glib-2.84.3-dev/include -isystem /nix/store/psi78zvlzrali45b76kimqvbxyklxwb7-libffi-3.4.8-dev/include -isystem /nix/store/flpfkdzbac7071xlydh8f4qqq6dvnzx9-gettext-0.22.5/include -isystem /nix/store/s5jwhvn7j2gyr4abfzkjrg0j9hlma2xr-glibc-iconv-2.40/include -isystem /nix/store/w0a0v3ripdb1x6hk37h9qiblc39mjma4-unixODBC-2.3.12/include -isystem /nix/store/n7abw5wmqn1acq0399hzinl625r34vn8-systemd-257.6-dev/include -isystem /nix/store/qr7sj7i9z4s66n99q88zm6xb2cqzqz10-util-linux-2.41-dev/include -isystem /nix/store/856v3vkwkcdwnqqh3wf0cx79gp7hwpn7-mtdev-1.1.7/include -isystem /nix/store/ykjgplyvyglqv4prarshqdxjsiszsdpf-lksctp-tools-1.0.21/include -isystem /nix/store/h3rfmphr21kc4fiwbdwxpjk7waa18s9j-libselinux-3.8.1-dev/include -isystem /nix/store/sn1z0cl7h2pcpakqbpdsx6jiy5n9qpb2-libsepol-3.8.1-dev/include -isystem /nix/store/s38laiz30qciawxn6bymqwyqmpf8s33j-lttng-ust-2.13.8-dev/include -isystem /nix/store/yx2avni6agq4m3mzhmlrmypflc9famxj-liburcu-0.15.2-dev/include -isystem /nix/store/h0c9jbqwi0mwlzxzbk59h29cqwds5irs-libthai-0.1.29-dev/include -isystem /nix/store/5fmckldlhbyklfmvgkcf88z2fvyhsqp4-libdrm-2.4.124-dev/include -isystem /nix/store/4xwk3d8797mlbw4bjwj5dcr0n6sw09ch-libdatrie-2019-12-20-dev/include -isystem /nix/store/7vml6dcgpjwcl6izw0ny6hdhg2kgx7gp-systemd-minimal-libs-257.6-dev/include -isystem /nix/store/f57f52ppyksjmdvdlmxbvxp2vc29jiq4-fontconfig-2.16.0-dev/include -isystem /nix/store/w9qijf113qkgqcv54ydhbjh0rlslysbr-freetype-2.13.3-dev/include -isystem /nix/store/wjqj8ncgdxqpn78qp23blp5ijprpavp9-bzip2-1.0.8-dev/include -isystem /nix/store/xdczp4bkrp2dff2apb1vbybbfmfi8f7d-brotli-1.1.0-dev/include -isystem /nix/store/b2aj478jxny0yvwqr6zglcmp99r3563b-libX11-1.8.12-dev/include -isystem /nix/store/spg20iadf5ylh7pl1l9q8ydf7dqghdfi-xorgproto-2024.1/include -isystem /nix/store/wp4nmh0byqn6w9885q10qm6v0vxq8m28-libxcb-1.17.0-dev/include -isystem /nix/store/mg09ypmxrqknb68wfxpdjzsm0msdvhqd-libXcomposite-0.4.6-dev/include -isystem /nix/store/4h7vf438jm33r6l9677dc9sm5qkv7sxd-libXfixes-6.0.1-dev/include -isystem /nix/store/4dj30iya7h9bfd9aac6vbrr2yviw1ibj-libXext-1.3.6-dev/include -isystem /nix/store/0wwzn4cb4zdj2jahvyirmfx0ksg3kcz7-libXau-1.0.12-dev/include -isystem /nix/store/3w8gi3kxckdlf1p0dw54b5mwmzcv6zd6-libXi-1.8.2-dev/include -isystem /nix/store/iywn2pwh2cmyvq12d5a9jm9xgx86i2sw-libXrender-0.9.12-dev/include -isystem /nix/store/zcmp1znlrzry73kzxychljwda2lmlzj7-libxkbcommon-1.8.1-dev/include -isystem /nix/store/1yqy5m7sv0bnidz2wnn7caj5zgmi8y4x-xcb-util-0.4.1-dev/include -isystem /nix/store/53v26wmr5v1a5ihnlv8ghsf9czw9dwv3-xcb-util-image-0.4.1-dev/include -isystem /nix/store/iyd9j2c1z86d2g9pkv92bfrh5akrlg03-xcb-util-keysyms-0.4.1-dev/include -isystem /nix/store/00as8mw378jja677j4mc3cmj11ncc9wv-xcb-util-renderutil-0.3.10-dev/include -isystem /nix/store/863xa5n8dhxjwlr0ms05wv5ii5y9p9na-xcb-util-wm-0.4.2-dev/include -isystem /nix/store/0s295h89k5vp1y968m68p24n9za7dxcf-libXdmcp-1.1.5-dev/include -isystem /nix/store/5npa9ai4gxj8bkz36l4crwybibm72j7i-libXtst-1.2.5/include -isystem /nix/store/75sfmkjzg3y5qd2zrxw06xly6sa4qr2c-xcb-util-cursor-0.1.5-dev/include -isystem /nix/store/57327qk19vkl6p2pgfbqw8vch7167pcl-libepoxy-1.5.10-dev/include -isystem /nix/store/jrmf65p7pn32f0hxlg2qxj99s8sw2038-cups-2.4.11-dev/include -isystem /nix/store/0r0mg0wd6g5ghhi93wn0kyzbdnl5xgka-gmp-with-cxx-6.3.0-dev/include -isystem /nix/store/pcm23dq8n6vj89kxzykw4gq9wbh5w7b4-qtbase-6.9.1/include -isystem /nix/store/8m33090jqw1pydm9nfmwarkm3v7n9zqi-qtlanguageserver-6.9.1/include -isystem /nix/store/pvyr1cd1d1gc1m6fvc1znn1p3p4qqv9g-qtshadertools-6.9.1/include -isystem /nix/store/wxp741p66xbd7lfmg75x9k77vcg48l21-qtsvg-6.9.1/include -isystem /nix/store/x4xkywkgmpfgmaccxv6vb1070nm16mvy-qtdeclarative-6.9.1/include -isystem /nix/store/x5jz0dmc4j76fidfskshgbim26v40685-qttools-6.9.1/include -isystem /nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/include -isystem /nix/store/74s0y3d6qjkfii4jpifjbkp2hrf7pr10-wireshark-qt-4.4.7-dev/include -isystem /nix/store/71k400gj4lhrjl47898shv9gkjh04b36-graphviz-12.2.1/include -isystem /nix/store/wkg70x83zky4l3l2hmarggq11jj8pgkv-libxml2-2.13.8-dev/include -isystem /nix/store/fkm8g9p5dp4kjxiy178qc834b0dwjfb1-libxslt-1.1.43-dev/include -isystem /nix/store/0225zs9jl9s2y3ai1arbg0h9z7z4bmfi-openssl-3.4.1-dev/include -isystem /nix/store/k6gi198r2cjjk70dnr1dwibgzf8gjbm2-sqlite-3.48.0-dev/include -isystem /nix/store/rxd3kdsc7k72198g58wk0qp3xdip5x5d-zlib-1.3.1-dev/include -isystem /nix/store/akn28bf4vh2q3p2czwkm37acmf33bvgd-libglvnd-1.7.0-dev/include -isystem /nix/store/zyj3yixsd4vjgbz8nsp5z9yfv6fhnw3d-vulkan-headers-1.4.313.0/include -isystem /nix/store/yfrv3rw3w96wxvgfga55dpb291v2x7cl-harfbuzz-10.2.0-dev/include -isystem /nix/store/7gpii8a6znikgs6q39gfh8007m081zpd-graphite2-1.3.14-dev/include -isystem /nix/store/y2jwi4a4pgmavi994lfdvc6nj45nxi4f-icu4c-76.1-dev/include -isystem /nix/store/b6y8k7i7bgkld9bgjjnsv5bqf2anq7yk-libjpeg-turbo-3.0.4-dev/include -isystem /nix/store/i2c4lj0hirk7i27xgib08zy0rdrkfi70-libpng-apng-1.6.46-dev/include -isystem /nix/store/5b3lilf2rmzgbkgw53r0bzhzgn6v4qrr-pcre2-10.44-dev/include -isystem /nix/store/mijswdfwx4yvqpfrxg6c0cs228w9v7ll-zstd-1.5.7-dev/include -isystem /nix/store/508aj2m7l24p200w67m5zyv0cgy70c76-libb2-0.98.1/include -isystem /nix/store/gfgzwp641q0y94fd6yfjd492bmvqmaif-md4c-0.5.2-dev/include -isystem /nix/store/x5zwzk8lpwvam3vninpdar8hr6qvaww3-double-conversion-3.3.1/include -isystem /nix/store/z4iv8z25l4jklbk6wq5r0vx6pjvs6hm7-libproxy-0.5.9-dev/include -isystem /nix/store/q8bx93bxxvbk89f58wi60wnqqnyj3lw9-dbus-1.14.10-dev/include -isystem /nix/store/bd7z19f32ww73wlrkpqdcma7ra67hs82-expat-2.7.1-dev/include -isystem /nix/store/y0n9h3hcv2wfp2rv03ii862lhycx5wij-glib-2.84.3-dev/include -isystem /nix/store/psi78zvlzrali45b76kimqvbxyklxwb7-libffi-3.4.8-dev/include -isystem /nix/store/flpfkdzbac7071xlydh8f4qqq6dvnzx9-gettext-0.22.5/include -isystem /nix/store/s5jwhvn7j2gyr4abfzkjrg0j9hlma2xr-glibc-iconv-2.40/include -isystem /nix/store/w0a0v3ripdb1x6hk37h9qiblc39mjma4-unixODBC-2.3.12/include -isystem /nix/store/n7abw5wmqn1acq0399hzinl625r34vn8-systemd-257.6-dev/include -isystem /nix/store/qr7sj7i9z4s66n99q88zm6xb2cqzqz10-util-linux-2.41-dev/include -isystem /nix/store/856v3vkwkcdwnqqh3wf0cx79gp7hwpn7-mtdev-1.1.7/include -isystem /nix/store/ykjgplyvyglqv4prarshqdxjsiszsdpf-lksctp-tools-1.0.21/include -isystem /nix/store/h3rfmphr21kc4fiwbdwxpjk7waa18s9j-libselinux-3.8.1-dev/include -isystem /nix/store/sn1z0cl7h2pcpakqbpdsx6jiy5n9qpb2-libsepol-3.8.1-dev/include -isystem /nix/store/s38laiz30qciawxn6bymqwyqmpf8s33j-lttng-ust-2.13.8-dev/include -isystem /nix/store/yx2avni6agq4m3mzhmlrmypflc9famxj-liburcu-0.15.2-dev/include -isystem /nix/store/h0c9jbqwi0mwlzxzbk59h29cqwds5irs-libthai-0.1.29-dev/include -isystem /nix/store/5fmckldlhbyklfmvgkcf88z2fvyhsqp4-libdrm-2.4.124-dev/include -isystem /nix/store/4xwk3d8797mlbw4bjwj5dcr0n6sw09ch-libdatrie-2019-12-20-dev/include -isystem /nix/store/7vml6dcgpjwcl6izw0ny6hdhg2kgx7gp-systemd-minimal-libs-257.6-dev/include -isystem /nix/store/f57f52ppyksjmdvdlmxbvxp2vc29jiq4-fontconfig-2.16.0-dev/include -isystem /nix/store/w9qijf113qkgqcv54ydhbjh0rlslysbr-freetype-2.13.3-dev/include -isystem /nix/store/wjqj8ncgdxqpn78qp23blp5ijprpavp9-bzip2-1.0.8-dev/include -isystem /nix/store/xdczp4bkrp2dff2apb1vbybbfmfi8f7d-brotli-1.1.0-dev/include -isystem /nix/store/b2aj478jxny0yvwqr6zglcmp99r3563b-libX11-1.8.12-dev/include -isystem /nix/store/spg20iadf5ylh7pl1l9q8ydf7dqghdfi-xorgproto-2024.1/include -isystem /nix/store/wp4nmh0byqn6w9885q10qm6v0vxq8m28-libxcb-1.17.0-dev/include -isystem /nix/store/mg09ypmxrqknb68wfxpdjzsm0msdvhqd-libXcomposite-0.4.6-dev/include -isystem /nix/store/4h7vf438jm33r6l9677dc9sm5qkv7sxd-libXfixes-6.0.1-dev/include -isystem /nix/store/4dj30iya7h9bfd9aac6vbrr2yviw1ibj-libXext-1.3.6-dev/include -isystem /nix/store/0wwzn4cb4zdj2jahvyirmfx0ksg3kcz7-libXau-1.0.12-dev/include -isystem /nix/store/3w8gi3kxckdlf1p0dw54b5mwmzcv6zd6-libXi-1.8.2-dev/include -isystem /nix/store/iywn2pwh2cmyvq12d5a9jm9xgx86i2sw-libXrender-0.9.12-dev/include -isystem /nix/store/zcmp1znlrzry73kzxychljwda2lmlzj7-libxkbcommon-1.8.1-dev/include -isystem /nix/store/1yqy5m7sv0bnidz2wnn7caj5zgmi8y4x-xcb-util-0.4.1-dev/include -isystem /nix/store/53v26wmr5v1a5ihnlv8ghsf9czw9dwv3-xcb-util-image-0.4.1-dev/include -isystem /nix/store/iyd9j2c1z86d2g9pkv92bfrh5akrlg03-xcb-util-keysyms-0.4.1-dev/include -isystem /nix/store/00as8mw378jja677j4mc3cmj11ncc9wv-xcb-util-renderutil-0.3.10-dev/include -isystem /nix/store/863xa5n8dhxjwlr0ms05wv5ii5y9p9na-xcb-util-wm-0.4.2-dev/include -isystem /nix/store/0s295h89k5vp1y968m68p24n9za7dxcf-libXdmcp-1.1.5-dev/include -isystem /nix/store/5npa9ai4gxj8bkz36l4crwybibm72j7i-libXtst-1.2.5/include -isystem /nix/store/75sfmkjzg3y5qd2zrxw06xly6sa4qr2c-xcb-util-cursor-0.1.5-dev/include -isystem /nix/store/57327qk19vkl6p2pgfbqw8vch7167pcl-libepoxy-1.5.10-dev/include -isystem /nix/store/jrmf65p7pn32f0hxlg2qxj99s8sw2038-cups-2.4.11-dev/include -isystem /nix/store/0r0mg0wd6g5ghhi93wn0kyzbdnl5xgka-gmp-with-cxx-6.3.0-dev/include -isystem /nix/store/pcm23dq8n6vj89kxzykw4gq9wbh5w7b4-qtbase-6.9.1/include -isystem /nix/store/8m33090jqw1pydm9nfmwarkm3v7n9zqi-qtlanguageserver-6.9.1/include -isystem /nix/store/pvyr1cd1d1gc1m6fvc1znn1p3p4qqv9g-qtshadertools-6.9.1/include -isystem /nix/store/wxp741p66xbd7lfmg75x9k77vcg48l21-qtsvg-6.9.1/include -isystem /nix/store/x4xkywkgmpfgmaccxv6vb1070nm16mvy-qtdeclarative-6.9.1/include -isystem /nix/store/x5jz0dmc4j76fidfskshgbim26v40685-qttools-6.9.1/include'
+export NIX_CFLAGS_COMPILE
+NIX_ENFORCE_NO_NATIVE='1'
+export NIX_ENFORCE_NO_NATIVE
+NIX_HARDENING_ENABLE='bindnow format fortify fortify3 pic relro stackclashprotection stackprotector strictoverflow zerocallusedregs'
+export NIX_HARDENING_ENABLE
+NIX_LDFLAGS='-rpath /home/tomoya/workspace/analysis/outputs/out/lib  -L/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/lib -L/nix/store/gkszdicyy88yymy5ji9702707lvxhp7g-wireshark-qt-4.4.7/lib -L/nix/store/f77jp5x42zj34d4q5c38697zsmrjhd70-dia-unstable-2023-09-28/lib -L/nix/store/71k400gj4lhrjl47898shv9gkjh04b36-graphviz-12.2.1/lib -L/nix/store/8y5ai2bi4s96nqb3bwphxnrlgwscir3c-libxml2-2.13.8/lib -L/nix/store/z8s46c3fm5mdbhi8fgw1md1hn6c3l9ik-libxslt-1.1.43/lib -L/nix/store/5xmcl9wr18g6ym3dh3363hv8hp6jyxqd-openssl-3.4.1/lib -L/nix/store/lc8ni1p2b6lljpb9sbx1v7yhjpv60pl3-sqlite-3.48.0/lib -L/nix/store/jl19fdc7gdxqz9a1s368r9d15vpirnqy-zlib-1.3.1/lib -L/nix/store/7227amwg7k4sbl6mhglq17v5x5ki54ks-libglvnd-1.7.0/lib -L/nix/store/ams45f9lnsmp6s3b8j5fjvd7csm558yk-vulkan-loader-1.4.313.0/lib -L/nix/store/dll7gaqkvw597jim01q7rpbsx2dzhsr0-graphite2-1.3.14/lib -L/nix/store/90qal753blhl7mrwzs2k8b00zby9r9xr-harfbuzz-10.2.0/lib -L/nix/store/sk67m13n9jbk0j8q3h8lzxyw5riah1km-icu4c-76.1/lib -L/nix/store/yvdmi1gvqjjil5ihka8qs9wrr92gns9j-libjpeg-turbo-3.0.4/lib -L/nix/store/4i49f869yc93c77m0y1lmpnvlzip5pgr-libpng-apng-1.6.46/lib -L/nix/store/vvp8hlss3d5q6hn0cifq04jrpnp6bini-pcre2-10.44/lib -L/nix/store/wbv7b4dc17n1azxan5m5mm07fifai44a-zstd-1.5.7/lib -L/nix/store/508aj2m7l24p200w67m5zyv0cgy70c76-libb2-0.98.1/lib -L/nix/store/7v1m3j9kkhikzvclv2065vh7agcnpap2-md4c-0.5.2-lib/lib -L/nix/store/x5zwzk8lpwvam3vninpdar8hr6qvaww3-double-conversion-3.3.1/lib -L/nix/store/b2rdhxhwanlfqqgqsvirpia0i8w42hpz-libproxy-0.5.9/lib -L/nix/store/l0d83xf43lsyhzqziy0am1cidhkcxs9q-expat-2.7.1/lib -L/nix/store/231d6mmkylzr80pf30dbywa9x9aryjgy-dbus-1.14.10-lib/lib -L/nix/store/rnn29mhynsa4ncmk0fkcrdr29n0j20l4-libffi-3.4.8/lib -L/nix/store/flpfkdzbac7071xlydh8f4qqq6dvnzx9-gettext-0.22.5/lib -L/nix/store/y3nxdc2x8hwivppzgx5hkrhacsh87l21-glib-2.84.3/lib -L/nix/store/w0a0v3ripdb1x6hk37h9qiblc39mjma4-unixODBC-2.3.12/lib -L/nix/store/93hb4bi2p4grwws3mbf0cz8k9zd4y1yz-sqlite-connector-odbc-0.9993/lib -L/nix/store/ymmaa926pv3f3wlgpw9y1aygdvqi1m7j-systemd-257.6/lib -L/nix/store/ds99hsvy5yk9mmrra1g053rncqx7nr9z-util-linux-2.41-lib/lib -L/nix/store/856v3vkwkcdwnqqh3wf0cx79gp7hwpn7-mtdev-1.1.7/lib -L/nix/store/ykjgplyvyglqv4prarshqdxjsiszsdpf-lksctp-tools-1.0.21/lib -L/nix/store/5gml2l2cj28yvyfyzblzjy1laqpxmyzd-libselinux-3.8.1/lib -L/nix/store/4bp15xxyi4zrd6j1aqk30prfdi94miwy-libsepol-3.8.1/lib -L/nix/store/nizpkpri0bcrcz7rbn94w2pkms3gjg6k-liburcu-0.15.2/lib -L/nix/store/52qxpd90xr6a9g9wn5d6dw66j52sh9zk-lttng-ust-2.13.8/lib -L/nix/store/vgk0g17bxmy0z5f6xk2d0sl36xgqxbn5-libthai-0.1.29/lib -L/nix/store/xpszkfp1gaf8jfmcsll93xg0pb4c0rk7-libdrm-2.4.124/lib -L/nix/store/lr67dv6pzm628cb2v3xraxz19d9iw23z-libdatrie-2019-12-20-lib/lib -L/nix/store/5flwv7rri80114p8vlz7l8qf8z5i557h-systemd-minimal-libs-257.6/lib -L/nix/store/zkvl3npcgzc1w623pj0fag0qsczd5rxq-bzip2-1.0.8/lib -L/nix/store/zb406965xij4m5f793xvrr16sjaixi00-brotli-1.1.0-lib/lib -L/nix/store/yw429hvy80x2hg00lsfdfhkkib7gz54g-freetype-2.13.3/lib -L/nix/store/nm07kfl411ig0yv61rvginj665b6c0ms-fontconfig-2.16.0-lib/lib -L/nix/store/2y2hhlki6macaj9j1409q1j6i33l6igf-libxcb-1.17.0/lib -L/nix/store/1nsvsrqp5zm96r9p3rrq3yhlyw8jiy91-libX11-1.8.12/lib -L/nix/store/94grp8dx897wmf0x3azpdbgzj3krz7v5-libXfixes-6.0.1/lib -L/nix/store/4phl6z95v2i4525y0zpmi9v6ac0n4bx7-libXcomposite-0.4.6/lib -L/nix/store/f8kjcizw0kmpyrn1abm1nfsbc007418g-libXau-1.0.12/lib -L/nix/store/0046rn5sgi6l38zl81bg2r02zlzxqqbc-libXext-1.3.6/lib -L/nix/store/58dzwlbfldrsnwah1q3cfaqrx98jajpp-libXi-1.8.2/lib -L/nix/store/v53v67k3s16wmak41qy0q54pd7dkbcvr-libXrender-0.9.12/lib -L/nix/store/sisfq9wihyqqjzmrpik9b4xksifw97ha-libxkbcommon-1.8.1/lib -L/nix/store/whii77m56rwk130727iv7kyycl24fjcc-xcb-util-0.4.1/lib -L/nix/store/f616859ywjq2aaa7dywaikfk5ch6w3k2-xcb-util-image-0.4.1/lib -L/nix/store/xamb3iw9a481i5rgnhgs5fhhgz1cgwak-xcb-util-keysyms-0.4.1/lib -L/nix/store/3zxad3pb148bhq4zq0kb2ss7dzcsbk31-xcb-util-renderutil-0.3.10/lib -L/nix/store/5rr3l4zpgl929cy7lawss0p273zdjkyl-xcb-util-wm-0.4.2/lib -L/nix/store/ycvsz2k1zqcg48as18fcb171rzfdn5ll-libXdmcp-1.1.5/lib -L/nix/store/5npa9ai4gxj8bkz36l4crwybibm72j7i-libXtst-1.2.5/lib -L/nix/store/92nrp8f5bcyxy57w30wxj5ncvygz1wnx-xcb-util-cursor-0.1.5/lib -L/nix/store/p61f1q6kh1ds3wfzk3hghdh90ki10mqv-libepoxy-1.5.10/lib -L/nix/store/qy4zsnh13nzvq9xz5n0d57d9v4pw4i7c-gmp-with-cxx-6.3.0/lib -L/nix/store/xm2418a7fclainspb35n6h05xfsxb6vn-cups-2.4.11-lib/lib -L/nix/store/pcm23dq8n6vj89kxzykw4gq9wbh5w7b4-qtbase-6.9.1/lib -L/nix/store/8m33090jqw1pydm9nfmwarkm3v7n9zqi-qtlanguageserver-6.9.1/lib -L/nix/store/pvyr1cd1d1gc1m6fvc1znn1p3p4qqv9g-qtshadertools-6.9.1/lib -L/nix/store/wxp741p66xbd7lfmg75x9k77vcg48l21-qtsvg-6.9.1/lib -L/nix/store/x4xkywkgmpfgmaccxv6vb1070nm16mvy-qtdeclarative-6.9.1/lib -L/nix/store/x5jz0dmc4j76fidfskshgbim26v40685-qttools-6.9.1/lib -L/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/lib -L/nix/store/gkszdicyy88yymy5ji9702707lvxhp7g-wireshark-qt-4.4.7/lib -L/nix/store/f77jp5x42zj34d4q5c38697zsmrjhd70-dia-unstable-2023-09-28/lib -L/nix/store/71k400gj4lhrjl47898shv9gkjh04b36-graphviz-12.2.1/lib -L/nix/store/8y5ai2bi4s96nqb3bwphxnrlgwscir3c-libxml2-2.13.8/lib -L/nix/store/z8s46c3fm5mdbhi8fgw1md1hn6c3l9ik-libxslt-1.1.43/lib -L/nix/store/5xmcl9wr18g6ym3dh3363hv8hp6jyxqd-openssl-3.4.1/lib -L/nix/store/lc8ni1p2b6lljpb9sbx1v7yhjpv60pl3-sqlite-3.48.0/lib -L/nix/store/jl19fdc7gdxqz9a1s368r9d15vpirnqy-zlib-1.3.1/lib -L/nix/store/7227amwg7k4sbl6mhglq17v5x5ki54ks-libglvnd-1.7.0/lib -L/nix/store/ams45f9lnsmp6s3b8j5fjvd7csm558yk-vulkan-loader-1.4.313.0/lib -L/nix/store/dll7gaqkvw597jim01q7rpbsx2dzhsr0-graphite2-1.3.14/lib -L/nix/store/90qal753blhl7mrwzs2k8b00zby9r9xr-harfbuzz-10.2.0/lib -L/nix/store/sk67m13n9jbk0j8q3h8lzxyw5riah1km-icu4c-76.1/lib -L/nix/store/yvdmi1gvqjjil5ihka8qs9wrr92gns9j-libjpeg-turbo-3.0.4/lib -L/nix/store/4i49f869yc93c77m0y1lmpnvlzip5pgr-libpng-apng-1.6.46/lib -L/nix/store/vvp8hlss3d5q6hn0cifq04jrpnp6bini-pcre2-10.44/lib -L/nix/store/wbv7b4dc17n1azxan5m5mm07fifai44a-zstd-1.5.7/lib -L/nix/store/508aj2m7l24p200w67m5zyv0cgy70c76-libb2-0.98.1/lib -L/nix/store/7v1m3j9kkhikzvclv2065vh7agcnpap2-md4c-0.5.2-lib/lib -L/nix/store/x5zwzk8lpwvam3vninpdar8hr6qvaww3-double-conversion-3.3.1/lib -L/nix/store/b2rdhxhwanlfqqgqsvirpia0i8w42hpz-libproxy-0.5.9/lib -L/nix/store/l0d83xf43lsyhzqziy0am1cidhkcxs9q-expat-2.7.1/lib -L/nix/store/231d6mmkylzr80pf30dbywa9x9aryjgy-dbus-1.14.10-lib/lib -L/nix/store/rnn29mhynsa4ncmk0fkcrdr29n0j20l4-libffi-3.4.8/lib -L/nix/store/flpfkdzbac7071xlydh8f4qqq6dvnzx9-gettext-0.22.5/lib -L/nix/store/y3nxdc2x8hwivppzgx5hkrhacsh87l21-glib-2.84.3/lib -L/nix/store/w0a0v3ripdb1x6hk37h9qiblc39mjma4-unixODBC-2.3.12/lib -L/nix/store/93hb4bi2p4grwws3mbf0cz8k9zd4y1yz-sqlite-connector-odbc-0.9993/lib -L/nix/store/ymmaa926pv3f3wlgpw9y1aygdvqi1m7j-systemd-257.6/lib -L/nix/store/ds99hsvy5yk9mmrra1g053rncqx7nr9z-util-linux-2.41-lib/lib -L/nix/store/856v3vkwkcdwnqqh3wf0cx79gp7hwpn7-mtdev-1.1.7/lib -L/nix/store/ykjgplyvyglqv4prarshqdxjsiszsdpf-lksctp-tools-1.0.21/lib -L/nix/store/5gml2l2cj28yvyfyzblzjy1laqpxmyzd-libselinux-3.8.1/lib -L/nix/store/4bp15xxyi4zrd6j1aqk30prfdi94miwy-libsepol-3.8.1/lib -L/nix/store/nizpkpri0bcrcz7rbn94w2pkms3gjg6k-liburcu-0.15.2/lib -L/nix/store/52qxpd90xr6a9g9wn5d6dw66j52sh9zk-lttng-ust-2.13.8/lib -L/nix/store/vgk0g17bxmy0z5f6xk2d0sl36xgqxbn5-libthai-0.1.29/lib -L/nix/store/xpszkfp1gaf8jfmcsll93xg0pb4c0rk7-libdrm-2.4.124/lib -L/nix/store/lr67dv6pzm628cb2v3xraxz19d9iw23z-libdatrie-2019-12-20-lib/lib -L/nix/store/5flwv7rri80114p8vlz7l8qf8z5i557h-systemd-minimal-libs-257.6/lib -L/nix/store/zkvl3npcgzc1w623pj0fag0qsczd5rxq-bzip2-1.0.8/lib -L/nix/store/zb406965xij4m5f793xvrr16sjaixi00-brotli-1.1.0-lib/lib -L/nix/store/yw429hvy80x2hg00lsfdfhkkib7gz54g-freetype-2.13.3/lib -L/nix/store/nm07kfl411ig0yv61rvginj665b6c0ms-fontconfig-2.16.0-lib/lib -L/nix/store/2y2hhlki6macaj9j1409q1j6i33l6igf-libxcb-1.17.0/lib -L/nix/store/1nsvsrqp5zm96r9p3rrq3yhlyw8jiy91-libX11-1.8.12/lib -L/nix/store/94grp8dx897wmf0x3azpdbgzj3krz7v5-libXfixes-6.0.1/lib -L/nix/store/4phl6z95v2i4525y0zpmi9v6ac0n4bx7-libXcomposite-0.4.6/lib -L/nix/store/f8kjcizw0kmpyrn1abm1nfsbc007418g-libXau-1.0.12/lib -L/nix/store/0046rn5sgi6l38zl81bg2r02zlzxqqbc-libXext-1.3.6/lib -L/nix/store/58dzwlbfldrsnwah1q3cfaqrx98jajpp-libXi-1.8.2/lib -L/nix/store/v53v67k3s16wmak41qy0q54pd7dkbcvr-libXrender-0.9.12/lib -L/nix/store/sisfq9wihyqqjzmrpik9b4xksifw97ha-libxkbcommon-1.8.1/lib -L/nix/store/whii77m56rwk130727iv7kyycl24fjcc-xcb-util-0.4.1/lib -L/nix/store/f616859ywjq2aaa7dywaikfk5ch6w3k2-xcb-util-image-0.4.1/lib -L/nix/store/xamb3iw9a481i5rgnhgs5fhhgz1cgwak-xcb-util-keysyms-0.4.1/lib -L/nix/store/3zxad3pb148bhq4zq0kb2ss7dzcsbk31-xcb-util-renderutil-0.3.10/lib -L/nix/store/5rr3l4zpgl929cy7lawss0p273zdjkyl-xcb-util-wm-0.4.2/lib -L/nix/store/ycvsz2k1zqcg48as18fcb171rzfdn5ll-libXdmcp-1.1.5/lib -L/nix/store/5npa9ai4gxj8bkz36l4crwybibm72j7i-libXtst-1.2.5/lib -L/nix/store/92nrp8f5bcyxy57w30wxj5ncvygz1wnx-xcb-util-cursor-0.1.5/lib -L/nix/store/p61f1q6kh1ds3wfzk3hghdh90ki10mqv-libepoxy-1.5.10/lib -L/nix/store/qy4zsnh13nzvq9xz5n0d57d9v4pw4i7c-gmp-with-cxx-6.3.0/lib -L/nix/store/xm2418a7fclainspb35n6h05xfsxb6vn-cups-2.4.11-lib/lib -L/nix/store/pcm23dq8n6vj89kxzykw4gq9wbh5w7b4-qtbase-6.9.1/lib -L/nix/store/8m33090jqw1pydm9nfmwarkm3v7n9zqi-qtlanguageserver-6.9.1/lib -L/nix/store/pvyr1cd1d1gc1m6fvc1znn1p3p4qqv9g-qtshadertools-6.9.1/lib -L/nix/store/wxp741p66xbd7lfmg75x9k77vcg48l21-qtsvg-6.9.1/lib -L/nix/store/x4xkywkgmpfgmaccxv6vb1070nm16mvy-qtdeclarative-6.9.1/lib -L/nix/store/x5jz0dmc4j76fidfskshgbim26v40685-qttools-6.9.1/lib'
+export NIX_LDFLAGS
+NIX_NO_SELF_RPATH='1'
+NIX_STORE='/nix/store'
+export NIX_STORE
+NM='nm'
+export NM
+OBJCOPY='objcopy'
+export OBJCOPY
+OBJDUMP='objdump'
+export OBJDUMP
+OLDPWD=''
+export OLDPWD
+OPTERR='1'
+OSTYPE='linux-gnu'
+PATH='/nix/store/smaydcvrcaz906653vbnps70y9j7w658-git-2.49.0/bin:/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/bin:/nix/store/wf1vkvsdfvf239la9h54g4xnqvqhf7yb-tcpdump-4.99.5/bin:/nix/store/gkszdicyy88yymy5ji9702707lvxhp7g-wireshark-qt-4.4.7/bin:/nix/store/jgm4h8svmb2wm618rz76wv3xahk7as4f-doxygen-1.13.2/bin:/nix/store/f77jp5x42zj34d4q5c38697zsmrjhd70-dia-unstable-2023-09-28/bin:/nix/store/0g09282c6amly6biazhh7rhz3xa2k3q8-texlive-2024-env/bin:/nix/store/2ggmrindi1bswshhn4adkhhi5cdnzrxh-python3.12-sphinx-8.2.3/bin:/nix/store/a906siib3gg1v9r8c7fszrmwjfcafs2n-python3.12-babel-2.17.0/bin:/nix/store/8wqqx7cbxkj0m3n4p9n5jhwcaasi6hvi-python3.12-docutils-0.21.2/bin:/nix/store/xa8vcbz8133h9gmsl2x401kacdyrcc6j-python3.12-pygments-2.19.1/bin:/nix/store/g9zij81hja8bs0s5i7ni60y7k90h113s-python3.12-charset-normalizer-3.4.1/bin:/nix/store/71k400gj4lhrjl47898shv9gkjh04b36-graphviz-12.2.1/bin:/nix/store/wkg70x83zky4l3l2hmarggq11jj8pgkv-libxml2-2.13.8-dev/bin:/nix/store/ysn1f98vdc2sxjkgvkmgpqy1ih7n0g56-libxml2-2.13.8-bin/bin:/nix/store/fkm8g9p5dp4kjxiy178qc834b0dwjfb1-libxslt-1.1.43-dev/bin:/nix/store/z8rwxyq3233ra0c81cb9yh5igljph7g7-libxslt-1.1.43-bin/bin:/nix/store/gzlgwyd3n4r17yyx7hrrlpkmplqianbl-openssl-3.4.1-bin/bin:/nix/store/6fx90jjjc3f18635y8cz2qy98y2h59cm-sqlite-3.48.0-bin/bin:/nix/store/yfrv3rw3w96wxvgfga55dpb291v2x7cl-harfbuzz-10.2.0-dev/bin:/nix/store/dll7gaqkvw597jim01q7rpbsx2dzhsr0-graphite2-1.3.14/bin:/nix/store/y2jwi4a4pgmavi994lfdvc6nj45nxi4f-icu4c-76.1-dev/bin:/nix/store/lrrj9h7h1ifbdv82rrbddxracm5jjxwx-libjpeg-turbo-3.0.4-bin/bin:/nix/store/i2c4lj0hirk7i27xgib08zy0rdrkfi70-libpng-apng-1.6.46-dev/bin:/nix/store/5b3lilf2rmzgbkgw53r0bzhzgn6v4qrr-pcre2-10.44-dev/bin:/nix/store/gwys5lcxsyjja9q6pm167wpvw5f58w6n-pcre2-10.44-bin/bin:/nix/store/ddap6dm3fjdm0zmw4m3rls73a0gml3xd-zstd-1.5.7-bin/bin:/nix/store/wbv7b4dc17n1azxan5m5mm07fifai44a-zstd-1.5.7/bin:/nix/store/9kcbmgs8fs15x675msaz6f63fnnzyc0v-md4c-0.5.2/bin:/nix/store/b2rdhxhwanlfqqgqsvirpia0i8w42hpz-libproxy-0.5.9/bin:/nix/store/bd7z19f32ww73wlrkpqdcma7ra67hs82-expat-2.7.1-dev/bin:/nix/store/231d6mmkylzr80pf30dbywa9x9aryjgy-dbus-1.14.10-lib/bin:/nix/store/zbydgvn9gypb3vg88mzydn88ky6cibaz-dbus-1.14.10/bin:/nix/store/y0n9h3hcv2wfp2rv03ii862lhycx5wij-glib-2.84.3-dev/bin:/nix/store/flpfkdzbac7071xlydh8f4qqq6dvnzx9-gettext-0.22.5/bin:/nix/store/3ybnl9nq86s7jz0i8pzqlrabjgdxzrjz-glib-2.84.3-bin/bin:/nix/store/w0a0v3ripdb1x6hk37h9qiblc39mjma4-unixODBC-2.3.12/bin:/nix/store/ymmaa926pv3f3wlgpw9y1aygdvqi1m7j-systemd-257.6/bin:/nix/store/m10ngkbjxbj0lqdq6rsyys9h2gj1f27d-util-linux-2.41-bin/bin:/nix/store/856v3vkwkcdwnqqh3wf0cx79gp7hwpn7-mtdev-1.1.7/bin:/nix/store/ykjgplyvyglqv4prarshqdxjsiszsdpf-lksctp-tools-1.0.21/bin:/nix/store/xj5lnv5hrh8myxbwagc11k4rhrzy2l7z-libselinux-3.8.1-bin/bin:/nix/store/saa7srm8fpm7ci3wn25kh51y2piw75an-libsepol-3.8.1-bin/bin:/nix/store/4f8gyla5ni50677qagng4gbhgj71bgqb-lttng-ust-2.13.8-bin/bin:/nix/store/lp1ak5dgh8fy09nrfryfsm0ayk6c0wwh-libdrm-2.4.124-bin/bin:/nix/store/kz658pyjy2glwnhgvq4vrziqirmnc5qs-libdatrie-2019-12-20-bin/bin:/nix/store/w9qijf113qkgqcv54ydhbjh0rlslysbr-freetype-2.13.3-dev/bin:/nix/store/28z6bx9sg0lsr7wra22pbjsk6fzfphy4-bzip2-1.0.8-bin/bin:/nix/store/llqrkvzn5f08iwlq4xqy5av5mppgp7yp-brotli-1.1.0/bin:/nix/store/i8ls8rz7c56ipdqwkr3c1lcpr30kh77m-fontconfig-2.16.0-bin/bin:/nix/store/sisfq9wihyqqjzmrpik9b4xksifw97ha-libxkbcommon-1.8.1/bin:/nix/store/jrmf65p7pn32f0hxlg2qxj99s8sw2038-cups-2.4.11-dev/bin:/nix/store/si92b84j9mqr3zshc8l78b7liq98sldc-cups-2.4.11/bin:/nix/store/pcm23dq8n6vj89kxzykw4gq9wbh5w7b4-qtbase-6.9.1/bin:/nix/store/ljzk99jradqd279q8f5qw4fbwqrdzpf2-qttools-6.9.1-dev/bin:/nix/store/pvyr1cd1d1gc1m6fvc1znn1p3p4qqv9g-qtshadertools-6.9.1/bin:/nix/store/x4xkywkgmpfgmaccxv6vb1070nm16mvy-qtdeclarative-6.9.1/bin:/nix/store/x5jz0dmc4j76fidfskshgbim26v40685-qttools-6.9.1/bin:/nix/store/j51w3hs146ky0pv6isv96imzx29sk71r-python3.12-ipython-9.2.0/bin:/nix/store/3wb8nyhf9maqijvn121xw7bbj2dw4m9c-python3.12-jupyter-client-8.6.3/bin:/nix/store/nx7714dykgirn35xqipcgz3s8vwlshzi-python3.12-jupyter-core-5.7.2/bin:/nix/store/n37x1z6fj8w9d03pyppb3yjlcmhvwxn9-python3.12-jupyter-console-6.6.3/bin:/nix/store/ph2qfa0v53nm1fd297dl889dv4dcs5h1-python3.12-jupyterlab-4.4.1/bin:/nix/store/1skxycgsx3cpzxyrf2pm5knjscjsggzg-python3.12-httpx-0.28.1/bin:/nix/store/njr0z1izs54hk2ic2v6qysz9nqwkgcyh-python3.12-jupyter-server-2.15.0/bin:/nix/store/1nhsjrsdh41ps26x6n990nkay55xzhri-python3.12-jupyter-events-0.11.0/bin:/nix/store/xjli5d0sm0i0pr9s2qld9k9nqiq8jx7a-python3.12-jsonschema-4.23.0/bin:/nix/store/isgf3m8dacfhkv97x6i5vd9v0dxci0lb-python3.12-jsonpointer-3.0.0/bin:/nix/store/dgkx3mknpnixam3wjbgfllz4dldh3540-python3.12-nbformat-5.10.4/bin:/nix/store/fkgj9pqb5qjvlkykvzdqbs3s21l0p2bb-python3.12-nbconvert-7.16.6/bin:/nix/store/01i7b0l1jgzkwzi6pjaf1fzslb8h6j3d-python3.12-chardet-5.2.0/bin:/nix/store/v82a7zyam3hill1chvhzj04akf6nm6sm-python3.12-nbclient-0.10.2/bin:/nix/store/kp9a1izahlwm9bp9rwa4da9v5rm3rly9-python3.12-send2trash-1.8.3/bin:/nix/store/26d8g75zns41mqk5njik22zwq2jcrska-python3.12-websocket-client-1.8.0/bin:/nix/store/66z062jczirzhdl4rpzf8blrqpi8bn7j-python3.12-json5-0.10.0/bin:/nix/store/vwaj7qjspl03bvagmja2zswydaj8gi8p-python3.12-notebook-7.4.1/bin:/nix/store/vjrxh9d2iwzb2njsdybq0y9cg87bnpxn-python3.12-numpy-2.2.5/bin:/nix/store/92psnf2rzd4x10j95j696v08gsjzamy2-python3.12-fonttools-4.56.0/bin:/nix/store/kn7qavpm13s6sx7qa7lc15yidanckzll-python3.12-kaleido-0.2.1/bin:/nix/store/0flj33q30lmzdjagwjqh964qmiyklww2-patchelf-0.15.0/bin:/nix/store/a0d7m3zn9p2dfa1h7ag9h2wzzr2w25sn-gcc-wrapper-14.2.1.20250322/bin:/nix/store/6i862vz60awrlsila8vw18rg4d4l66iy-gcc-14.2.1.20250322/bin:/nix/store/y2xdxp8r4g92q28am6mbxj44rivnyirl-glibc-2.40-66-bin/bin:/nix/store/mp7ba85zcqdj2sqwa29pql02s6nqpcxy-coreutils-9.7/bin:/nix/store/2gkh9v7wrzjq6ws312c6z6ajwnjvwcmb-binutils-wrapper-2.44/bin:/nix/store/mkvc0lnnpmi604rqsjdlv1pmhr638nbd-binutils-2.44/bin:/nix/store/mp7ba85zcqdj2sqwa29pql02s6nqpcxy-coreutils-9.7/bin:/nix/store/7fjnb79r7p38piiyn5xwgcj5w7fpfi02-findutils-4.10.0/bin:/nix/store/1pi99mlqimxmqm1jvllbcaj8v16w2nbv-diffutils-3.12/bin:/nix/store/x23s7lcvhf18zz3rj543680jgrj71vil-gnused-4.9/bin:/nix/store/8b4vn1iyn6kqiisjvlmv67d1c0p3j6wj-gnugrep-3.11/bin:/nix/store/n8825s8qprf8p70m0hq6pz7rvlnsxdjm-gawk-5.3.2/bin:/nix/store/7nilh5hvnfbsx3vn020pkjkgx9rgsizb-gnutar-1.35/bin:/nix/store/gqpd9ax2s6jjf7mjyv1q7bwbsycyaxic-gzip-1.14/bin:/nix/store/28z6bx9sg0lsr7wra22pbjsk6fzfphy4-bzip2-1.0.8-bin/bin:/nix/store/8dl5ryfna3hjqhvnkw7srm6wnka6agxl-gnumake-4.4.1/bin:/nix/store/ih68ar79msmj0496pgld4r3vqfr7bbin-bash-5.2p37/bin:/nix/store/kc8h52p4dfgajrg3qlgx246hl0znr213-patch-2.7.6/bin:/nix/store/cmv326slnswzsjm2sqgbz16hzzqvkfjy-xz-5.8.1-bin/bin:/nix/store/v5skl3bspzhm2y13vcxcrw8w29g6phi0-file-5.45/bin'
+export PATH
+PS4='+ '
+PYTHONHASHSEED='0'
+export PYTHONHASHSEED
+PYTHONNOUSERSITE='1'
+export PYTHONNOUSERSITE
+PYTHONPATH='/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/lib/python3.12/site-packages:/nix/store/2ggmrindi1bswshhn4adkhhi5cdnzrxh-python3.12-sphinx-8.2.3/lib/python3.12/site-packages:/nix/store/81mnzv0h3m7qxs60r722xm6kbw5l2d5b-python3.12-alabaster-1.0.0/lib/python3.12/site-packages:/nix/store/a906siib3gg1v9r8c7fszrmwjfcafs2n-python3.12-babel-2.17.0/lib/python3.12/site-packages:/nix/store/8wqqx7cbxkj0m3n4p9n5jhwcaasi6hvi-python3.12-docutils-0.21.2/lib/python3.12/site-packages:/nix/store/6rqcf8hv5wwqf74n5yavi1jjlz9qy445-python3.12-imagesize-1.4.1/lib/python3.12/site-packages:/nix/store/qzicnwci4dpqzykmlf91yvchhhbq968s-python3.12-jinja2-3.1.6/lib/python3.12/site-packages:/nix/store/rx8n7pmsl4w4nv04dr1akili227jlz9m-python3.12-markupsafe-3.0.2/lib/python3.12/site-packages:/nix/store/hx4azv435qg3bx6286rphd3n910c35pg-python3.12-packaging-24.2/lib/python3.12/site-packages:/nix/store/xa8vcbz8133h9gmsl2x401kacdyrcc6j-python3.12-pygments-2.19.1/lib/python3.12/site-packages:/nix/store/70rlqanx1dv5rqidf0jc9dmii8dq2a2m-python3.12-requests-2.32.3/lib/python3.12/site-packages:/nix/store/w9gmvrb8km8fp7dsgdzfvy6zwwdv1j0c-python3.12-certifi-2025.01.31/lib/python3.12/site-packages:/nix/store/g9zij81hja8bs0s5i7ni60y7k90h113s-python3.12-charset-normalizer-3.4.1/lib/python3.12/site-packages:/nix/store/7bj5g2x9bfp4fv73sprg039pc7h7zcbm-python3.12-idna-3.10/lib/python3.12/site-packages:/nix/store/19rbfa56zl9baks43nwdsggmz0a4jg1a-python3.12-urllib3-2.3.0/lib/python3.12/site-packages:/nix/store/s7d15z67bjqii4s5pd226nvj56mix0rz-python3.12-roman-numerals-py-3.1.0/lib/python3.12/site-packages:/nix/store/h4yvw4knj7wsghdn4yz7hpxy9x9fbjd5-python3.12-snowballstemmer-2.2.0/lib/python3.12/site-packages:/nix/store/bsxrp4v3nh7pfy2j9bzywmzvinxwyzby-python3.12-pystemmer-2.2.0.1/lib/python3.12/site-packages:/nix/store/0dhgrwvyx0spy8256sir5m2dkbmhvr4z-python3.12-sphinxcontrib-applehelp-2.0.0/lib/python3.12/site-packages:/nix/store/n7q2p5a4f1shiz5szb3zf8mhg2bkbgmn-python3.12-sphinxcontrib-devhelp-2.0.0/lib/python3.12/site-packages:/nix/store/xhi725m883jwry8ifkp2ilkl0xy64q6m-python3.12-sphinxcontrib-htmlhelp-2.1.0/lib/python3.12/site-packages:/nix/store/i6ck04ari3rdn1g0yv0igl3lnvfyf73p-python3.12-sphinxcontrib-jsmath-1.0.1/lib/python3.12/site-packages:/nix/store/3jy6sfb655sa9vm2w767h4m2v78ydgjh-python3.12-sphinxcontrib-qthelp-2.0.0/lib/python3.12/site-packages:/nix/store/wf3dym6h0cyk6qxcfpjsbzqc3la0zpvj-python3.12-sphinxcontrib-serializinghtml-2.0.0/lib/python3.12/site-packages:/nix/store/r0qbdfnvm384fff52xkdkzxiyqqyswi1-python3.12-sphinxcontrib-websupport-2.0.0/lib/python3.12/site-packages:/nix/store/qkkgz5r0z149pwnbvz8qdayh46d045hk-python3.12-ipykernel-6.29.5/lib/python3.12/site-packages:/nix/store/ms0wwgynanl2gp8c4fycx2d7fxdkw6mv-python3.12-comm-0.2.2/lib/python3.12/site-packages:/nix/store/czrqiahwxxiixzl74w10f74zvpz3y8m5-python3.12-traitlets-5.14.3/lib/python3.12/site-packages:/nix/store/j51w3hs146ky0pv6isv96imzx29sk71r-python3.12-ipython-9.2.0/lib/python3.12/site-packages:/nix/store/nv6z25ghscygq6jzivn705ds5ycvak5q-python3.12-decorator-5.2.1/lib/python3.12/site-packages:/nix/store/r31rgw3calmin99259z86p6lg90ah322-python3.12-ipython-pygments-lexers-1.1.1/lib/python3.12/site-packages:/nix/store/c2p4g8phxwmwy51wll7d1c0frw5szfbx-python3.12-jedi-0.19.2/lib/python3.12/site-packages:/nix/store/97mk8lg616kk9acm15qzm90a7wzvc7i3-python3.12-parso-0.8.4/lib/python3.12/site-packages:/nix/store/sq69ar98w90jp9ghy163km5i8w65pri1-python3.12-matplotlib-inline-0.1.7/lib/python3.12/site-packages:/nix/store/g0ll01c75dwipwdm090am1mp2qnrqn67-python3.12-pexpect-4.9.0/lib/python3.12/site-packages:/nix/store/iagbj7jd74zxjvgy74wbz9dn130axrh1-python3.12-ptyprocess-0.7.0/lib/python3.12/site-packages:/nix/store/vmpcmgcnwk614p71rvbf8x5k9sn6z571-python3.12-prompt-toolkit-3.0.50/lib/python3.12/site-packages:/nix/store/yjyqllvcz5s4w9h33ars9zkyj08gislg-python3.12-six-1.17.0/lib/python3.12/site-packages:/nix/store/xscg3as6h8zkanp495sjq55nq2azr5ls-python3.12-wcwidth-0.2.13/lib/python3.12/site-packages:/nix/store/ca5b92gwd66jh99s4khir4wprx45ps4q-python3.12-stack-data-0.6.3/lib/python3.12/site-packages:/nix/store/9idxa8lwc4ly63fsp9h90pb01x39h3nm-python3.12-asttokens-3.0.0/lib/python3.12/site-packages:/nix/store/07y4gvxn8a0k2yzz5pn4k9g56j41qsyq-python3.12-executing-2.2.0/lib/python3.12/site-packages:/nix/store/yn2h8ycxri1gz28g5nw9xf1ckbgzb6pb-python3.12-pure-eval-0.2.3/lib/python3.12/site-packages:/nix/store/ld8pfb6mln7r2jcva1rf30qxwmjzl7ya-python3.12-toml-0.10.2/lib/python3.12/site-packages:/nix/store/3wb8nyhf9maqijvn121xw7bbj2dw4m9c-python3.12-jupyter-client-8.6.3/lib/python3.12/site-packages:/nix/store/nx7714dykgirn35xqipcgz3s8vwlshzi-python3.12-jupyter-core-5.7.2/lib/python3.12/site-packages:/nix/store/r6gnwzgamspmbxv48j1xhmb2h4kfnz4n-python3.12-platformdirs-4.3.7/lib/python3.12/site-packages:/nix/store/k4qm3jlysf5crywc40d4v5w34kj5lksz-python3.12-python-dateutil-2.9.0.post0/lib/python3.12/site-packages:/nix/store/yfavw5qqp0pvgdy8p50rfrp5w77zra95-python3.12-pyzmq-26.3.0/lib/python3.12/site-packages:/nix/store/7vyrx0g4f5rj4059jqwc1nj6289gl8q2-python3.12-tornado-6.5.1/lib/python3.12/site-packages:/nix/store/cp667py2sqhpk0lzw130fg0nzb9sxzng-python3.12-nest-asyncio-1.6.0/lib/python3.12/site-packages:/nix/store/w7xfpjinkid66kbzvpghwpbpzrkbl1ik-python3.12-psutil-7.0.0/lib/python3.12/site-packages:/nix/store/32spr243r89zwrrnawpxrzq5wln7wbm8-python3.12-jupyter-1.1.1/lib/python3.12/site-packages:/nix/store/7c43in15dxn0ai7l9haa8ngwwkvzcxmn-python3.12-ipywidgets-8.1.5/lib/python3.12/site-packages:/nix/store/w2df6m4469wqv2ivqwgaqm30rvkm4sgi-python3.12-jupyterlab-widgets-3.0.13/lib/python3.12/site-packages:/nix/store/9zs0xwbz79j670h4d753078i2kvkjbyy-python3.12-widgetsnbextension-4.0.13/lib/python3.12/site-packages:/nix/store/n37x1z6fj8w9d03pyppb3yjlcmhvwxn9-python3.12-jupyter-console-6.6.3/lib/python3.12/site-packages:/nix/store/ph2qfa0v53nm1fd297dl889dv4dcs5h1-python3.12-jupyterlab-4.4.1/lib/python3.12/site-packages:/nix/store/y8c1xr5r8da92s3nbb58373vjbl88svl-python3.12-async-lru-2.0.5/lib/python3.12/site-packages:/nix/store/1skxycgsx3cpzxyrf2pm5knjscjsggzg-python3.12-httpx-0.28.1/lib/python3.12/site-packages:/nix/store/lnw0s088k1cvk39v9hravpddxdqwmd9a-python3.12-anyio-4.9.0/lib/python3.12/site-packages:/nix/store/ppdjjhbs1ca9j0419xncjbxqx688a1ik-python3.12-sniffio-1.3.1/lib/python3.12/site-packages:/nix/store/q152izwmf9qzy8hj2p8mjv3imzbh7s9w-python3.12-typing-extensions-4.13.2/lib/python3.12/site-packages:/nix/store/07a9ypxai3xzwc4g3y36f1yd9cdx7yx8-python3.12-httpcore-1.0.9/lib/python3.12/site-packages:/nix/store/1a78f92ia98q5ly5wksx9vpzb4v36y4f-python3.12-h11-0.16.0/lib/python3.12/site-packages:/nix/store/giisbdh9q465p7b9brvqxzn9npg7dlvj-python3.12-jupyter-lsp-2.2.5/lib/python3.12/site-packages:/nix/store/njr0z1izs54hk2ic2v6qysz9nqwkgcyh-python3.12-jupyter-server-2.15.0/lib/python3.12/site-packages:/nix/store/00c26srdpjx7nfyix2d6kywfgmmwpywy-python3.12-argon2-cffi-23.1.0/lib/python3.12/site-packages:/nix/store/6aw2cg3kc971mgcdakxvlajjrdh19ygl-python3.12-argon2-cffi-bindings-21.2.0/lib/python3.12/site-packages:/nix/store/xy880mwxql4nhdrw15r0ay1dwx3bmwrh-python3.12-cffi-1.17.1/lib/python3.12/site-packages:/nix/store/063crngv576j033cwhz2s4xn8345df1b-python3.12-pycparser-2.22/lib/python3.12/site-packages:/nix/store/1nhsjrsdh41ps26x6n990nkay55xzhri-python3.12-jupyter-events-0.11.0/lib/python3.12/site-packages:/nix/store/xjli5d0sm0i0pr9s2qld9k9nqiq8jx7a-python3.12-jsonschema-4.23.0/lib/python3.12/site-packages:/nix/store/wddbpvwf533jwv3qix0qiib8bvg4xf45-python3.12-attrs-25.3.0/lib/python3.12/site-packages:/nix/store/1bfcy63rpa2nv7mnnc81spsmps74nn95-python3.12-jsonschema-specifications-2024.10.1/lib/python3.12/site-packages:/nix/store/acdlkgxypwamfkp6hvw1c05n0ffvm2kw-python3.12-referencing-0.36.2/lib/python3.12/site-packages:/nix/store/gjrv4hpcqz60jsppp4hn8hx99qm23vnk-python3.12-rpds-py-0.24.0/lib/python3.12/site-packages:/nix/store/jbfq90qbbixrh2wh7cjm0pzdn310f41p-python3.12-python-json-logger-3.2.1/lib/python3.12/site-packages:/nix/store/nvzz66421j2a6icv4i2ayn1pqyngjwah-python3.12-pyyaml-6.0.2/lib/python3.12/site-packages:/nix/store/0qzi756n8kvvwln7xy88xx4bk18ym8z6-python3.12-rfc3339-validator-0.1.4/lib/python3.12/site-packages:/nix/store/bq2ag92ij9zkyrpg1chdag5q9wfid1sm-python3.12-rfc3986-validator-0.1.1/lib/python3.12/site-packages:/nix/store/8fw324cfphmp01920hpxwx2kcgds5rsf-python3.12-fqdn-1.5.1/lib/python3.12/site-packages:/nix/store/v15f6hy2rc050dfk9nddwh3wb6q136sp-python3.12-isoduration-20.11.0/lib/python3.12/site-packages:/nix/store/fpz17zcqdfkbxg2s9szpqi1sfgxaxvrk-python3.12-arrow-1.3.0/lib/python3.12/site-packages:/nix/store/2bwqcs4xyzqw8fy6h19h5z12vvlq6w3k-python3.12-types-python-dateutil-2.9.0.20241206/lib/python3.12/site-packages:/nix/store/isgf3m8dacfhkv97x6i5vd9v0dxci0lb-python3.12-jsonpointer-3.0.0/lib/python3.12/site-packages:/nix/store/23a1ifw64lifpnr84m7xain0g1xf47vp-python3.12-uri-template-1.3.0/lib/python3.12/site-packages:/nix/store/3bz1fq3qws8gisccyys1d17yiv5jpiw8-python3.12-webcolors-24.11.1/lib/python3.12/site-packages:/nix/store/a4cwp0n8sl56x1c7dvmn95zxm9b1c8xs-python3.12-jupyter-server-terminals-0.5.3/lib/python3.12/site-packages:/nix/store/7dji3jksiikkiybrz7sbb2ay203i2p1b-python3.12-terminado-0.18.1/lib/python3.12/site-packages:/nix/store/dgkx3mknpnixam3wjbgfllz4dldh3540-python3.12-nbformat-5.10.4/lib/python3.12/site-packages:/nix/store/44zcqfkfpvg0d0g1h2j2q40xyd664q6x-python3.12-fastjsonschema-2.21.1/lib/python3.12/site-packages:/nix/store/fkgj9pqb5qjvlkykvzdqbs3s21l0p2bb-python3.12-nbconvert-7.16.6/lib/python3.12/site-packages:/nix/store/7s9p6ksldfpjk44ha4d0hkcfgjfihvwk-python3.12-beautifulsoup4-4.12.3/lib/python3.12/site-packages:/nix/store/01i7b0l1jgzkwzi6pjaf1fzslb8h6j3d-python3.12-chardet-5.2.0/lib/python3.12/site-packages:/nix/store/sd7j5a80idvl564g55kq7ylznv4hsy74-python3.12-soupsieve-2.6/lib/python3.12/site-packages:/nix/store/4sqwi99a9hz90m0kjslwn6nq2v9lkh52-python3.12-bleach-6.2.0/lib/python3.12/site-packages:/nix/store/8fhjrvfrr99idfk16wgbkzqj0z0361v4-python3.12-html5lib-1.1/lib/python3.12/site-packages:/nix/store/q7xlyki1r05ym96lw204hhk9sr2zwdfs-python3.12-webencodings-0.5.1/lib/python3.12/site-packages:/nix/store/2d3prlfhjwacbqm4y3my8mvdrs2anbnq-python3.12-setuptools-78.1.0/lib/python3.12/site-packages:/nix/store/pdr1w5nhp8nlf4y1jy6ngsvn5yvwkfmk-python3.12-defusedxml-0.8.0rc2/lib/python3.12/site-packages:/nix/store/qag087rsjgikfj1a4mfqrmny8k9389wy-python3.12-jupyterlab-pygments-0.3.0/lib/python3.12/site-packages:/nix/store/y7kzbaf1bmaxg08ij3x9550jipdg17m5-python3.12-mistune-3.1.2/lib/python3.12/site-packages:/nix/store/v82a7zyam3hill1chvhzj04akf6nm6sm-python3.12-nbclient-0.10.2/lib/python3.12/site-packages:/nix/store/vk74kcsly0mda6hir54gcnw4w7vqha3x-python3.12-pandocfilters-1.5.1/lib/python3.12/site-packages:/nix/store/61f01rsphws89cxchyyw89500bwv52vj-python3.12-tinycss2-1.4.0/lib/python3.12/site-packages:/nix/store/kp9a1izahlwm9bp9rwa4da9v5rm3rly9-python3.12-send2trash-1.8.3/lib/python3.12/site-packages:/nix/store/z7k07ghr8xykfy2ms353sdgk7kr0k42h-python3.12-prometheus-client-0.21.1/lib/python3.12/site-packages:/nix/store/26d8g75zns41mqk5njik22zwq2jcrska-python3.12-websocket-client-1.8.0/lib/python3.12/site-packages:/nix/store/4lfisgmf87g5i2r6aa5xamzvyjvnn0d2-python3.12-overrides-7.7.0/lib/python3.12/site-packages:/nix/store/p0n3rl23hx3qfb77rc1w5592zl0xfrzr-python3.12-jupyterlab-server-2.27.3/lib/python3.12/site-packages:/nix/store/66z062jczirzhdl4rpzf8blrqpi8bn7j-python3.12-json5-0.10.0/lib/python3.12/site-packages:/nix/store/nr9x5ipvsdijav8nqckkma0gvaj57d4z-python3.12-notebook-shim-0.2.4/lib/python3.12/site-packages:/nix/store/vwaj7qjspl03bvagmja2zswydaj8gi8p-python3.12-notebook-7.4.1/lib/python3.12/site-packages:/nix/store/ysz568vfldxlf24bdmxn0v7zshvf9804-python3.12-matplotlib-3.10.1/lib/python3.12/site-packages:/nix/store/kvnvq1pczf1m8p8vp3xm4y6lmry65apg-python3.12-contourpy-1.3.1/lib/python3.12/site-packages:/nix/store/vjrxh9d2iwzb2njsdybq0y9cg87bnpxn-python3.12-numpy-2.2.5/lib/python3.12/site-packages:/nix/store/prd5x4nfdvwj1z7lxy6j1bpvw0yf0bpx-python3.12-cycler-0.12.1/lib/python3.12/site-packages:/nix/store/92psnf2rzd4x10j95j696v08gsjzamy2-python3.12-fonttools-4.56.0/lib/python3.12/site-packages:/nix/store/4nx3gwjq5vw6q4hvsb3gfv0pb7g9i7zl-python3.12-kiwisolver-1.4.8/lib/python3.12/site-packages:/nix/store/nardq58rbj3kxasq3fflgv6dy94nbl42-python3.12-pillow-11.2.1/lib/python3.12/site-packages:/nix/store/61bydncj9m9k1h8jmgx5bi0smw1gk7sy-python3.12-pyparsing-3.2.3/lib/python3.12/site-packages:/nix/store/izkldz9a5b7kbdlgfm1n7zrmmp6ihs1m-python3.12-tkinter-3.12.11/lib/python3.12/site-packages:/nix/store/ky9srnyb1q7kjnh7cqd1ny4w849fc9f2-python3.12-plotly-5.24.1/lib/python3.12/site-packages:/nix/store/lskml5zq4kjfdbf7i4aczw4rqhbrvj9x-python3.12-tenacity-9.0.0/lib/python3.12/site-packages:/nix/store/kn7qavpm13s6sx7qa7lc15yidanckzll-python3.12-kaleido-0.2.1/lib/python3.12/site-packages:/nix/store/mvfl8sbrx0mwk3w6a0m4k7i7m15pr7dn-python3.12-pandas-2.2.3/lib/python3.12/site-packages:/nix/store/vqpjh9b21bxgjh4z1hxhd1f75h4vh7fk-python3.12-pytz-2025.2/lib/python3.12/site-packages:/nix/store/vb6ni45a87mxrj7v5jygxwbg1794z07s-python3.12-tzdata-2025.2/lib/python3.12/site-packages:/nix/store/6mm715369j7msb302057v2cmlph7qx2g-python3.12-seaborn-0.13.2/lib/python3.12/site-packages'
+export PYTHONPATH
+QMAKE='/nix/store/pcm23dq8n6vj89kxzykw4gq9wbh5w7b4-qtbase-6.9.1/bin/qmake'
+export QMAKE
+QMAKEMODULES='/mkspecs:/mkspecs:/mkspecs:/mkspecs:/mkspecs:/mkspecs:/mkspecs:/mkspecs'
+export QMAKEMODULES
+QMAKEPATH='/nix/store/8cdqj8xlvpl25rqq5fyfvn6s7zzay3pw-qtbase-6.9.1-dev:/nix/store/pcm23dq8n6vj89kxzykw4gq9wbh5w7b4-qtbase-6.9.1:/nix/store/ljzk99jradqd279q8f5qw4fbwqrdzpf2-qttools-6.9.1-dev:/nix/store/nlga16dy7xdz3nz2gmp8arc9ap7whir4-qtdeclarative-6.9.1-dev:/nix/store/hvhl39ag0byrb7dvys43y6dkhd5sbmn9-qtlanguageserver-6.9.1-dev:/nix/store/pzb93xkgl8pd5j06zw9viqgx0szd6dw5-qtshadertools-6.9.1-dev:/nix/store/k6j4i4vq04r7marl5cpg3j64m4l76caz-qtsvg-6.9.1-dev:/nix/store/x4xkywkgmpfgmaccxv6vb1070nm16mvy-qtdeclarative-6.9.1'
+export QMAKEPATH
+QT_ADDITIONAL_PACKAGES_PREFIX_PATH='/nix/store/smaydcvrcaz906653vbnps70y9j7w658-git-2.49.0:/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11:/nix/store/wf1vkvsdfvf239la9h54g4xnqvqhf7yb-tcpdump-4.99.5:/nix/store/74s0y3d6qjkfii4jpifjbkp2hrf7pr10-wireshark-qt-4.4.7-dev:/nix/store/gkszdicyy88yymy5ji9702707lvxhp7g-wireshark-qt-4.4.7:/nix/store/jgm4h8svmb2wm618rz76wv3xahk7as4f-doxygen-1.13.2:/nix/store/f77jp5x42zj34d4q5c38697zsmrjhd70-dia-unstable-2023-09-28:/nix/store/0g09282c6amly6biazhh7rhz3xa2k3q8-texlive-2024-env:/nix/store/2ggmrindi1bswshhn4adkhhi5cdnzrxh-python3.12-sphinx-8.2.3:/nix/store/81mnzv0h3m7qxs60r722xm6kbw5l2d5b-python3.12-alabaster-1.0.0:/nix/store/a906siib3gg1v9r8c7fszrmwjfcafs2n-python3.12-babel-2.17.0:/nix/store/8wqqx7cbxkj0m3n4p9n5jhwcaasi6hvi-python3.12-docutils-0.21.2:/nix/store/6rqcf8hv5wwqf74n5yavi1jjlz9qy445-python3.12-imagesize-1.4.1:/nix/store/qzicnwci4dpqzykmlf91yvchhhbq968s-python3.12-jinja2-3.1.6:/nix/store/rx8n7pmsl4w4nv04dr1akili227jlz9m-python3.12-markupsafe-3.0.2:/nix/store/hx4azv435qg3bx6286rphd3n910c35pg-python3.12-packaging-24.2:/nix/store/xa8vcbz8133h9gmsl2x401kacdyrcc6j-python3.12-pygments-2.19.1:/nix/store/70rlqanx1dv5rqidf0jc9dmii8dq2a2m-python3.12-requests-2.32.3:/nix/store/w9gmvrb8km8fp7dsgdzfvy6zwwdv1j0c-python3.12-certifi-2025.01.31:/nix/store/g9zij81hja8bs0s5i7ni60y7k90h113s-python3.12-charset-normalizer-3.4.1:/nix/store/7bj5g2x9bfp4fv73sprg039pc7h7zcbm-python3.12-idna-3.10:/nix/store/19rbfa56zl9baks43nwdsggmz0a4jg1a-python3.12-urllib3-2.3.0:/nix/store/s7d15z67bjqii4s5pd226nvj56mix0rz-python3.12-roman-numerals-py-3.1.0:/nix/store/h4yvw4knj7wsghdn4yz7hpxy9x9fbjd5-python3.12-snowballstemmer-2.2.0:/nix/store/bsxrp4v3nh7pfy2j9bzywmzvinxwyzby-python3.12-pystemmer-2.2.0.1:/nix/store/0dhgrwvyx0spy8256sir5m2dkbmhvr4z-python3.12-sphinxcontrib-applehelp-2.0.0:/nix/store/n7q2p5a4f1shiz5szb3zf8mhg2bkbgmn-python3.12-sphinxcontrib-devhelp-2.0.0:/nix/store/xhi725m883jwry8ifkp2ilkl0xy64q6m-python3.12-sphinxcontrib-htmlhelp-2.1.0:/nix/store/i6ck04ari3rdn1g0yv0igl3lnvfyf73p-python3.12-sphinxcontrib-jsmath-1.0.1:/nix/store/3jy6sfb655sa9vm2w767h4m2v78ydgjh-python3.12-sphinxcontrib-qthelp-2.0.0:/nix/store/wf3dym6h0cyk6qxcfpjsbzqc3la0zpvj-python3.12-sphinxcontrib-serializinghtml-2.0.0:/nix/store/r0qbdfnvm384fff52xkdkzxiyqqyswi1-python3.12-sphinxcontrib-websupport-2.0.0:/nix/store/71k400gj4lhrjl47898shv9gkjh04b36-graphviz-12.2.1:/nix/store/8cdqj8xlvpl25rqq5fyfvn6s7zzay3pw-qtbase-6.9.1-dev:/nix/store/wkg70x83zky4l3l2hmarggq11jj8pgkv-libxml2-2.13.8-dev:/nix/store/asi29hlr0p4jh6xfbk23ppfbs1v30sa2-find-xml-catalogs-hook:/nix/store/ysn1f98vdc2sxjkgvkmgpqy1ih7n0g56-libxml2-2.13.8-bin:/nix/store/8y5ai2bi4s96nqb3bwphxnrlgwscir3c-libxml2-2.13.8:/nix/store/fkm8g9p5dp4kjxiy178qc834b0dwjfb1-libxslt-1.1.43-dev:/nix/store/z8rwxyq3233ra0c81cb9yh5igljph7g7-libxslt-1.1.43-bin:/nix/store/z8s46c3fm5mdbhi8fgw1md1hn6c3l9ik-libxslt-1.1.43:/nix/store/0225zs9jl9s2y3ai1arbg0h9z7z4bmfi-openssl-3.4.1-dev:/nix/store/gzlgwyd3n4r17yyx7hrrlpkmplqianbl-openssl-3.4.1-bin:/nix/store/5xmcl9wr18g6ym3dh3363hv8hp6jyxqd-openssl-3.4.1:/nix/store/k6gi198r2cjjk70dnr1dwibgzf8gjbm2-sqlite-3.48.0-dev:/nix/store/6fx90jjjc3f18635y8cz2qy98y2h59cm-sqlite-3.48.0-bin:/nix/store/lc8ni1p2b6lljpb9sbx1v7yhjpv60pl3-sqlite-3.48.0:/nix/store/rxd3kdsc7k72198g58wk0qp3xdip5x5d-zlib-1.3.1-dev:/nix/store/jl19fdc7gdxqz9a1s368r9d15vpirnqy-zlib-1.3.1:/nix/store/akn28bf4vh2q3p2czwkm37acmf33bvgd-libglvnd-1.7.0-dev:/nix/store/7227amwg7k4sbl6mhglq17v5x5ki54ks-libglvnd-1.7.0:/nix/store/zyj3yixsd4vjgbz8nsp5z9yfv6fhnw3d-vulkan-headers-1.4.313.0:/nix/store/9ish1z2fqsgfdi13vqrj1zaq0clpmgf3-vulkan-loader-1.4.313.0-dev:/nix/store/ams45f9lnsmp6s3b8j5fjvd7csm558yk-vulkan-loader-1.4.313.0:/nix/store/yfrv3rw3w96wxvgfga55dpb291v2x7cl-harfbuzz-10.2.0-dev:/nix/store/7gpii8a6znikgs6q39gfh8007m081zpd-graphite2-1.3.14-dev:/nix/store/dll7gaqkvw597jim01q7rpbsx2dzhsr0-graphite2-1.3.14:/nix/store/90qal753blhl7mrwzs2k8b00zby9r9xr-harfbuzz-10.2.0:/nix/store/y2jwi4a4pgmavi994lfdvc6nj45nxi4f-icu4c-76.1-dev:/nix/store/sk67m13n9jbk0j8q3h8lzxyw5riah1km-icu4c-76.1:/nix/store/b6y8k7i7bgkld9bgjjnsv5bqf2anq7yk-libjpeg-turbo-3.0.4-dev:/nix/store/lrrj9h7h1ifbdv82rrbddxracm5jjxwx-libjpeg-turbo-3.0.4-bin:/nix/store/yvdmi1gvqjjil5ihka8qs9wrr92gns9j-libjpeg-turbo-3.0.4:/nix/store/i2c4lj0hirk7i27xgib08zy0rdrkfi70-libpng-apng-1.6.46-dev:/nix/store/4i49f869yc93c77m0y1lmpnvlzip5pgr-libpng-apng-1.6.46:/nix/store/5b3lilf2rmzgbkgw53r0bzhzgn6v4qrr-pcre2-10.44-dev:/nix/store/gwys5lcxsyjja9q6pm167wpvw5f58w6n-pcre2-10.44-bin:/nix/store/vvp8hlss3d5q6hn0cifq04jrpnp6bini-pcre2-10.44:/nix/store/mijswdfwx4yvqpfrxg6c0cs228w9v7ll-zstd-1.5.7-dev:/nix/store/ddap6dm3fjdm0zmw4m3rls73a0gml3xd-zstd-1.5.7-bin:/nix/store/wbv7b4dc17n1azxan5m5mm07fifai44a-zstd-1.5.7:/nix/store/508aj2m7l24p200w67m5zyv0cgy70c76-libb2-0.98.1:/nix/store/gfgzwp641q0y94fd6yfjd492bmvqmaif-md4c-0.5.2-dev:/nix/store/7v1m3j9kkhikzvclv2065vh7agcnpap2-md4c-0.5.2-lib:/nix/store/9kcbmgs8fs15x675msaz6f63fnnzyc0v-md4c-0.5.2:/nix/store/x5zwzk8lpwvam3vninpdar8hr6qvaww3-double-conversion-3.3.1:/nix/store/z4iv8z25l4jklbk6wq5r0vx6pjvs6hm7-libproxy-0.5.9-dev:/nix/store/b2rdhxhwanlfqqgqsvirpia0i8w42hpz-libproxy-0.5.9:/nix/store/q8bx93bxxvbk89f58wi60wnqqnyj3lw9-dbus-1.14.10-dev:/nix/store/bd7z19f32ww73wlrkpqdcma7ra67hs82-expat-2.7.1-dev:/nix/store/l0d83xf43lsyhzqziy0am1cidhkcxs9q-expat-2.7.1:/nix/store/231d6mmkylzr80pf30dbywa9x9aryjgy-dbus-1.14.10-lib:/nix/store/zbydgvn9gypb3vg88mzydn88ky6cibaz-dbus-1.14.10:/nix/store/y0n9h3hcv2wfp2rv03ii862lhycx5wij-glib-2.84.3-dev:/nix/store/psi78zvlzrali45b76kimqvbxyklxwb7-libffi-3.4.8-dev:/nix/store/rnn29mhynsa4ncmk0fkcrdr29n0j20l4-libffi-3.4.8:/nix/store/flpfkdzbac7071xlydh8f4qqq6dvnzx9-gettext-0.22.5:/nix/store/s5jwhvn7j2gyr4abfzkjrg0j9hlma2xr-glibc-iconv-2.40:/nix/store/3ybnl9nq86s7jz0i8pzqlrabjgdxzrjz-glib-2.84.3-bin:/nix/store/y3nxdc2x8hwivppzgx5hkrhacsh87l21-glib-2.84.3:/nix/store/w0a0v3ripdb1x6hk37h9qiblc39mjma4-unixODBC-2.3.12:/nix/store/hjkci6z2cgf2c708vs0lpikmp7i5xli2-psqlodbc-17.00.0002:/nix/store/93hb4bi2p4grwws3mbf0cz8k9zd4y1yz-sqlite-connector-odbc-0.9993:/nix/store/d60f69g64f94718nmcf4kc30dyddz295-mariadb-connector-odbc-3.1.20:/nix/store/n7abw5wmqn1acq0399hzinl625r34vn8-systemd-257.6-dev:/nix/store/ymmaa926pv3f3wlgpw9y1aygdvqi1m7j-systemd-257.6:/nix/store/qr7sj7i9z4s66n99q88zm6xb2cqzqz10-util-linux-2.41-dev:/nix/store/m10ngkbjxbj0lqdq6rsyys9h2gj1f27d-util-linux-2.41-bin:/nix/store/ds99hsvy5yk9mmrra1g053rncqx7nr9z-util-linux-2.41-lib:/nix/store/856v3vkwkcdwnqqh3wf0cx79gp7hwpn7-mtdev-1.1.7:/nix/store/ykjgplyvyglqv4prarshqdxjsiszsdpf-lksctp-tools-1.0.21:/nix/store/h3rfmphr21kc4fiwbdwxpjk7waa18s9j-libselinux-3.8.1-dev:/nix/store/xj5lnv5hrh8myxbwagc11k4rhrzy2l7z-libselinux-3.8.1-bin:/nix/store/5gml2l2cj28yvyfyzblzjy1laqpxmyzd-libselinux-3.8.1:/nix/store/sn1z0cl7h2pcpakqbpdsx6jiy5n9qpb2-libsepol-3.8.1-dev:/nix/store/saa7srm8fpm7ci3wn25kh51y2piw75an-libsepol-3.8.1-bin:/nix/store/4bp15xxyi4zrd6j1aqk30prfdi94miwy-libsepol-3.8.1:/nix/store/s38laiz30qciawxn6bymqwyqmpf8s33j-lttng-ust-2.13.8-dev:/nix/store/yx2avni6agq4m3mzhmlrmypflc9famxj-liburcu-0.15.2-dev:/nix/store/nizpkpri0bcrcz7rbn94w2pkms3gjg6k-liburcu-0.15.2:/nix/store/4f8gyla5ni50677qagng4gbhgj71bgqb-lttng-ust-2.13.8-bin:/nix/store/52qxpd90xr6a9g9wn5d6dw66j52sh9zk-lttng-ust-2.13.8:/nix/store/h0c9jbqwi0mwlzxzbk59h29cqwds5irs-libthai-0.1.29-dev:/nix/store/vgk0g17bxmy0z5f6xk2d0sl36xgqxbn5-libthai-0.1.29:/nix/store/5fmckldlhbyklfmvgkcf88z2fvyhsqp4-libdrm-2.4.124-dev:/nix/store/lp1ak5dgh8fy09nrfryfsm0ayk6c0wwh-libdrm-2.4.124-bin:/nix/store/xpszkfp1gaf8jfmcsll93xg0pb4c0rk7-libdrm-2.4.124:/nix/store/4xwk3d8797mlbw4bjwj5dcr0n6sw09ch-libdatrie-2019-12-20-dev:/nix/store/kz658pyjy2glwnhgvq4vrziqirmnc5qs-libdatrie-2019-12-20-bin:/nix/store/lr67dv6pzm628cb2v3xraxz19d9iw23z-libdatrie-2019-12-20-lib:/nix/store/7vml6dcgpjwcl6izw0ny6hdhg2kgx7gp-systemd-minimal-libs-257.6-dev:/nix/store/5flwv7rri80114p8vlz7l8qf8z5i557h-systemd-minimal-libs-257.6:/nix/store/f57f52ppyksjmdvdlmxbvxp2vc29jiq4-fontconfig-2.16.0-dev:/nix/store/w9qijf113qkgqcv54ydhbjh0rlslysbr-freetype-2.13.3-dev:/nix/store/wjqj8ncgdxqpn78qp23blp5ijprpavp9-bzip2-1.0.8-dev:/nix/store/28z6bx9sg0lsr7wra22pbjsk6fzfphy4-bzip2-1.0.8-bin:/nix/store/zkvl3npcgzc1w623pj0fag0qsczd5rxq-bzip2-1.0.8:/nix/store/xdczp4bkrp2dff2apb1vbybbfmfi8f7d-brotli-1.1.0-dev:/nix/store/zb406965xij4m5f793xvrr16sjaixi00-brotli-1.1.0-lib:/nix/store/llqrkvzn5f08iwlq4xqy5av5mppgp7yp-brotli-1.1.0:/nix/store/yw429hvy80x2hg00lsfdfhkkib7gz54g-freetype-2.13.3:/nix/store/i8ls8rz7c56ipdqwkr3c1lcpr30kh77m-fontconfig-2.16.0-bin:/nix/store/nm07kfl411ig0yv61rvginj665b6c0ms-fontconfig-2.16.0-lib:/nix/store/b2aj478jxny0yvwqr6zglcmp99r3563b-libX11-1.8.12-dev:/nix/store/spg20iadf5ylh7pl1l9q8ydf7dqghdfi-xorgproto-2024.1:/nix/store/wp4nmh0byqn6w9885q10qm6v0vxq8m28-libxcb-1.17.0-dev:/nix/store/2y2hhlki6macaj9j1409q1j6i33l6igf-libxcb-1.17.0:/nix/store/1nsvsrqp5zm96r9p3rrq3yhlyw8jiy91-libX11-1.8.12:/nix/store/mg09ypmxrqknb68wfxpdjzsm0msdvhqd-libXcomposite-0.4.6-dev:/nix/store/4h7vf438jm33r6l9677dc9sm5qkv7sxd-libXfixes-6.0.1-dev:/nix/store/94grp8dx897wmf0x3azpdbgzj3krz7v5-libXfixes-6.0.1:/nix/store/4phl6z95v2i4525y0zpmi9v6ac0n4bx7-libXcomposite-0.4.6:/nix/store/4dj30iya7h9bfd9aac6vbrr2yviw1ibj-libXext-1.3.6-dev:/nix/store/0wwzn4cb4zdj2jahvyirmfx0ksg3kcz7-libXau-1.0.12-dev:/nix/store/f8kjcizw0kmpyrn1abm1nfsbc007418g-libXau-1.0.12:/nix/store/0046rn5sgi6l38zl81bg2r02zlzxqqbc-libXext-1.3.6:/nix/store/3w8gi3kxckdlf1p0dw54b5mwmzcv6zd6-libXi-1.8.2-dev:/nix/store/58dzwlbfldrsnwah1q3cfaqrx98jajpp-libXi-1.8.2:/nix/store/iywn2pwh2cmyvq12d5a9jm9xgx86i2sw-libXrender-0.9.12-dev:/nix/store/v53v67k3s16wmak41qy0q54pd7dkbcvr-libXrender-0.9.12:/nix/store/zcmp1znlrzry73kzxychljwda2lmlzj7-libxkbcommon-1.8.1-dev:/nix/store/sisfq9wihyqqjzmrpik9b4xksifw97ha-libxkbcommon-1.8.1:/nix/store/1yqy5m7sv0bnidz2wnn7caj5zgmi8y4x-xcb-util-0.4.1-dev:/nix/store/whii77m56rwk130727iv7kyycl24fjcc-xcb-util-0.4.1:/nix/store/53v26wmr5v1a5ihnlv8ghsf9czw9dwv3-xcb-util-image-0.4.1-dev:/nix/store/f616859ywjq2aaa7dywaikfk5ch6w3k2-xcb-util-image-0.4.1:/nix/store/iyd9j2c1z86d2g9pkv92bfrh5akrlg03-xcb-util-keysyms-0.4.1-dev:/nix/store/xamb3iw9a481i5rgnhgs5fhhgz1cgwak-xcb-util-keysyms-0.4.1:/nix/store/00as8mw378jja677j4mc3cmj11ncc9wv-xcb-util-renderutil-0.3.10-dev:/nix/store/3zxad3pb148bhq4zq0kb2ss7dzcsbk31-xcb-util-renderutil-0.3.10:/nix/store/863xa5n8dhxjwlr0ms05wv5ii5y9p9na-xcb-util-wm-0.4.2-dev:/nix/store/5rr3l4zpgl929cy7lawss0p273zdjkyl-xcb-util-wm-0.4.2:/nix/store/0s295h89k5vp1y968m68p24n9za7dxcf-libXdmcp-1.1.5-dev:/nix/store/ycvsz2k1zqcg48as18fcb171rzfdn5ll-libXdmcp-1.1.5:/nix/store/5npa9ai4gxj8bkz36l4crwybibm72j7i-libXtst-1.2.5:/nix/store/75sfmkjzg3y5qd2zrxw06xly6sa4qr2c-xcb-util-cursor-0.1.5-dev:/nix/store/92nrp8f5bcyxy57w30wxj5ncvygz1wnx-xcb-util-cursor-0.1.5:/nix/store/57327qk19vkl6p2pgfbqw8vch7167pcl-libepoxy-1.5.10-dev:/nix/store/p61f1q6kh1ds3wfzk3hghdh90ki10mqv-libepoxy-1.5.10:/nix/store/jrmf65p7pn32f0hxlg2qxj99s8sw2038-cups-2.4.11-dev:/nix/store/0r0mg0wd6g5ghhi93wn0kyzbdnl5xgka-gmp-with-cxx-6.3.0-dev:/nix/store/qy4zsnh13nzvq9xz5n0d57d9v4pw4i7c-gmp-with-cxx-6.3.0:/nix/store/xm2418a7fclainspb35n6h05xfsxb6vn-cups-2.4.11-lib:/nix/store/si92b84j9mqr3zshc8l78b7liq98sldc-cups-2.4.11:/nix/store/pcm23dq8n6vj89kxzykw4gq9wbh5w7b4-qtbase-6.9.1:/nix/store/ljzk99jradqd279q8f5qw4fbwqrdzpf2-qttools-6.9.1-dev:/nix/store/nlga16dy7xdz3nz2gmp8arc9ap7whir4-qtdeclarative-6.9.1-dev:/nix/store/hvhl39ag0byrb7dvys43y6dkhd5sbmn9-qtlanguageserver-6.9.1-dev:/nix/store/8m33090jqw1pydm9nfmwarkm3v7n9zqi-qtlanguageserver-6.9.1:/nix/store/pzb93xkgl8pd5j06zw9viqgx0szd6dw5-qtshadertools-6.9.1-dev:/nix/store/pvyr1cd1d1gc1m6fvc1znn1p3p4qqv9g-qtshadertools-6.9.1:/nix/store/k6j4i4vq04r7marl5cpg3j64m4l76caz-qtsvg-6.9.1-dev:/nix/store/wxp741p66xbd7lfmg75x9k77vcg48l21-qtsvg-6.9.1:/nix/store/x4xkywkgmpfgmaccxv6vb1070nm16mvy-qtdeclarative-6.9.1:/nix/store/x5jz0dmc4j76fidfskshgbim26v40685-qttools-6.9.1:/nix/store/qkkgz5r0z149pwnbvz8qdayh46d045hk-python3.12-ipykernel-6.29.5:/nix/store/ms0wwgynanl2gp8c4fycx2d7fxdkw6mv-python3.12-comm-0.2.2:/nix/store/czrqiahwxxiixzl74w10f74zvpz3y8m5-python3.12-traitlets-5.14.3:/nix/store/j51w3hs146ky0pv6isv96imzx29sk71r-python3.12-ipython-9.2.0:/nix/store/nv6z25ghscygq6jzivn705ds5ycvak5q-python3.12-decorator-5.2.1:/nix/store/r31rgw3calmin99259z86p6lg90ah322-python3.12-ipython-pygments-lexers-1.1.1:/nix/store/c2p4g8phxwmwy51wll7d1c0frw5szfbx-python3.12-jedi-0.19.2:/nix/store/97mk8lg616kk9acm15qzm90a7wzvc7i3-python3.12-parso-0.8.4:/nix/store/sq69ar98w90jp9ghy163km5i8w65pri1-python3.12-matplotlib-inline-0.1.7:/nix/store/g0ll01c75dwipwdm090am1mp2qnrqn67-python3.12-pexpect-4.9.0:/nix/store/iagbj7jd74zxjvgy74wbz9dn130axrh1-python3.12-ptyprocess-0.7.0:/nix/store/vmpcmgcnwk614p71rvbf8x5k9sn6z571-python3.12-prompt-toolkit-3.0.50:/nix/store/yjyqllvcz5s4w9h33ars9zkyj08gislg-python3.12-six-1.17.0:/nix/store/xscg3as6h8zkanp495sjq55nq2azr5ls-python3.12-wcwidth-0.2.13:/nix/store/ca5b92gwd66jh99s4khir4wprx45ps4q-python3.12-stack-data-0.6.3:/nix/store/9idxa8lwc4ly63fsp9h90pb01x39h3nm-python3.12-asttokens-3.0.0:/nix/store/07y4gvxn8a0k2yzz5pn4k9g56j41qsyq-python3.12-executing-2.2.0:/nix/store/yn2h8ycxri1gz28g5nw9xf1ckbgzb6pb-python3.12-pure-eval-0.2.3:/nix/store/ld8pfb6mln7r2jcva1rf30qxwmjzl7ya-python3.12-toml-0.10.2:/nix/store/3wb8nyhf9maqijvn121xw7bbj2dw4m9c-python3.12-jupyter-client-8.6.3:/nix/store/nx7714dykgirn35xqipcgz3s8vwlshzi-python3.12-jupyter-core-5.7.2:/nix/store/r6gnwzgamspmbxv48j1xhmb2h4kfnz4n-python3.12-platformdirs-4.3.7:/nix/store/k4qm3jlysf5crywc40d4v5w34kj5lksz-python3.12-python-dateutil-2.9.0.post0:/nix/store/yfavw5qqp0pvgdy8p50rfrp5w77zra95-python3.12-pyzmq-26.3.0:/nix/store/7vyrx0g4f5rj4059jqwc1nj6289gl8q2-python3.12-tornado-6.5.1:/nix/store/cp667py2sqhpk0lzw130fg0nzb9sxzng-python3.12-nest-asyncio-1.6.0:/nix/store/w7xfpjinkid66kbzvpghwpbpzrkbl1ik-python3.12-psutil-7.0.0:/nix/store/32spr243r89zwrrnawpxrzq5wln7wbm8-python3.12-jupyter-1.1.1:/nix/store/7c43in15dxn0ai7l9haa8ngwwkvzcxmn-python3.12-ipywidgets-8.1.5:/nix/store/w2df6m4469wqv2ivqwgaqm30rvkm4sgi-python3.12-jupyterlab-widgets-3.0.13:/nix/store/9zs0xwbz79j670h4d753078i2kvkjbyy-python3.12-widgetsnbextension-4.0.13:/nix/store/n37x1z6fj8w9d03pyppb3yjlcmhvwxn9-python3.12-jupyter-console-6.6.3:/nix/store/ph2qfa0v53nm1fd297dl889dv4dcs5h1-python3.12-jupyterlab-4.4.1:/nix/store/y8c1xr5r8da92s3nbb58373vjbl88svl-python3.12-async-lru-2.0.5:/nix/store/1skxycgsx3cpzxyrf2pm5knjscjsggzg-python3.12-httpx-0.28.1:/nix/store/lnw0s088k1cvk39v9hravpddxdqwmd9a-python3.12-anyio-4.9.0:/nix/store/ppdjjhbs1ca9j0419xncjbxqx688a1ik-python3.12-sniffio-1.3.1:/nix/store/q152izwmf9qzy8hj2p8mjv3imzbh7s9w-python3.12-typing-extensions-4.13.2:/nix/store/07a9ypxai3xzwc4g3y36f1yd9cdx7yx8-python3.12-httpcore-1.0.9:/nix/store/1a78f92ia98q5ly5wksx9vpzb4v36y4f-python3.12-h11-0.16.0:/nix/store/giisbdh9q465p7b9brvqxzn9npg7dlvj-python3.12-jupyter-lsp-2.2.5:/nix/store/njr0z1izs54hk2ic2v6qysz9nqwkgcyh-python3.12-jupyter-server-2.15.0:/nix/store/00c26srdpjx7nfyix2d6kywfgmmwpywy-python3.12-argon2-cffi-23.1.0:/nix/store/6aw2cg3kc971mgcdakxvlajjrdh19ygl-python3.12-argon2-cffi-bindings-21.2.0:/nix/store/xy880mwxql4nhdrw15r0ay1dwx3bmwrh-python3.12-cffi-1.17.1:/nix/store/063crngv576j033cwhz2s4xn8345df1b-python3.12-pycparser-2.22:/nix/store/1nhsjrsdh41ps26x6n990nkay55xzhri-python3.12-jupyter-events-0.11.0:/nix/store/xjli5d0sm0i0pr9s2qld9k9nqiq8jx7a-python3.12-jsonschema-4.23.0:/nix/store/wddbpvwf533jwv3qix0qiib8bvg4xf45-python3.12-attrs-25.3.0:/nix/store/1bfcy63rpa2nv7mnnc81spsmps74nn95-python3.12-jsonschema-specifications-2024.10.1:/nix/store/acdlkgxypwamfkp6hvw1c05n0ffvm2kw-python3.12-referencing-0.36.2:/nix/store/gjrv4hpcqz60jsppp4hn8hx99qm23vnk-python3.12-rpds-py-0.24.0:/nix/store/jbfq90qbbixrh2wh7cjm0pzdn310f41p-python3.12-python-json-logger-3.2.1:/nix/store/nvzz66421j2a6icv4i2ayn1pqyngjwah-python3.12-pyyaml-6.0.2:/nix/store/0qzi756n8kvvwln7xy88xx4bk18ym8z6-python3.12-rfc3339-validator-0.1.4:/nix/store/bq2ag92ij9zkyrpg1chdag5q9wfid1sm-python3.12-rfc3986-validator-0.1.1:/nix/store/8fw324cfphmp01920hpxwx2kcgds5rsf-python3.12-fqdn-1.5.1:/nix/store/v15f6hy2rc050dfk9nddwh3wb6q136sp-python3.12-isoduration-20.11.0:/nix/store/fpz17zcqdfkbxg2s9szpqi1sfgxaxvrk-python3.12-arrow-1.3.0:/nix/store/2bwqcs4xyzqw8fy6h19h5z12vvlq6w3k-python3.12-types-python-dateutil-2.9.0.20241206:/nix/store/isgf3m8dacfhkv97x6i5vd9v0dxci0lb-python3.12-jsonpointer-3.0.0:/nix/store/23a1ifw64lifpnr84m7xain0g1xf47vp-python3.12-uri-template-1.3.0:/nix/store/3bz1fq3qws8gisccyys1d17yiv5jpiw8-python3.12-webcolors-24.11.1:/nix/store/a4cwp0n8sl56x1c7dvmn95zxm9b1c8xs-python3.12-jupyter-server-terminals-0.5.3:/nix/store/7dji3jksiikkiybrz7sbb2ay203i2p1b-python3.12-terminado-0.18.1:/nix/store/dgkx3mknpnixam3wjbgfllz4dldh3540-python3.12-nbformat-5.10.4:/nix/store/44zcqfkfpvg0d0g1h2j2q40xyd664q6x-python3.12-fastjsonschema-2.21.1:/nix/store/fkgj9pqb5qjvlkykvzdqbs3s21l0p2bb-python3.12-nbconvert-7.16.6:/nix/store/7s9p6ksldfpjk44ha4d0hkcfgjfihvwk-python3.12-beautifulsoup4-4.12.3:/nix/store/01i7b0l1jgzkwzi6pjaf1fzslb8h6j3d-python3.12-chardet-5.2.0:/nix/store/sd7j5a80idvl564g55kq7ylznv4hsy74-python3.12-soupsieve-2.6:/nix/store/4sqwi99a9hz90m0kjslwn6nq2v9lkh52-python3.12-bleach-6.2.0:/nix/store/8fhjrvfrr99idfk16wgbkzqj0z0361v4-python3.12-html5lib-1.1:/nix/store/q7xlyki1r05ym96lw204hhk9sr2zwdfs-python3.12-webencodings-0.5.1:/nix/store/2d3prlfhjwacbqm4y3my8mvdrs2anbnq-python3.12-setuptools-78.1.0:/nix/store/pdr1w5nhp8nlf4y1jy6ngsvn5yvwkfmk-python3.12-defusedxml-0.8.0rc2:/nix/store/qag087rsjgikfj1a4mfqrmny8k9389wy-python3.12-jupyterlab-pygments-0.3.0:/nix/store/y7kzbaf1bmaxg08ij3x9550jipdg17m5-python3.12-mistune-3.1.2:/nix/store/v82a7zyam3hill1chvhzj04akf6nm6sm-python3.12-nbclient-0.10.2:/nix/store/vk74kcsly0mda6hir54gcnw4w7vqha3x-python3.12-pandocfilters-1.5.1:/nix/store/61f01rsphws89cxchyyw89500bwv52vj-python3.12-tinycss2-1.4.0:/nix/store/kp9a1izahlwm9bp9rwa4da9v5rm3rly9-python3.12-send2trash-1.8.3:/nix/store/z7k07ghr8xykfy2ms353sdgk7kr0k42h-python3.12-prometheus-client-0.21.1:/nix/store/26d8g75zns41mqk5njik22zwq2jcrska-python3.12-websocket-client-1.8.0:/nix/store/4lfisgmf87g5i2r6aa5xamzvyjvnn0d2-python3.12-overrides-7.7.0:/nix/store/p0n3rl23hx3qfb77rc1w5592zl0xfrzr-python3.12-jupyterlab-server-2.27.3:/nix/store/66z062jczirzhdl4rpzf8blrqpi8bn7j-python3.12-json5-0.10.0:/nix/store/nr9x5ipvsdijav8nqckkma0gvaj57d4z-python3.12-notebook-shim-0.2.4:/nix/store/vwaj7qjspl03bvagmja2zswydaj8gi8p-python3.12-notebook-7.4.1:/nix/store/ysz568vfldxlf24bdmxn0v7zshvf9804-python3.12-matplotlib-3.10.1:/nix/store/kvnvq1pczf1m8p8vp3xm4y6lmry65apg-python3.12-contourpy-1.3.1:/nix/store/vjrxh9d2iwzb2njsdybq0y9cg87bnpxn-python3.12-numpy-2.2.5:/nix/store/prd5x4nfdvwj1z7lxy6j1bpvw0yf0bpx-python3.12-cycler-0.12.1:/nix/store/92psnf2rzd4x10j95j696v08gsjzamy2-python3.12-fonttools-4.56.0:/nix/store/4nx3gwjq5vw6q4hvsb3gfv0pb7g9i7zl-python3.12-kiwisolver-1.4.8:/nix/store/nardq58rbj3kxasq3fflgv6dy94nbl42-python3.12-pillow-11.2.1:/nix/store/61bydncj9m9k1h8jmgx5bi0smw1gk7sy-python3.12-pyparsing-3.2.3:/nix/store/izkldz9a5b7kbdlgfm1n7zrmmp6ihs1m-python3.12-tkinter-3.12.11:/nix/store/ky9srnyb1q7kjnh7cqd1ny4w849fc9f2-python3.12-plotly-5.24.1:/nix/store/lskml5zq4kjfdbf7i4aczw4rqhbrvj9x-python3.12-tenacity-9.0.0:/nix/store/kn7qavpm13s6sx7qa7lc15yidanckzll-python3.12-kaleido-0.2.1:/nix/store/mvfl8sbrx0mwk3w6a0m4k7i7m15pr7dn-python3.12-pandas-2.2.3:/nix/store/vqpjh9b21bxgjh4z1hxhd1f75h4vh7fk-python3.12-pytz-2025.2:/nix/store/vb6ni45a87mxrj7v5jygxwbg1794z07s-python3.12-tzdata-2025.2:/nix/store/6mm715369j7msb302057v2cmlph7qx2g-python3.12-seaborn-0.13.2:/nix/store/0flj33q30lmzdjagwjqh964qmiyklww2-patchelf-0.15.0:/nix/store/y0mnc83lrdgll8bg6qll7lcbkhrr7b84-update-autotools-gnu-config-scripts-hook:/nix/store/a0d7m3zn9p2dfa1h7ag9h2wzzr2w25sn-gcc-wrapper-14.2.1.20250322:/nix/store/2gkh9v7wrzjq6ws312c6z6ajwnjvwcmb-binutils-wrapper-2.44'
+export QT_ADDITIONAL_PACKAGES_PREFIX_PATH
+RANLIB='ranlib'
+export RANLIB
+READELF='readelf'
+export READELF
+SHELL='/nix/store/ih68ar79msmj0496pgld4r3vqfr7bbin-bash-5.2p37/bin/bash'
+export SHELL
+SIZE='size'
+export SIZE
+SOURCE_DATE_EPOCH='315532800'
+export SOURCE_DATE_EPOCH
+STRINGS='strings'
+export STRINGS
+STRIP='strip'
+export STRIP
+XDG_DATA_DIRS='/nix/store/smaydcvrcaz906653vbnps70y9j7w658-git-2.49.0/share:/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11/share:/nix/store/wf1vkvsdfvf239la9h54g4xnqvqhf7yb-tcpdump-4.99.5/share:/nix/store/gkszdicyy88yymy5ji9702707lvxhp7g-wireshark-qt-4.4.7/share:/nix/store/jgm4h8svmb2wm618rz76wv3xahk7as4f-doxygen-1.13.2/share:/nix/store/f77jp5x42zj34d4q5c38697zsmrjhd70-dia-unstable-2023-09-28/share:/nix/store/0g09282c6amly6biazhh7rhz3xa2k3q8-texlive-2024-env/share:/nix/store/71k400gj4lhrjl47898shv9gkjh04b36-graphviz-12.2.1/share:/nix/store/wkg70x83zky4l3l2hmarggq11jj8pgkv-libxml2-2.13.8-dev/share:/nix/store/ysn1f98vdc2sxjkgvkmgpqy1ih7n0g56-libxml2-2.13.8-bin/share:/nix/store/8y5ai2bi4s96nqb3bwphxnrlgwscir3c-libxml2-2.13.8/share:/nix/store/z8rwxyq3233ra0c81cb9yh5igljph7g7-libxslt-1.1.43-bin/share:/nix/store/jl19fdc7gdxqz9a1s368r9d15vpirnqy-zlib-1.3.1/share:/nix/store/zyj3yixsd4vjgbz8nsp5z9yfv6fhnw3d-vulkan-headers-1.4.313.0/share:/nix/store/yfrv3rw3w96wxvgfga55dpb291v2x7cl-harfbuzz-10.2.0-dev/share:/nix/store/dll7gaqkvw597jim01q7rpbsx2dzhsr0-graphite2-1.3.14/share:/nix/store/y2jwi4a4pgmavi994lfdvc6nj45nxi4f-icu4c-76.1-dev/share:/nix/store/sk67m13n9jbk0j8q3h8lzxyw5riah1km-icu4c-76.1/share:/nix/store/wbv7b4dc17n1azxan5m5mm07fifai44a-zstd-1.5.7/share:/nix/store/z4iv8z25l4jklbk6wq5r0vx6pjvs6hm7-libproxy-0.5.9-dev/share:/nix/store/b2rdhxhwanlfqqgqsvirpia0i8w42hpz-libproxy-0.5.9/share:/nix/store/bd7z19f32ww73wlrkpqdcma7ra67hs82-expat-2.7.1-dev/share:/nix/store/l0d83xf43lsyhzqziy0am1cidhkcxs9q-expat-2.7.1/share:/nix/store/zbydgvn9gypb3vg88mzydn88ky6cibaz-dbus-1.14.10/share:/nix/store/y0n9h3hcv2wfp2rv03ii862lhycx5wij-glib-2.84.3-dev/share:/nix/store/flpfkdzbac7071xlydh8f4qqq6dvnzx9-gettext-0.22.5/share:/nix/store/3ybnl9nq86s7jz0i8pzqlrabjgdxzrjz-glib-2.84.3-bin/share:/nix/store/y3nxdc2x8hwivppzgx5hkrhacsh87l21-glib-2.84.3/share:/nix/store/w0a0v3ripdb1x6hk37h9qiblc39mjma4-unixODBC-2.3.12/share:/nix/store/n7abw5wmqn1acq0399hzinl625r34vn8-systemd-257.6-dev/share:/nix/store/ymmaa926pv3f3wlgpw9y1aygdvqi1m7j-systemd-257.6/share:/nix/store/m10ngkbjxbj0lqdq6rsyys9h2gj1f27d-util-linux-2.41-bin/share:/nix/store/ds99hsvy5yk9mmrra1g053rncqx7nr9z-util-linux-2.41-lib/share:/nix/store/ykjgplyvyglqv4prarshqdxjsiszsdpf-lksctp-tools-1.0.21/share:/nix/store/4f8gyla5ni50677qagng4gbhgj71bgqb-lttng-ust-2.13.8-bin/share:/nix/store/52qxpd90xr6a9g9wn5d6dw66j52sh9zk-lttng-ust-2.13.8/share:/nix/store/vgk0g17bxmy0z5f6xk2d0sl36xgqxbn5-libthai-0.1.29/share:/nix/store/lp1ak5dgh8fy09nrfryfsm0ayk6c0wwh-libdrm-2.4.124-bin/share:/nix/store/xpszkfp1gaf8jfmcsll93xg0pb4c0rk7-libdrm-2.4.124/share:/nix/store/kz658pyjy2glwnhgvq4vrziqirmnc5qs-libdatrie-2019-12-20-bin/share:/nix/store/7vml6dcgpjwcl6izw0ny6hdhg2kgx7gp-systemd-minimal-libs-257.6-dev/share:/nix/store/w9qijf113qkgqcv54ydhbjh0rlslysbr-freetype-2.13.3-dev/share:/nix/store/llqrkvzn5f08iwlq4xqy5av5mppgp7yp-brotli-1.1.0/share:/nix/store/yw429hvy80x2hg00lsfdfhkkib7gz54g-freetype-2.13.3/share:/nix/store/i8ls8rz7c56ipdqwkr3c1lcpr30kh77m-fontconfig-2.16.0-bin/share:/nix/store/nm07kfl411ig0yv61rvginj665b6c0ms-fontconfig-2.16.0-lib/share:/nix/store/spg20iadf5ylh7pl1l9q8ydf7dqghdfi-xorgproto-2024.1/share:/nix/store/1nsvsrqp5zm96r9p3rrq3yhlyw8jiy91-libX11-1.8.12/share:/nix/store/94grp8dx897wmf0x3azpdbgzj3krz7v5-libXfixes-6.0.1/share:/nix/store/4phl6z95v2i4525y0zpmi9v6ac0n4bx7-libXcomposite-0.4.6/share:/nix/store/f8kjcizw0kmpyrn1abm1nfsbc007418g-libXau-1.0.12/share:/nix/store/sisfq9wihyqqjzmrpik9b4xksifw97ha-libxkbcommon-1.8.1/share:/nix/store/5npa9ai4gxj8bkz36l4crwybibm72j7i-libXtst-1.2.5/share:/nix/store/xm2418a7fclainspb35n6h05xfsxb6vn-cups-2.4.11-lib/share:/nix/store/si92b84j9mqr3zshc8l78b7liq98sldc-cups-2.4.11/share:/nix/store/pcm23dq8n6vj89kxzykw4gq9wbh5w7b4-qtbase-6.9.1/share:/nix/store/qkkgz5r0z149pwnbvz8qdayh46d045hk-python3.12-ipykernel-6.29.5/share:/nix/store/j51w3hs146ky0pv6isv96imzx29sk71r-python3.12-ipython-9.2.0/share:/nix/store/w2df6m4469wqv2ivqwgaqm30rvkm4sgi-python3.12-jupyterlab-widgets-3.0.13/share:/nix/store/9zs0xwbz79j670h4d753078i2kvkjbyy-python3.12-widgetsnbextension-4.0.13/share:/nix/store/ph2qfa0v53nm1fd297dl889dv4dcs5h1-python3.12-jupyterlab-4.4.1/share:/nix/store/fkgj9pqb5qjvlkykvzdqbs3s21l0p2bb-python3.12-nbconvert-7.16.6/share:/nix/store/qag087rsjgikfj1a4mfqrmny8k9389wy-python3.12-jupyterlab-pygments-0.3.0/share:/nix/store/vwaj7qjspl03bvagmja2zswydaj8gi8p-python3.12-notebook-7.4.1/share:/nix/store/92psnf2rzd4x10j95j696v08gsjzamy2-python3.12-fonttools-4.56.0/share:/nix/store/0flj33q30lmzdjagwjqh964qmiyklww2-patchelf-0.15.0/share'
+export XDG_DATA_DIRS
+XML_CATALOG_FILES='  /nix/store/zbydgvn9gypb3vg88mzydn88ky6cibaz-dbus-1.14.10/share/xml/dbus-1/catalog.xml /nix/store/zbydgvn9gypb3vg88mzydn88ky6cibaz-dbus-1.14.10/share/xml/dbus-1/catalog.xml /nix/store/zbydgvn9gypb3vg88mzydn88ky6cibaz-dbus-1.14.10/share/xml/dbus-1/catalog.xml'
+export XML_CATALOG_FILES
+_PYTHON_HOST_PLATFORM='linux-x86_64'
+export _PYTHON_HOST_PLATFORM
+_PYTHON_SYSCONFIGDATA_NAME='_sysconfigdata__linux_x86_64-linux-gnu'
+export _PYTHON_SYSCONFIGDATA_NAME
+__nix_qtbase='/nix/store/pcm23dq8n6vj89kxzykw4gq9wbh5w7b4-qtbase-6.9.1'
+__structuredAttrs=''
+export __structuredAttrs
+_substituteStream_has_warned_replace_deprecation='false'
+buildInputs=''
+export buildInputs
+buildPhase='{ echo "------------------------------------------------------------";
+  echo " WARNING: the existence of this path is not guaranteed.";
+  echo " It is an internal implementation detail for pkgs.mkShell.";
+  echo "------------------------------------------------------------";
+  echo;
+  # Record all build inputs as runtime dependencies
+  export;
+} >> "$out"
+'
+export buildPhase
+builder='/nix/store/ih68ar79msmj0496pgld4r3vqfr7bbin-bash-5.2p37/bin/bash'
+export builder
+cmakeFlags=' -DQT_OPTIONAL_TOOLS_PATH=/nix/store/x5jz0dmc4j76fidfskshgbim26v40685-qttools-6.9.1 -DQT_OPTIONAL_TOOLS_PATH=/nix/store/x5jz0dmc4j76fidfskshgbim26v40685-qttools-6.9.1 -DQT_OPTIONAL_TOOLS_PATH=/nix/store/x5jz0dmc4j76fidfskshgbim26v40685-qttools-6.9.1'
+export cmakeFlags
+configureFlags=''
+export configureFlags
+defaultBuildInputs=''
+defaultNativeBuildInputs='/nix/store/0flj33q30lmzdjagwjqh964qmiyklww2-patchelf-0.15.0 /nix/store/y0mnc83lrdgll8bg6qll7lcbkhrr7b84-update-autotools-gnu-config-scripts-hook /nix/store/jjhw2phnaip4kg0qjas3x3fsaifi8y0w-no-broken-symlinks.sh /nix/store/h9lc1dpi14z7is86ffhl3ld569138595-audit-tmpdir.sh /nix/store/m54bmrhj6fqz8nds5zcj97w9s9bckc9v-compress-man-pages.sh /nix/store/wgrbkkaldkrlrni33ccvm3b6vbxzb656-make-symlinks-relative.sh /nix/store/5yzw0vhkyszf2d179m0qfkgxmp5wjjx4-move-docs.sh /nix/store/fyaryjvghbkpfnsyw97hb3lyb37s1pd6-move-lib64.sh /nix/store/kd4xwxjpjxi71jkm6ka0np72if9rm3y0-move-sbin.sh /nix/store/pag6l61paj1dc9sv15l7bm5c17xn5kyk-move-systemd-user-units.sh /nix/store/cmzya9irvxzlkh7lfy6i82gbp0saxqj3-multiple-outputs.sh /nix/store/hxv896faph0rqxjq2ycxpcrbnngc95sz-patch-shebangs.sh /nix/store/cickvswrvann041nqxb0rxilc46svw1n-prune-libtool-files.sh /nix/store/xyff06pkhki3qy1ls77w10s0v79c9il0-reproducible-builds.sh /nix/store/z7k98578dfzi6l3hsvbivzm7hfqlk0zc-set-source-date-epoch-to-latest.sh /nix/store/pilsssjjdxvdphlg2h19p0bfx5q0jzkn-strip.sh /nix/store/a0d7m3zn9p2dfa1h7ag9h2wzzr2w25sn-gcc-wrapper-14.2.1.20250322'
+depsBuildBuild=''
+export depsBuildBuild
+depsBuildBuildPropagated=''
+export depsBuildBuildPropagated
+depsBuildTarget=''
+export depsBuildTarget
+depsBuildTargetPropagated=''
+export depsBuildTargetPropagated
+depsHostHost=''
+export depsHostHost
+depsHostHostPropagated=''
+export depsHostHostPropagated
+depsTargetTarget=''
+export depsTargetTarget
+depsTargetTargetPropagated=''
+export depsTargetTargetPropagated
+doCheck=''
+export doCheck
+doInstallCheck=''
+export doInstallCheck
+dontAddDisableDepTrack='1'
+export dontAddDisableDepTrack
+declare -a envBuildBuildHooks=('addPythonPath' 'sysconfigdataHook' 'qtToolsHook' 'addQtModulePrefix' 'addXMLCatalogs' 'gettextDataDirsHook' )
+declare -a envBuildHostHooks=('addPythonPath' 'sysconfigdataHook' 'qmakePathHook' 'qtToolsHook' 'addQtModulePrefix' 'addXMLCatalogs' 'gettextDataDirsHook' )
+declare -a envBuildTargetHooks=('addPythonPath' 'sysconfigdataHook' 'qtToolsHook' 'addQtModulePrefix' 'addXMLCatalogs' 'gettextDataDirsHook' )
+declare -a envHostHostHooks=('make_glib_find_gsettings_schemas' 'ccWrapper_addCVars' 'bintoolsWrapper_addLDVars' )
+declare -a envHostTargetHooks=('make_glib_find_gsettings_schemas' 'ccWrapper_addCVars' 'bintoolsWrapper_addLDVars' )
+declare -a envTargetTargetHooks=()
+declare -a fixupOutputHooks=('if [ -z "${dontPatchELF-}" ]; then patchELF "$prefix"; fi' 'if [[ -z "${noAuditTmpdir-}" && -e "$prefix" ]]; then auditTmpdir "$prefix"; fi' 'if [ -z "${dontGzipMan-}" ]; then compressManPages "$prefix"; fi' '_moveLib64' '_moveSbin' '_moveSystemdUserUnits' 'patchShebangsAuto' '_pruneLibtoolFiles' '_doStrip' )
+guess='12'
+initialPath='/nix/store/mp7ba85zcqdj2sqwa29pql02s6nqpcxy-coreutils-9.7 /nix/store/7fjnb79r7p38piiyn5xwgcj5w7fpfi02-findutils-4.10.0 /nix/store/1pi99mlqimxmqm1jvllbcaj8v16w2nbv-diffutils-3.12 /nix/store/x23s7lcvhf18zz3rj543680jgrj71vil-gnused-4.9 /nix/store/8b4vn1iyn6kqiisjvlmv67d1c0p3j6wj-gnugrep-3.11 /nix/store/n8825s8qprf8p70m0hq6pz7rvlnsxdjm-gawk-5.3.2 /nix/store/7nilh5hvnfbsx3vn020pkjkgx9rgsizb-gnutar-1.35 /nix/store/gqpd9ax2s6jjf7mjyv1q7bwbsycyaxic-gzip-1.14 /nix/store/28z6bx9sg0lsr7wra22pbjsk6fzfphy4-bzip2-1.0.8-bin /nix/store/8dl5ryfna3hjqhvnkw7srm6wnka6agxl-gnumake-4.4.1 /nix/store/ih68ar79msmj0496pgld4r3vqfr7bbin-bash-5.2p37 /nix/store/kc8h52p4dfgajrg3qlgx246hl0znr213-patch-2.7.6 /nix/store/cmv326slnswzsjm2sqgbz16hzzqvkfjy-xz-5.8.1-bin /nix/store/v5skl3bspzhm2y13vcxcrw8w29g6phi0-file-5.45'
+libxmlHookDone='1'
+mesonFlags=''
+export mesonFlags
+name='nix-shell-env'
+export name
+nativeBuildInputs='/nix/store/smaydcvrcaz906653vbnps70y9j7w658-git-2.49.0 /nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11 /nix/store/wf1vkvsdfvf239la9h54g4xnqvqhf7yb-tcpdump-4.99.5 /nix/store/74s0y3d6qjkfii4jpifjbkp2hrf7pr10-wireshark-qt-4.4.7-dev /nix/store/jgm4h8svmb2wm618rz76wv3xahk7as4f-doxygen-1.13.2 /nix/store/f77jp5x42zj34d4q5c38697zsmrjhd70-dia-unstable-2023-09-28 /nix/store/0g09282c6amly6biazhh7rhz3xa2k3q8-texlive-2024-env /nix/store/2ggmrindi1bswshhn4adkhhi5cdnzrxh-python3.12-sphinx-8.2.3 /nix/store/71k400gj4lhrjl47898shv9gkjh04b36-graphviz-12.2.1 /nix/store/8cdqj8xlvpl25rqq5fyfvn6s7zzay3pw-qtbase-6.9.1-dev /nix/store/ljzk99jradqd279q8f5qw4fbwqrdzpf2-qttools-6.9.1-dev /nix/store/qkkgz5r0z149pwnbvz8qdayh46d045hk-python3.12-ipykernel-6.29.5 /nix/store/32spr243r89zwrrnawpxrzq5wln7wbm8-python3.12-jupyter-1.1.1 /nix/store/ph2qfa0v53nm1fd297dl889dv4dcs5h1-python3.12-jupyterlab-4.4.1 /nix/store/vwaj7qjspl03bvagmja2zswydaj8gi8p-python3.12-notebook-7.4.1 /nix/store/ysz568vfldxlf24bdmxn0v7zshvf9804-python3.12-matplotlib-3.10.1 /nix/store/ky9srnyb1q7kjnh7cqd1ny4w849fc9f2-python3.12-plotly-5.24.1 /nix/store/7c43in15dxn0ai7l9haa8ngwwkvzcxmn-python3.12-ipywidgets-8.1.5 /nix/store/mvfl8sbrx0mwk3w6a0m4k7i7m15pr7dn-python3.12-pandas-2.2.3 /nix/store/6mm715369j7msb302057v2cmlph7qx2g-python3.12-seaborn-0.13.2'
+export nativeBuildInputs
+out='/home/tomoya/workspace/analysis/outputs/out'
+export out
+outputBin='out'
+outputDev='out'
+outputDevdoc='REMOVE'
+outputDevman='out'
+outputDoc='out'
+outputInclude='out'
+outputInfo='out'
+outputLib='out'
+outputMan='out'
+outputs='out'
+export outputs
+patches=''
+export patches
+phases='buildPhase'
+export phases
+pkg='/nix/store/a0d7m3zn9p2dfa1h7ag9h2wzzr2w25sn-gcc-wrapper-14.2.1.20250322'
+declare -a pkgsBuildBuild=()
+declare -a pkgsBuildHost=('/nix/store/smaydcvrcaz906653vbnps70y9j7w658-git-2.49.0' '/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11' '/nix/store/wf1vkvsdfvf239la9h54g4xnqvqhf7yb-tcpdump-4.99.5' '/nix/store/74s0y3d6qjkfii4jpifjbkp2hrf7pr10-wireshark-qt-4.4.7-dev' '/nix/store/gkszdicyy88yymy5ji9702707lvxhp7g-wireshark-qt-4.4.7' '/nix/store/jgm4h8svmb2wm618rz76wv3xahk7as4f-doxygen-1.13.2' '/nix/store/f77jp5x42zj34d4q5c38697zsmrjhd70-dia-unstable-2023-09-28' '/nix/store/0g09282c6amly6biazhh7rhz3xa2k3q8-texlive-2024-env' '/nix/store/2ggmrindi1bswshhn4adkhhi5cdnzrxh-python3.12-sphinx-8.2.3' '/nix/store/81mnzv0h3m7qxs60r722xm6kbw5l2d5b-python3.12-alabaster-1.0.0' '/nix/store/a906siib3gg1v9r8c7fszrmwjfcafs2n-python3.12-babel-2.17.0' '/nix/store/8wqqx7cbxkj0m3n4p9n5jhwcaasi6hvi-python3.12-docutils-0.21.2' '/nix/store/6rqcf8hv5wwqf74n5yavi1jjlz9qy445-python3.12-imagesize-1.4.1' '/nix/store/qzicnwci4dpqzykmlf91yvchhhbq968s-python3.12-jinja2-3.1.6' '/nix/store/rx8n7pmsl4w4nv04dr1akili227jlz9m-python3.12-markupsafe-3.0.2' '/nix/store/hx4azv435qg3bx6286rphd3n910c35pg-python3.12-packaging-24.2' '/nix/store/xa8vcbz8133h9gmsl2x401kacdyrcc6j-python3.12-pygments-2.19.1' '/nix/store/70rlqanx1dv5rqidf0jc9dmii8dq2a2m-python3.12-requests-2.32.3' '/nix/store/w9gmvrb8km8fp7dsgdzfvy6zwwdv1j0c-python3.12-certifi-2025.01.31' '/nix/store/g9zij81hja8bs0s5i7ni60y7k90h113s-python3.12-charset-normalizer-3.4.1' '/nix/store/7bj5g2x9bfp4fv73sprg039pc7h7zcbm-python3.12-idna-3.10' '/nix/store/19rbfa56zl9baks43nwdsggmz0a4jg1a-python3.12-urllib3-2.3.0' '/nix/store/s7d15z67bjqii4s5pd226nvj56mix0rz-python3.12-roman-numerals-py-3.1.0' '/nix/store/h4yvw4knj7wsghdn4yz7hpxy9x9fbjd5-python3.12-snowballstemmer-2.2.0' '/nix/store/bsxrp4v3nh7pfy2j9bzywmzvinxwyzby-python3.12-pystemmer-2.2.0.1' '/nix/store/0dhgrwvyx0spy8256sir5m2dkbmhvr4z-python3.12-sphinxcontrib-applehelp-2.0.0' '/nix/store/n7q2p5a4f1shiz5szb3zf8mhg2bkbgmn-python3.12-sphinxcontrib-devhelp-2.0.0' '/nix/store/xhi725m883jwry8ifkp2ilkl0xy64q6m-python3.12-sphinxcontrib-htmlhelp-2.1.0' '/nix/store/i6ck04ari3rdn1g0yv0igl3lnvfyf73p-python3.12-sphinxcontrib-jsmath-1.0.1' '/nix/store/3jy6sfb655sa9vm2w767h4m2v78ydgjh-python3.12-sphinxcontrib-qthelp-2.0.0' '/nix/store/wf3dym6h0cyk6qxcfpjsbzqc3la0zpvj-python3.12-sphinxcontrib-serializinghtml-2.0.0' '/nix/store/r0qbdfnvm384fff52xkdkzxiyqqyswi1-python3.12-sphinxcontrib-websupport-2.0.0' '/nix/store/71k400gj4lhrjl47898shv9gkjh04b36-graphviz-12.2.1' '/nix/store/8cdqj8xlvpl25rqq5fyfvn6s7zzay3pw-qtbase-6.9.1-dev' '/nix/store/wkg70x83zky4l3l2hmarggq11jj8pgkv-libxml2-2.13.8-dev' '/nix/store/asi29hlr0p4jh6xfbk23ppfbs1v30sa2-find-xml-catalogs-hook' '/nix/store/ysn1f98vdc2sxjkgvkmgpqy1ih7n0g56-libxml2-2.13.8-bin' '/nix/store/8y5ai2bi4s96nqb3bwphxnrlgwscir3c-libxml2-2.13.8' '/nix/store/fkm8g9p5dp4kjxiy178qc834b0dwjfb1-libxslt-1.1.43-dev' '/nix/store/z8rwxyq3233ra0c81cb9yh5igljph7g7-libxslt-1.1.43-bin' '/nix/store/z8s46c3fm5mdbhi8fgw1md1hn6c3l9ik-libxslt-1.1.43' '/nix/store/0225zs9jl9s2y3ai1arbg0h9z7z4bmfi-openssl-3.4.1-dev' '/nix/store/gzlgwyd3n4r17yyx7hrrlpkmplqianbl-openssl-3.4.1-bin' '/nix/store/5xmcl9wr18g6ym3dh3363hv8hp6jyxqd-openssl-3.4.1' '/nix/store/k6gi198r2cjjk70dnr1dwibgzf8gjbm2-sqlite-3.48.0-dev' '/nix/store/6fx90jjjc3f18635y8cz2qy98y2h59cm-sqlite-3.48.0-bin' '/nix/store/lc8ni1p2b6lljpb9sbx1v7yhjpv60pl3-sqlite-3.48.0' '/nix/store/rxd3kdsc7k72198g58wk0qp3xdip5x5d-zlib-1.3.1-dev' '/nix/store/jl19fdc7gdxqz9a1s368r9d15vpirnqy-zlib-1.3.1' '/nix/store/akn28bf4vh2q3p2czwkm37acmf33bvgd-libglvnd-1.7.0-dev' '/nix/store/7227amwg7k4sbl6mhglq17v5x5ki54ks-libglvnd-1.7.0' '/nix/store/zyj3yixsd4vjgbz8nsp5z9yfv6fhnw3d-vulkan-headers-1.4.313.0' '/nix/store/9ish1z2fqsgfdi13vqrj1zaq0clpmgf3-vulkan-loader-1.4.313.0-dev' '/nix/store/ams45f9lnsmp6s3b8j5fjvd7csm558yk-vulkan-loader-1.4.313.0' '/nix/store/yfrv3rw3w96wxvgfga55dpb291v2x7cl-harfbuzz-10.2.0-dev' '/nix/store/7gpii8a6znikgs6q39gfh8007m081zpd-graphite2-1.3.14-dev' '/nix/store/dll7gaqkvw597jim01q7rpbsx2dzhsr0-graphite2-1.3.14' '/nix/store/90qal753blhl7mrwzs2k8b00zby9r9xr-harfbuzz-10.2.0' '/nix/store/y2jwi4a4pgmavi994lfdvc6nj45nxi4f-icu4c-76.1-dev' '/nix/store/sk67m13n9jbk0j8q3h8lzxyw5riah1km-icu4c-76.1' '/nix/store/b6y8k7i7bgkld9bgjjnsv5bqf2anq7yk-libjpeg-turbo-3.0.4-dev' '/nix/store/lrrj9h7h1ifbdv82rrbddxracm5jjxwx-libjpeg-turbo-3.0.4-bin' '/nix/store/yvdmi1gvqjjil5ihka8qs9wrr92gns9j-libjpeg-turbo-3.0.4' '/nix/store/i2c4lj0hirk7i27xgib08zy0rdrkfi70-libpng-apng-1.6.46-dev' '/nix/store/4i49f869yc93c77m0y1lmpnvlzip5pgr-libpng-apng-1.6.46' '/nix/store/5b3lilf2rmzgbkgw53r0bzhzgn6v4qrr-pcre2-10.44-dev' '/nix/store/gwys5lcxsyjja9q6pm167wpvw5f58w6n-pcre2-10.44-bin' '/nix/store/vvp8hlss3d5q6hn0cifq04jrpnp6bini-pcre2-10.44' '/nix/store/mijswdfwx4yvqpfrxg6c0cs228w9v7ll-zstd-1.5.7-dev' '/nix/store/ddap6dm3fjdm0zmw4m3rls73a0gml3xd-zstd-1.5.7-bin' '/nix/store/wbv7b4dc17n1azxan5m5mm07fifai44a-zstd-1.5.7' '/nix/store/508aj2m7l24p200w67m5zyv0cgy70c76-libb2-0.98.1' '/nix/store/gfgzwp641q0y94fd6yfjd492bmvqmaif-md4c-0.5.2-dev' '/nix/store/7v1m3j9kkhikzvclv2065vh7agcnpap2-md4c-0.5.2-lib' '/nix/store/9kcbmgs8fs15x675msaz6f63fnnzyc0v-md4c-0.5.2' '/nix/store/x5zwzk8lpwvam3vninpdar8hr6qvaww3-double-conversion-3.3.1' '/nix/store/z4iv8z25l4jklbk6wq5r0vx6pjvs6hm7-libproxy-0.5.9-dev' '/nix/store/b2rdhxhwanlfqqgqsvirpia0i8w42hpz-libproxy-0.5.9' '/nix/store/q8bx93bxxvbk89f58wi60wnqqnyj3lw9-dbus-1.14.10-dev' '/nix/store/bd7z19f32ww73wlrkpqdcma7ra67hs82-expat-2.7.1-dev' '/nix/store/l0d83xf43lsyhzqziy0am1cidhkcxs9q-expat-2.7.1' '/nix/store/231d6mmkylzr80pf30dbywa9x9aryjgy-dbus-1.14.10-lib' '/nix/store/zbydgvn9gypb3vg88mzydn88ky6cibaz-dbus-1.14.10' '/nix/store/y0n9h3hcv2wfp2rv03ii862lhycx5wij-glib-2.84.3-dev' '/nix/store/psi78zvlzrali45b76kimqvbxyklxwb7-libffi-3.4.8-dev' '/nix/store/rnn29mhynsa4ncmk0fkcrdr29n0j20l4-libffi-3.4.8' '/nix/store/flpfkdzbac7071xlydh8f4qqq6dvnzx9-gettext-0.22.5' '/nix/store/s5jwhvn7j2gyr4abfzkjrg0j9hlma2xr-glibc-iconv-2.40' '/nix/store/3ybnl9nq86s7jz0i8pzqlrabjgdxzrjz-glib-2.84.3-bin' '/nix/store/y3nxdc2x8hwivppzgx5hkrhacsh87l21-glib-2.84.3' '/nix/store/w0a0v3ripdb1x6hk37h9qiblc39mjma4-unixODBC-2.3.12' '/nix/store/hjkci6z2cgf2c708vs0lpikmp7i5xli2-psqlodbc-17.00.0002' '/nix/store/93hb4bi2p4grwws3mbf0cz8k9zd4y1yz-sqlite-connector-odbc-0.9993' '/nix/store/d60f69g64f94718nmcf4kc30dyddz295-mariadb-connector-odbc-3.1.20' '/nix/store/n7abw5wmqn1acq0399hzinl625r34vn8-systemd-257.6-dev' '/nix/store/ymmaa926pv3f3wlgpw9y1aygdvqi1m7j-systemd-257.6' '/nix/store/qr7sj7i9z4s66n99q88zm6xb2cqzqz10-util-linux-2.41-dev' '/nix/store/m10ngkbjxbj0lqdq6rsyys9h2gj1f27d-util-linux-2.41-bin' '/nix/store/ds99hsvy5yk9mmrra1g053rncqx7nr9z-util-linux-2.41-lib' '/nix/store/856v3vkwkcdwnqqh3wf0cx79gp7hwpn7-mtdev-1.1.7' '/nix/store/ykjgplyvyglqv4prarshqdxjsiszsdpf-lksctp-tools-1.0.21' '/nix/store/h3rfmphr21kc4fiwbdwxpjk7waa18s9j-libselinux-3.8.1-dev' '/nix/store/xj5lnv5hrh8myxbwagc11k4rhrzy2l7z-libselinux-3.8.1-bin' '/nix/store/5gml2l2cj28yvyfyzblzjy1laqpxmyzd-libselinux-3.8.1' '/nix/store/sn1z0cl7h2pcpakqbpdsx6jiy5n9qpb2-libsepol-3.8.1-dev' '/nix/store/saa7srm8fpm7ci3wn25kh51y2piw75an-libsepol-3.8.1-bin' '/nix/store/4bp15xxyi4zrd6j1aqk30prfdi94miwy-libsepol-3.8.1' '/nix/store/s38laiz30qciawxn6bymqwyqmpf8s33j-lttng-ust-2.13.8-dev' '/nix/store/yx2avni6agq4m3mzhmlrmypflc9famxj-liburcu-0.15.2-dev' '/nix/store/nizpkpri0bcrcz7rbn94w2pkms3gjg6k-liburcu-0.15.2' '/nix/store/4f8gyla5ni50677qagng4gbhgj71bgqb-lttng-ust-2.13.8-bin' '/nix/store/52qxpd90xr6a9g9wn5d6dw66j52sh9zk-lttng-ust-2.13.8' '/nix/store/h0c9jbqwi0mwlzxzbk59h29cqwds5irs-libthai-0.1.29-dev' '/nix/store/vgk0g17bxmy0z5f6xk2d0sl36xgqxbn5-libthai-0.1.29' '/nix/store/5fmckldlhbyklfmvgkcf88z2fvyhsqp4-libdrm-2.4.124-dev' '/nix/store/lp1ak5dgh8fy09nrfryfsm0ayk6c0wwh-libdrm-2.4.124-bin' '/nix/store/xpszkfp1gaf8jfmcsll93xg0pb4c0rk7-libdrm-2.4.124' '/nix/store/4xwk3d8797mlbw4bjwj5dcr0n6sw09ch-libdatrie-2019-12-20-dev' '/nix/store/kz658pyjy2glwnhgvq4vrziqirmnc5qs-libdatrie-2019-12-20-bin' '/nix/store/lr67dv6pzm628cb2v3xraxz19d9iw23z-libdatrie-2019-12-20-lib' '/nix/store/7vml6dcgpjwcl6izw0ny6hdhg2kgx7gp-systemd-minimal-libs-257.6-dev' '/nix/store/5flwv7rri80114p8vlz7l8qf8z5i557h-systemd-minimal-libs-257.6' '/nix/store/f57f52ppyksjmdvdlmxbvxp2vc29jiq4-fontconfig-2.16.0-dev' '/nix/store/w9qijf113qkgqcv54ydhbjh0rlslysbr-freetype-2.13.3-dev' '/nix/store/wjqj8ncgdxqpn78qp23blp5ijprpavp9-bzip2-1.0.8-dev' '/nix/store/28z6bx9sg0lsr7wra22pbjsk6fzfphy4-bzip2-1.0.8-bin' '/nix/store/zkvl3npcgzc1w623pj0fag0qsczd5rxq-bzip2-1.0.8' '/nix/store/xdczp4bkrp2dff2apb1vbybbfmfi8f7d-brotli-1.1.0-dev' '/nix/store/zb406965xij4m5f793xvrr16sjaixi00-brotli-1.1.0-lib' '/nix/store/llqrkvzn5f08iwlq4xqy5av5mppgp7yp-brotli-1.1.0' '/nix/store/yw429hvy80x2hg00lsfdfhkkib7gz54g-freetype-2.13.3' '/nix/store/i8ls8rz7c56ipdqwkr3c1lcpr30kh77m-fontconfig-2.16.0-bin' '/nix/store/nm07kfl411ig0yv61rvginj665b6c0ms-fontconfig-2.16.0-lib' '/nix/store/b2aj478jxny0yvwqr6zglcmp99r3563b-libX11-1.8.12-dev' '/nix/store/spg20iadf5ylh7pl1l9q8ydf7dqghdfi-xorgproto-2024.1' '/nix/store/wp4nmh0byqn6w9885q10qm6v0vxq8m28-libxcb-1.17.0-dev' '/nix/store/2y2hhlki6macaj9j1409q1j6i33l6igf-libxcb-1.17.0' '/nix/store/1nsvsrqp5zm96r9p3rrq3yhlyw8jiy91-libX11-1.8.12' '/nix/store/mg09ypmxrqknb68wfxpdjzsm0msdvhqd-libXcomposite-0.4.6-dev' '/nix/store/4h7vf438jm33r6l9677dc9sm5qkv7sxd-libXfixes-6.0.1-dev' '/nix/store/94grp8dx897wmf0x3azpdbgzj3krz7v5-libXfixes-6.0.1' '/nix/store/4phl6z95v2i4525y0zpmi9v6ac0n4bx7-libXcomposite-0.4.6' '/nix/store/4dj30iya7h9bfd9aac6vbrr2yviw1ibj-libXext-1.3.6-dev' '/nix/store/0wwzn4cb4zdj2jahvyirmfx0ksg3kcz7-libXau-1.0.12-dev' '/nix/store/f8kjcizw0kmpyrn1abm1nfsbc007418g-libXau-1.0.12' '/nix/store/0046rn5sgi6l38zl81bg2r02zlzxqqbc-libXext-1.3.6' '/nix/store/3w8gi3kxckdlf1p0dw54b5mwmzcv6zd6-libXi-1.8.2-dev' '/nix/store/58dzwlbfldrsnwah1q3cfaqrx98jajpp-libXi-1.8.2' '/nix/store/iywn2pwh2cmyvq12d5a9jm9xgx86i2sw-libXrender-0.9.12-dev' '/nix/store/v53v67k3s16wmak41qy0q54pd7dkbcvr-libXrender-0.9.12' '/nix/store/zcmp1znlrzry73kzxychljwda2lmlzj7-libxkbcommon-1.8.1-dev' '/nix/store/sisfq9wihyqqjzmrpik9b4xksifw97ha-libxkbcommon-1.8.1' '/nix/store/1yqy5m7sv0bnidz2wnn7caj5zgmi8y4x-xcb-util-0.4.1-dev' '/nix/store/whii77m56rwk130727iv7kyycl24fjcc-xcb-util-0.4.1' '/nix/store/53v26wmr5v1a5ihnlv8ghsf9czw9dwv3-xcb-util-image-0.4.1-dev' '/nix/store/f616859ywjq2aaa7dywaikfk5ch6w3k2-xcb-util-image-0.4.1' '/nix/store/iyd9j2c1z86d2g9pkv92bfrh5akrlg03-xcb-util-keysyms-0.4.1-dev' '/nix/store/xamb3iw9a481i5rgnhgs5fhhgz1cgwak-xcb-util-keysyms-0.4.1' '/nix/store/00as8mw378jja677j4mc3cmj11ncc9wv-xcb-util-renderutil-0.3.10-dev' '/nix/store/3zxad3pb148bhq4zq0kb2ss7dzcsbk31-xcb-util-renderutil-0.3.10' '/nix/store/863xa5n8dhxjwlr0ms05wv5ii5y9p9na-xcb-util-wm-0.4.2-dev' '/nix/store/5rr3l4zpgl929cy7lawss0p273zdjkyl-xcb-util-wm-0.4.2' '/nix/store/0s295h89k5vp1y968m68p24n9za7dxcf-libXdmcp-1.1.5-dev' '/nix/store/ycvsz2k1zqcg48as18fcb171rzfdn5ll-libXdmcp-1.1.5' '/nix/store/5npa9ai4gxj8bkz36l4crwybibm72j7i-libXtst-1.2.5' '/nix/store/75sfmkjzg3y5qd2zrxw06xly6sa4qr2c-xcb-util-cursor-0.1.5-dev' '/nix/store/92nrp8f5bcyxy57w30wxj5ncvygz1wnx-xcb-util-cursor-0.1.5' '/nix/store/57327qk19vkl6p2pgfbqw8vch7167pcl-libepoxy-1.5.10-dev' '/nix/store/p61f1q6kh1ds3wfzk3hghdh90ki10mqv-libepoxy-1.5.10' '/nix/store/jrmf65p7pn32f0hxlg2qxj99s8sw2038-cups-2.4.11-dev' '/nix/store/0r0mg0wd6g5ghhi93wn0kyzbdnl5xgka-gmp-with-cxx-6.3.0-dev' '/nix/store/qy4zsnh13nzvq9xz5n0d57d9v4pw4i7c-gmp-with-cxx-6.3.0' '/nix/store/xm2418a7fclainspb35n6h05xfsxb6vn-cups-2.4.11-lib' '/nix/store/si92b84j9mqr3zshc8l78b7liq98sldc-cups-2.4.11' '/nix/store/pcm23dq8n6vj89kxzykw4gq9wbh5w7b4-qtbase-6.9.1' '/nix/store/ljzk99jradqd279q8f5qw4fbwqrdzpf2-qttools-6.9.1-dev' '/nix/store/nlga16dy7xdz3nz2gmp8arc9ap7whir4-qtdeclarative-6.9.1-dev' '/nix/store/hvhl39ag0byrb7dvys43y6dkhd5sbmn9-qtlanguageserver-6.9.1-dev' '/nix/store/8m33090jqw1pydm9nfmwarkm3v7n9zqi-qtlanguageserver-6.9.1' '/nix/store/pzb93xkgl8pd5j06zw9viqgx0szd6dw5-qtshadertools-6.9.1-dev' '/nix/store/pvyr1cd1d1gc1m6fvc1znn1p3p4qqv9g-qtshadertools-6.9.1' '/nix/store/k6j4i4vq04r7marl5cpg3j64m4l76caz-qtsvg-6.9.1-dev' '/nix/store/wxp741p66xbd7lfmg75x9k77vcg48l21-qtsvg-6.9.1' '/nix/store/x4xkywkgmpfgmaccxv6vb1070nm16mvy-qtdeclarative-6.9.1' '/nix/store/x5jz0dmc4j76fidfskshgbim26v40685-qttools-6.9.1' '/nix/store/qkkgz5r0z149pwnbvz8qdayh46d045hk-python3.12-ipykernel-6.29.5' '/nix/store/ms0wwgynanl2gp8c4fycx2d7fxdkw6mv-python3.12-comm-0.2.2' '/nix/store/czrqiahwxxiixzl74w10f74zvpz3y8m5-python3.12-traitlets-5.14.3' '/nix/store/j51w3hs146ky0pv6isv96imzx29sk71r-python3.12-ipython-9.2.0' '/nix/store/nv6z25ghscygq6jzivn705ds5ycvak5q-python3.12-decorator-5.2.1' '/nix/store/r31rgw3calmin99259z86p6lg90ah322-python3.12-ipython-pygments-lexers-1.1.1' '/nix/store/c2p4g8phxwmwy51wll7d1c0frw5szfbx-python3.12-jedi-0.19.2' '/nix/store/97mk8lg616kk9acm15qzm90a7wzvc7i3-python3.12-parso-0.8.4' '/nix/store/sq69ar98w90jp9ghy163km5i8w65pri1-python3.12-matplotlib-inline-0.1.7' '/nix/store/g0ll01c75dwipwdm090am1mp2qnrqn67-python3.12-pexpect-4.9.0' '/nix/store/iagbj7jd74zxjvgy74wbz9dn130axrh1-python3.12-ptyprocess-0.7.0' '/nix/store/vmpcmgcnwk614p71rvbf8x5k9sn6z571-python3.12-prompt-toolkit-3.0.50' '/nix/store/yjyqllvcz5s4w9h33ars9zkyj08gislg-python3.12-six-1.17.0' '/nix/store/xscg3as6h8zkanp495sjq55nq2azr5ls-python3.12-wcwidth-0.2.13' '/nix/store/ca5b92gwd66jh99s4khir4wprx45ps4q-python3.12-stack-data-0.6.3' '/nix/store/9idxa8lwc4ly63fsp9h90pb01x39h3nm-python3.12-asttokens-3.0.0' '/nix/store/07y4gvxn8a0k2yzz5pn4k9g56j41qsyq-python3.12-executing-2.2.0' '/nix/store/yn2h8ycxri1gz28g5nw9xf1ckbgzb6pb-python3.12-pure-eval-0.2.3' '/nix/store/ld8pfb6mln7r2jcva1rf30qxwmjzl7ya-python3.12-toml-0.10.2' '/nix/store/3wb8nyhf9maqijvn121xw7bbj2dw4m9c-python3.12-jupyter-client-8.6.3' '/nix/store/nx7714dykgirn35xqipcgz3s8vwlshzi-python3.12-jupyter-core-5.7.2' '/nix/store/r6gnwzgamspmbxv48j1xhmb2h4kfnz4n-python3.12-platformdirs-4.3.7' '/nix/store/k4qm3jlysf5crywc40d4v5w34kj5lksz-python3.12-python-dateutil-2.9.0.post0' '/nix/store/yfavw5qqp0pvgdy8p50rfrp5w77zra95-python3.12-pyzmq-26.3.0' '/nix/store/7vyrx0g4f5rj4059jqwc1nj6289gl8q2-python3.12-tornado-6.5.1' '/nix/store/cp667py2sqhpk0lzw130fg0nzb9sxzng-python3.12-nest-asyncio-1.6.0' '/nix/store/w7xfpjinkid66kbzvpghwpbpzrkbl1ik-python3.12-psutil-7.0.0' '/nix/store/32spr243r89zwrrnawpxrzq5wln7wbm8-python3.12-jupyter-1.1.1' '/nix/store/7c43in15dxn0ai7l9haa8ngwwkvzcxmn-python3.12-ipywidgets-8.1.5' '/nix/store/w2df6m4469wqv2ivqwgaqm30rvkm4sgi-python3.12-jupyterlab-widgets-3.0.13' '/nix/store/9zs0xwbz79j670h4d753078i2kvkjbyy-python3.12-widgetsnbextension-4.0.13' '/nix/store/n37x1z6fj8w9d03pyppb3yjlcmhvwxn9-python3.12-jupyter-console-6.6.3' '/nix/store/ph2qfa0v53nm1fd297dl889dv4dcs5h1-python3.12-jupyterlab-4.4.1' '/nix/store/y8c1xr5r8da92s3nbb58373vjbl88svl-python3.12-async-lru-2.0.5' '/nix/store/1skxycgsx3cpzxyrf2pm5knjscjsggzg-python3.12-httpx-0.28.1' '/nix/store/lnw0s088k1cvk39v9hravpddxdqwmd9a-python3.12-anyio-4.9.0' '/nix/store/ppdjjhbs1ca9j0419xncjbxqx688a1ik-python3.12-sniffio-1.3.1' '/nix/store/q152izwmf9qzy8hj2p8mjv3imzbh7s9w-python3.12-typing-extensions-4.13.2' '/nix/store/07a9ypxai3xzwc4g3y36f1yd9cdx7yx8-python3.12-httpcore-1.0.9' '/nix/store/1a78f92ia98q5ly5wksx9vpzb4v36y4f-python3.12-h11-0.16.0' '/nix/store/giisbdh9q465p7b9brvqxzn9npg7dlvj-python3.12-jupyter-lsp-2.2.5' '/nix/store/njr0z1izs54hk2ic2v6qysz9nqwkgcyh-python3.12-jupyter-server-2.15.0' '/nix/store/00c26srdpjx7nfyix2d6kywfgmmwpywy-python3.12-argon2-cffi-23.1.0' '/nix/store/6aw2cg3kc971mgcdakxvlajjrdh19ygl-python3.12-argon2-cffi-bindings-21.2.0' '/nix/store/xy880mwxql4nhdrw15r0ay1dwx3bmwrh-python3.12-cffi-1.17.1' '/nix/store/063crngv576j033cwhz2s4xn8345df1b-python3.12-pycparser-2.22' '/nix/store/1nhsjrsdh41ps26x6n990nkay55xzhri-python3.12-jupyter-events-0.11.0' '/nix/store/xjli5d0sm0i0pr9s2qld9k9nqiq8jx7a-python3.12-jsonschema-4.23.0' '/nix/store/wddbpvwf533jwv3qix0qiib8bvg4xf45-python3.12-attrs-25.3.0' '/nix/store/1bfcy63rpa2nv7mnnc81spsmps74nn95-python3.12-jsonschema-specifications-2024.10.1' '/nix/store/acdlkgxypwamfkp6hvw1c05n0ffvm2kw-python3.12-referencing-0.36.2' '/nix/store/gjrv4hpcqz60jsppp4hn8hx99qm23vnk-python3.12-rpds-py-0.24.0' '/nix/store/jbfq90qbbixrh2wh7cjm0pzdn310f41p-python3.12-python-json-logger-3.2.1' '/nix/store/nvzz66421j2a6icv4i2ayn1pqyngjwah-python3.12-pyyaml-6.0.2' '/nix/store/0qzi756n8kvvwln7xy88xx4bk18ym8z6-python3.12-rfc3339-validator-0.1.4' '/nix/store/bq2ag92ij9zkyrpg1chdag5q9wfid1sm-python3.12-rfc3986-validator-0.1.1' '/nix/store/8fw324cfphmp01920hpxwx2kcgds5rsf-python3.12-fqdn-1.5.1' '/nix/store/v15f6hy2rc050dfk9nddwh3wb6q136sp-python3.12-isoduration-20.11.0' '/nix/store/fpz17zcqdfkbxg2s9szpqi1sfgxaxvrk-python3.12-arrow-1.3.0' '/nix/store/2bwqcs4xyzqw8fy6h19h5z12vvlq6w3k-python3.12-types-python-dateutil-2.9.0.20241206' '/nix/store/isgf3m8dacfhkv97x6i5vd9v0dxci0lb-python3.12-jsonpointer-3.0.0' '/nix/store/23a1ifw64lifpnr84m7xain0g1xf47vp-python3.12-uri-template-1.3.0' '/nix/store/3bz1fq3qws8gisccyys1d17yiv5jpiw8-python3.12-webcolors-24.11.1' '/nix/store/a4cwp0n8sl56x1c7dvmn95zxm9b1c8xs-python3.12-jupyter-server-terminals-0.5.3' '/nix/store/7dji3jksiikkiybrz7sbb2ay203i2p1b-python3.12-terminado-0.18.1' '/nix/store/dgkx3mknpnixam3wjbgfllz4dldh3540-python3.12-nbformat-5.10.4' '/nix/store/44zcqfkfpvg0d0g1h2j2q40xyd664q6x-python3.12-fastjsonschema-2.21.1' '/nix/store/fkgj9pqb5qjvlkykvzdqbs3s21l0p2bb-python3.12-nbconvert-7.16.6' '/nix/store/7s9p6ksldfpjk44ha4d0hkcfgjfihvwk-python3.12-beautifulsoup4-4.12.3' '/nix/store/01i7b0l1jgzkwzi6pjaf1fzslb8h6j3d-python3.12-chardet-5.2.0' '/nix/store/sd7j5a80idvl564g55kq7ylznv4hsy74-python3.12-soupsieve-2.6' '/nix/store/4sqwi99a9hz90m0kjslwn6nq2v9lkh52-python3.12-bleach-6.2.0' '/nix/store/8fhjrvfrr99idfk16wgbkzqj0z0361v4-python3.12-html5lib-1.1' '/nix/store/q7xlyki1r05ym96lw204hhk9sr2zwdfs-python3.12-webencodings-0.5.1' '/nix/store/2d3prlfhjwacbqm4y3my8mvdrs2anbnq-python3.12-setuptools-78.1.0' '/nix/store/pdr1w5nhp8nlf4y1jy6ngsvn5yvwkfmk-python3.12-defusedxml-0.8.0rc2' '/nix/store/qag087rsjgikfj1a4mfqrmny8k9389wy-python3.12-jupyterlab-pygments-0.3.0' '/nix/store/y7kzbaf1bmaxg08ij3x9550jipdg17m5-python3.12-mistune-3.1.2' '/nix/store/v82a7zyam3hill1chvhzj04akf6nm6sm-python3.12-nbclient-0.10.2' '/nix/store/vk74kcsly0mda6hir54gcnw4w7vqha3x-python3.12-pandocfilters-1.5.1' '/nix/store/61f01rsphws89cxchyyw89500bwv52vj-python3.12-tinycss2-1.4.0' '/nix/store/kp9a1izahlwm9bp9rwa4da9v5rm3rly9-python3.12-send2trash-1.8.3' '/nix/store/z7k07ghr8xykfy2ms353sdgk7kr0k42h-python3.12-prometheus-client-0.21.1' '/nix/store/26d8g75zns41mqk5njik22zwq2jcrska-python3.12-websocket-client-1.8.0' '/nix/store/4lfisgmf87g5i2r6aa5xamzvyjvnn0d2-python3.12-overrides-7.7.0' '/nix/store/p0n3rl23hx3qfb77rc1w5592zl0xfrzr-python3.12-jupyterlab-server-2.27.3' '/nix/store/66z062jczirzhdl4rpzf8blrqpi8bn7j-python3.12-json5-0.10.0' '/nix/store/nr9x5ipvsdijav8nqckkma0gvaj57d4z-python3.12-notebook-shim-0.2.4' '/nix/store/vwaj7qjspl03bvagmja2zswydaj8gi8p-python3.12-notebook-7.4.1' '/nix/store/ysz568vfldxlf24bdmxn0v7zshvf9804-python3.12-matplotlib-3.10.1' '/nix/store/kvnvq1pczf1m8p8vp3xm4y6lmry65apg-python3.12-contourpy-1.3.1' '/nix/store/vjrxh9d2iwzb2njsdybq0y9cg87bnpxn-python3.12-numpy-2.2.5' '/nix/store/prd5x4nfdvwj1z7lxy6j1bpvw0yf0bpx-python3.12-cycler-0.12.1' '/nix/store/92psnf2rzd4x10j95j696v08gsjzamy2-python3.12-fonttools-4.56.0' '/nix/store/4nx3gwjq5vw6q4hvsb3gfv0pb7g9i7zl-python3.12-kiwisolver-1.4.8' '/nix/store/nardq58rbj3kxasq3fflgv6dy94nbl42-python3.12-pillow-11.2.1' '/nix/store/61bydncj9m9k1h8jmgx5bi0smw1gk7sy-python3.12-pyparsing-3.2.3' '/nix/store/izkldz9a5b7kbdlgfm1n7zrmmp6ihs1m-python3.12-tkinter-3.12.11' '/nix/store/ky9srnyb1q7kjnh7cqd1ny4w849fc9f2-python3.12-plotly-5.24.1' '/nix/store/lskml5zq4kjfdbf7i4aczw4rqhbrvj9x-python3.12-tenacity-9.0.0' '/nix/store/kn7qavpm13s6sx7qa7lc15yidanckzll-python3.12-kaleido-0.2.1' '/nix/store/mvfl8sbrx0mwk3w6a0m4k7i7m15pr7dn-python3.12-pandas-2.2.3' '/nix/store/vqpjh9b21bxgjh4z1hxhd1f75h4vh7fk-python3.12-pytz-2025.2' '/nix/store/vb6ni45a87mxrj7v5jygxwbg1794z07s-python3.12-tzdata-2025.2' '/nix/store/6mm715369j7msb302057v2cmlph7qx2g-python3.12-seaborn-0.13.2' '/nix/store/0flj33q30lmzdjagwjqh964qmiyklww2-patchelf-0.15.0' '/nix/store/y0mnc83lrdgll8bg6qll7lcbkhrr7b84-update-autotools-gnu-config-scripts-hook' '/nix/store/jjhw2phnaip4kg0qjas3x3fsaifi8y0w-no-broken-symlinks.sh' '/nix/store/h9lc1dpi14z7is86ffhl3ld569138595-audit-tmpdir.sh' '/nix/store/m54bmrhj6fqz8nds5zcj97w9s9bckc9v-compress-man-pages.sh' '/nix/store/wgrbkkaldkrlrni33ccvm3b6vbxzb656-make-symlinks-relative.sh' '/nix/store/5yzw0vhkyszf2d179m0qfkgxmp5wjjx4-move-docs.sh' '/nix/store/fyaryjvghbkpfnsyw97hb3lyb37s1pd6-move-lib64.sh' '/nix/store/kd4xwxjpjxi71jkm6ka0np72if9rm3y0-move-sbin.sh' '/nix/store/pag6l61paj1dc9sv15l7bm5c17xn5kyk-move-systemd-user-units.sh' '/nix/store/cmzya9irvxzlkh7lfy6i82gbp0saxqj3-multiple-outputs.sh' '/nix/store/hxv896faph0rqxjq2ycxpcrbnngc95sz-patch-shebangs.sh' '/nix/store/cickvswrvann041nqxb0rxilc46svw1n-prune-libtool-files.sh' '/nix/store/xyff06pkhki3qy1ls77w10s0v79c9il0-reproducible-builds.sh' '/nix/store/z7k98578dfzi6l3hsvbivzm7hfqlk0zc-set-source-date-epoch-to-latest.sh' '/nix/store/pilsssjjdxvdphlg2h19p0bfx5q0jzkn-strip.sh' '/nix/store/a0d7m3zn9p2dfa1h7ag9h2wzzr2w25sn-gcc-wrapper-14.2.1.20250322' '/nix/store/2gkh9v7wrzjq6ws312c6z6ajwnjvwcmb-binutils-wrapper-2.44' )
+declare -a pkgsBuildTarget=()
+declare -a pkgsHostHost=()
+declare -a pkgsHostTarget=()
+declare -a pkgsTargetTarget=()
+declare -a postFixupHooks=('noBrokenSymlinksInAllOutputs' '_makeSymlinksRelativeInAllOutputs' '_multioutPropagateDev' )
+declare -a postHooks=('httpxSslCertFileUnset' )
+declare -a postInstallHooks=('glibPostInstallHook' )
+postPhases=' postPatchMkspecs'
+declare -a postUnpackHooks=('_updateSourceDateEpochFromSourceRoot' )
+declare -a preConfigureHooks=('_multioutConfig' )
+preConfigurePhases=' updateAutotoolsGnuConfigScriptsPhase'
+declare -a preFixupHooks=('_moveToShare' '_multioutDocs' '_multioutDevs' )
+preInstallPhases=' glibPreInstallPhase'
+prePhases=' qtPreHook'
+preferLocalBuild='1'
+export preferLocalBuild
+prefix='/home/tomoya/workspace/analysis/outputs/out'
+declare -a propagatedBuildDepFiles=('propagated-build-build-deps' 'propagated-native-build-inputs' 'propagated-build-target-deps' )
+propagatedBuildInputs=''
+export propagatedBuildInputs
+declare -a propagatedHostDepFiles=('propagated-host-host-deps' 'propagated-build-inputs' )
+propagatedNativeBuildInputs=''
+export propagatedNativeBuildInputs
+declare -a propagatedTargetDepFiles=('propagated-target-target-deps' )
+declare -A qmakePathSeen=(['/nix/store/0046rn5sgi6l38zl81bg2r02zlzxqqbc-libXext-1.3.6']='1' ['/nix/store/00as8mw378jja677j4mc3cmj11ncc9wv-xcb-util-renderutil-0.3.10-dev']='1' ['/nix/store/00c26srdpjx7nfyix2d6kywfgmmwpywy-python3.12-argon2-cffi-23.1.0']='1' ['/nix/store/01i7b0l1jgzkwzi6pjaf1fzslb8h6j3d-python3.12-chardet-5.2.0']='1' ['/nix/store/0225zs9jl9s2y3ai1arbg0h9z7z4bmfi-openssl-3.4.1-dev']='1' ['/nix/store/063crngv576j033cwhz2s4xn8345df1b-python3.12-pycparser-2.22']='1' ['/nix/store/07a9ypxai3xzwc4g3y36f1yd9cdx7yx8-python3.12-httpcore-1.0.9']='1' ['/nix/store/07y4gvxn8a0k2yzz5pn4k9g56j41qsyq-python3.12-executing-2.2.0']='1' ['/nix/store/0dhgrwvyx0spy8256sir5m2dkbmhvr4z-python3.12-sphinxcontrib-applehelp-2.0.0']='1' ['/nix/store/0flj33q30lmzdjagwjqh964qmiyklww2-patchelf-0.15.0']='1' ['/nix/store/0g09282c6amly6biazhh7rhz3xa2k3q8-texlive-2024-env']='1' ['/nix/store/0qzi756n8kvvwln7xy88xx4bk18ym8z6-python3.12-rfc3339-validator-0.1.4']='1' ['/nix/store/0r0mg0wd6g5ghhi93wn0kyzbdnl5xgka-gmp-with-cxx-6.3.0-dev']='1' ['/nix/store/0s295h89k5vp1y968m68p24n9za7dxcf-libXdmcp-1.1.5-dev']='1' ['/nix/store/0wwzn4cb4zdj2jahvyirmfx0ksg3kcz7-libXau-1.0.12-dev']='1' ['/nix/store/19rbfa56zl9baks43nwdsggmz0a4jg1a-python3.12-urllib3-2.3.0']='1' ['/nix/store/1a78f92ia98q5ly5wksx9vpzb4v36y4f-python3.12-h11-0.16.0']='1' ['/nix/store/1bfcy63rpa2nv7mnnc81spsmps74nn95-python3.12-jsonschema-specifications-2024.10.1']='1' ['/nix/store/1nhsjrsdh41ps26x6n990nkay55xzhri-python3.12-jupyter-events-0.11.0']='1' ['/nix/store/1nsvsrqp5zm96r9p3rrq3yhlyw8jiy91-libX11-1.8.12']='1' ['/nix/store/1skxycgsx3cpzxyrf2pm5knjscjsggzg-python3.12-httpx-0.28.1']='1' ['/nix/store/1yqy5m7sv0bnidz2wnn7caj5zgmi8y4x-xcb-util-0.4.1-dev']='1' ['/nix/store/231d6mmkylzr80pf30dbywa9x9aryjgy-dbus-1.14.10-lib']='1' ['/nix/store/23a1ifw64lifpnr84m7xain0g1xf47vp-python3.12-uri-template-1.3.0']='1' ['/nix/store/26d8g75zns41mqk5njik22zwq2jcrska-python3.12-websocket-client-1.8.0']='1' ['/nix/store/28z6bx9sg0lsr7wra22pbjsk6fzfphy4-bzip2-1.0.8-bin']='1' ['/nix/store/2bwqcs4xyzqw8fy6h19h5z12vvlq6w3k-python3.12-types-python-dateutil-2.9.0.20241206']='1' ['/nix/store/2d3prlfhjwacbqm4y3my8mvdrs2anbnq-python3.12-setuptools-78.1.0']='1' ['/nix/store/2ggmrindi1bswshhn4adkhhi5cdnzrxh-python3.12-sphinx-8.2.3']='1' ['/nix/store/2gkh9v7wrzjq6ws312c6z6ajwnjvwcmb-binutils-wrapper-2.44']='1' ['/nix/store/2y2hhlki6macaj9j1409q1j6i33l6igf-libxcb-1.17.0']='1' ['/nix/store/32spr243r89zwrrnawpxrzq5wln7wbm8-python3.12-jupyter-1.1.1']='1' ['/nix/store/3bz1fq3qws8gisccyys1d17yiv5jpiw8-python3.12-webcolors-24.11.1']='1' ['/nix/store/3jy6sfb655sa9vm2w767h4m2v78ydgjh-python3.12-sphinxcontrib-qthelp-2.0.0']='1' ['/nix/store/3w8gi3kxckdlf1p0dw54b5mwmzcv6zd6-libXi-1.8.2-dev']='1' ['/nix/store/3wb8nyhf9maqijvn121xw7bbj2dw4m9c-python3.12-jupyter-client-8.6.3']='1' ['/nix/store/3ybnl9nq86s7jz0i8pzqlrabjgdxzrjz-glib-2.84.3-bin']='1' ['/nix/store/3zxad3pb148bhq4zq0kb2ss7dzcsbk31-xcb-util-renderutil-0.3.10']='1' ['/nix/store/44zcqfkfpvg0d0g1h2j2q40xyd664q6x-python3.12-fastjsonschema-2.21.1']='1' ['/nix/store/4bp15xxyi4zrd6j1aqk30prfdi94miwy-libsepol-3.8.1']='1' ['/nix/store/4dj30iya7h9bfd9aac6vbrr2yviw1ibj-libXext-1.3.6-dev']='1' ['/nix/store/4f8gyla5ni50677qagng4gbhgj71bgqb-lttng-ust-2.13.8-bin']='1' ['/nix/store/4h7vf438jm33r6l9677dc9sm5qkv7sxd-libXfixes-6.0.1-dev']='1' ['/nix/store/4i49f869yc93c77m0y1lmpnvlzip5pgr-libpng-apng-1.6.46']='1' ['/nix/store/4lfisgmf87g5i2r6aa5xamzvyjvnn0d2-python3.12-overrides-7.7.0']='1' ['/nix/store/4nx3gwjq5vw6q4hvsb3gfv0pb7g9i7zl-python3.12-kiwisolver-1.4.8']='1' ['/nix/store/4phl6z95v2i4525y0zpmi9v6ac0n4bx7-libXcomposite-0.4.6']='1' ['/nix/store/4sqwi99a9hz90m0kjslwn6nq2v9lkh52-python3.12-bleach-6.2.0']='1' ['/nix/store/4xwk3d8797mlbw4bjwj5dcr0n6sw09ch-libdatrie-2019-12-20-dev']='1' ['/nix/store/508aj2m7l24p200w67m5zyv0cgy70c76-libb2-0.98.1']='1' ['/nix/store/52qxpd90xr6a9g9wn5d6dw66j52sh9zk-lttng-ust-2.13.8']='1' ['/nix/store/53v26wmr5v1a5ihnlv8ghsf9czw9dwv3-xcb-util-image-0.4.1-dev']='1' ['/nix/store/57327qk19vkl6p2pgfbqw8vch7167pcl-libepoxy-1.5.10-dev']='1' ['/nix/store/58dzwlbfldrsnwah1q3cfaqrx98jajpp-libXi-1.8.2']='1' ['/nix/store/5b3lilf2rmzgbkgw53r0bzhzgn6v4qrr-pcre2-10.44-dev']='1' ['/nix/store/5flwv7rri80114p8vlz7l8qf8z5i557h-systemd-minimal-libs-257.6']='1' ['/nix/store/5fmckldlhbyklfmvgkcf88z2fvyhsqp4-libdrm-2.4.124-dev']='1' ['/nix/store/5gml2l2cj28yvyfyzblzjy1laqpxmyzd-libselinux-3.8.1']='1' ['/nix/store/5npa9ai4gxj8bkz36l4crwybibm72j7i-libXtst-1.2.5']='1' ['/nix/store/5rr3l4zpgl929cy7lawss0p273zdjkyl-xcb-util-wm-0.4.2']='1' ['/nix/store/5xmcl9wr18g6ym3dh3363hv8hp6jyxqd-openssl-3.4.1']='1' ['/nix/store/5yzw0vhkyszf2d179m0qfkgxmp5wjjx4-move-docs.sh']='1' ['/nix/store/61bydncj9m9k1h8jmgx5bi0smw1gk7sy-python3.12-pyparsing-3.2.3']='1' ['/nix/store/61f01rsphws89cxchyyw89500bwv52vj-python3.12-tinycss2-1.4.0']='1' ['/nix/store/66z062jczirzhdl4rpzf8blrqpi8bn7j-python3.12-json5-0.10.0']='1' ['/nix/store/6aw2cg3kc971mgcdakxvlajjrdh19ygl-python3.12-argon2-cffi-bindings-21.2.0']='1' ['/nix/store/6fx90jjjc3f18635y8cz2qy98y2h59cm-sqlite-3.48.0-bin']='1' ['/nix/store/6mm715369j7msb302057v2cmlph7qx2g-python3.12-seaborn-0.13.2']='1' ['/nix/store/6rqcf8hv5wwqf74n5yavi1jjlz9qy445-python3.12-imagesize-1.4.1']='1' ['/nix/store/70rlqanx1dv5rqidf0jc9dmii8dq2a2m-python3.12-requests-2.32.3']='1' ['/nix/store/71k400gj4lhrjl47898shv9gkjh04b36-graphviz-12.2.1']='1' ['/nix/store/7227amwg7k4sbl6mhglq17v5x5ki54ks-libglvnd-1.7.0']='1' ['/nix/store/74s0y3d6qjkfii4jpifjbkp2hrf7pr10-wireshark-qt-4.4.7-dev']='1' ['/nix/store/75sfmkjzg3y5qd2zrxw06xly6sa4qr2c-xcb-util-cursor-0.1.5-dev']='1' ['/nix/store/7bj5g2x9bfp4fv73sprg039pc7h7zcbm-python3.12-idna-3.10']='1' ['/nix/store/7c43in15dxn0ai7l9haa8ngwwkvzcxmn-python3.12-ipywidgets-8.1.5']='1' ['/nix/store/7dji3jksiikkiybrz7sbb2ay203i2p1b-python3.12-terminado-0.18.1']='1' ['/nix/store/7gpii8a6znikgs6q39gfh8007m081zpd-graphite2-1.3.14-dev']='1' ['/nix/store/7s9p6ksldfpjk44ha4d0hkcfgjfihvwk-python3.12-beautifulsoup4-4.12.3']='1' ['/nix/store/7v1m3j9kkhikzvclv2065vh7agcnpap2-md4c-0.5.2-lib']='1' ['/nix/store/7vml6dcgpjwcl6izw0ny6hdhg2kgx7gp-systemd-minimal-libs-257.6-dev']='1' ['/nix/store/7vyrx0g4f5rj4059jqwc1nj6289gl8q2-python3.12-tornado-6.5.1']='1' ['/nix/store/81mnzv0h3m7qxs60r722xm6kbw5l2d5b-python3.12-alabaster-1.0.0']='1' ['/nix/store/856v3vkwkcdwnqqh3wf0cx79gp7hwpn7-mtdev-1.1.7']='1' ['/nix/store/863xa5n8dhxjwlr0ms05wv5ii5y9p9na-xcb-util-wm-0.4.2-dev']='1' ['/nix/store/8cdqj8xlvpl25rqq5fyfvn6s7zzay3pw-qtbase-6.9.1-dev']='1' ['/nix/store/8fhjrvfrr99idfk16wgbkzqj0z0361v4-python3.12-html5lib-1.1']='1' ['/nix/store/8fw324cfphmp01920hpxwx2kcgds5rsf-python3.12-fqdn-1.5.1']='1' ['/nix/store/8m33090jqw1pydm9nfmwarkm3v7n9zqi-qtlanguageserver-6.9.1']='1' ['/nix/store/8wqqx7cbxkj0m3n4p9n5jhwcaasi6hvi-python3.12-docutils-0.21.2']='1' ['/nix/store/8y5ai2bi4s96nqb3bwphxnrlgwscir3c-libxml2-2.13.8']='1' ['/nix/store/90qal753blhl7mrwzs2k8b00zby9r9xr-harfbuzz-10.2.0']='1' ['/nix/store/92nrp8f5bcyxy57w30wxj5ncvygz1wnx-xcb-util-cursor-0.1.5']='1' ['/nix/store/92psnf2rzd4x10j95j696v08gsjzamy2-python3.12-fonttools-4.56.0']='1' ['/nix/store/93hb4bi2p4grwws3mbf0cz8k9zd4y1yz-sqlite-connector-odbc-0.9993']='1' ['/nix/store/94grp8dx897wmf0x3azpdbgzj3krz7v5-libXfixes-6.0.1']='1' ['/nix/store/97mk8lg616kk9acm15qzm90a7wzvc7i3-python3.12-parso-0.8.4']='1' ['/nix/store/9idxa8lwc4ly63fsp9h90pb01x39h3nm-python3.12-asttokens-3.0.0']='1' ['/nix/store/9ish1z2fqsgfdi13vqrj1zaq0clpmgf3-vulkan-loader-1.4.313.0-dev']='1' ['/nix/store/9kcbmgs8fs15x675msaz6f63fnnzyc0v-md4c-0.5.2']='1' ['/nix/store/9zs0xwbz79j670h4d753078i2kvkjbyy-python3.12-widgetsnbextension-4.0.13']='1' ['/nix/store/a0d7m3zn9p2dfa1h7ag9h2wzzr2w25sn-gcc-wrapper-14.2.1.20250322']='1' ['/nix/store/a4cwp0n8sl56x1c7dvmn95zxm9b1c8xs-python3.12-jupyter-server-terminals-0.5.3']='1' ['/nix/store/a906siib3gg1v9r8c7fszrmwjfcafs2n-python3.12-babel-2.17.0']='1' ['/nix/store/acdlkgxypwamfkp6hvw1c05n0ffvm2kw-python3.12-referencing-0.36.2']='1' ['/nix/store/akn28bf4vh2q3p2czwkm37acmf33bvgd-libglvnd-1.7.0-dev']='1' ['/nix/store/ams45f9lnsmp6s3b8j5fjvd7csm558yk-vulkan-loader-1.4.313.0']='1' ['/nix/store/asi29hlr0p4jh6xfbk23ppfbs1v30sa2-find-xml-catalogs-hook']='1' ['/nix/store/b2aj478jxny0yvwqr6zglcmp99r3563b-libX11-1.8.12-dev']='1' ['/nix/store/b2rdhxhwanlfqqgqsvirpia0i8w42hpz-libproxy-0.5.9']='1' ['/nix/store/b6y8k7i7bgkld9bgjjnsv5bqf2anq7yk-libjpeg-turbo-3.0.4-dev']='1' ['/nix/store/bd7z19f32ww73wlrkpqdcma7ra67hs82-expat-2.7.1-dev']='1' ['/nix/store/bq2ag92ij9zkyrpg1chdag5q9wfid1sm-python3.12-rfc3986-validator-0.1.1']='1' ['/nix/store/bsxrp4v3nh7pfy2j9bzywmzvinxwyzby-python3.12-pystemmer-2.2.0.1']='1' ['/nix/store/c2p4g8phxwmwy51wll7d1c0frw5szfbx-python3.12-jedi-0.19.2']='1' ['/nix/store/ca5b92gwd66jh99s4khir4wprx45ps4q-python3.12-stack-data-0.6.3']='1' ['/nix/store/cickvswrvann041nqxb0rxilc46svw1n-prune-libtool-files.sh']='1' ['/nix/store/cmzya9irvxzlkh7lfy6i82gbp0saxqj3-multiple-outputs.sh']='1' ['/nix/store/cp667py2sqhpk0lzw130fg0nzb9sxzng-python3.12-nest-asyncio-1.6.0']='1' ['/nix/store/czrqiahwxxiixzl74w10f74zvpz3y8m5-python3.12-traitlets-5.14.3']='1' ['/nix/store/d60f69g64f94718nmcf4kc30dyddz295-mariadb-connector-odbc-3.1.20']='1' ['/nix/store/ddap6dm3fjdm0zmw4m3rls73a0gml3xd-zstd-1.5.7-bin']='1' ['/nix/store/dgkx3mknpnixam3wjbgfllz4dldh3540-python3.12-nbformat-5.10.4']='1' ['/nix/store/dll7gaqkvw597jim01q7rpbsx2dzhsr0-graphite2-1.3.14']='1' ['/nix/store/ds99hsvy5yk9mmrra1g053rncqx7nr9z-util-linux-2.41-lib']='1' ['/nix/store/f57f52ppyksjmdvdlmxbvxp2vc29jiq4-fontconfig-2.16.0-dev']='1' ['/nix/store/f616859ywjq2aaa7dywaikfk5ch6w3k2-xcb-util-image-0.4.1']='1' ['/nix/store/f77jp5x42zj34d4q5c38697zsmrjhd70-dia-unstable-2023-09-28']='1' ['/nix/store/f8kjcizw0kmpyrn1abm1nfsbc007418g-libXau-1.0.12']='1' ['/nix/store/fkgj9pqb5qjvlkykvzdqbs3s21l0p2bb-python3.12-nbconvert-7.16.6']='1' ['/nix/store/fkm8g9p5dp4kjxiy178qc834b0dwjfb1-libxslt-1.1.43-dev']='1' ['/nix/store/flpfkdzbac7071xlydh8f4qqq6dvnzx9-gettext-0.22.5']='1' ['/nix/store/fpz17zcqdfkbxg2s9szpqi1sfgxaxvrk-python3.12-arrow-1.3.0']='1' ['/nix/store/fyaryjvghbkpfnsyw97hb3lyb37s1pd6-move-lib64.sh']='1' ['/nix/store/g0ll01c75dwipwdm090am1mp2qnrqn67-python3.12-pexpect-4.9.0']='1' ['/nix/store/g9zij81hja8bs0s5i7ni60y7k90h113s-python3.12-charset-normalizer-3.4.1']='1' ['/nix/store/gfgzwp641q0y94fd6yfjd492bmvqmaif-md4c-0.5.2-dev']='1' ['/nix/store/giisbdh9q465p7b9brvqxzn9npg7dlvj-python3.12-jupyter-lsp-2.2.5']='1' ['/nix/store/gjrv4hpcqz60jsppp4hn8hx99qm23vnk-python3.12-rpds-py-0.24.0']='1' ['/nix/store/gkszdicyy88yymy5ji9702707lvxhp7g-wireshark-qt-4.4.7']='1' ['/nix/store/gwys5lcxsyjja9q6pm167wpvw5f58w6n-pcre2-10.44-bin']='1' ['/nix/store/gzlgwyd3n4r17yyx7hrrlpkmplqianbl-openssl-3.4.1-bin']='1' ['/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11']='1' ['/nix/store/h0c9jbqwi0mwlzxzbk59h29cqwds5irs-libthai-0.1.29-dev']='1' ['/nix/store/h3rfmphr21kc4fiwbdwxpjk7waa18s9j-libselinux-3.8.1-dev']='1' ['/nix/store/h4yvw4knj7wsghdn4yz7hpxy9x9fbjd5-python3.12-snowballstemmer-2.2.0']='1' ['/nix/store/h9lc1dpi14z7is86ffhl3ld569138595-audit-tmpdir.sh']='1' ['/nix/store/hjkci6z2cgf2c708vs0lpikmp7i5xli2-psqlodbc-17.00.0002']='1' ['/nix/store/hvhl39ag0byrb7dvys43y6dkhd5sbmn9-qtlanguageserver-6.9.1-dev']='1' ['/nix/store/hx4azv435qg3bx6286rphd3n910c35pg-python3.12-packaging-24.2']='1' ['/nix/store/hxv896faph0rqxjq2ycxpcrbnngc95sz-patch-shebangs.sh']='1' ['/nix/store/i2c4lj0hirk7i27xgib08zy0rdrkfi70-libpng-apng-1.6.46-dev']='1' ['/nix/store/i6ck04ari3rdn1g0yv0igl3lnvfyf73p-python3.12-sphinxcontrib-jsmath-1.0.1']='1' ['/nix/store/i8ls8rz7c56ipdqwkr3c1lcpr30kh77m-fontconfig-2.16.0-bin']='1' ['/nix/store/iagbj7jd74zxjvgy74wbz9dn130axrh1-python3.12-ptyprocess-0.7.0']='1' ['/nix/store/isgf3m8dacfhkv97x6i5vd9v0dxci0lb-python3.12-jsonpointer-3.0.0']='1' ['/nix/store/iyd9j2c1z86d2g9pkv92bfrh5akrlg03-xcb-util-keysyms-0.4.1-dev']='1' ['/nix/store/iywn2pwh2cmyvq12d5a9jm9xgx86i2sw-libXrender-0.9.12-dev']='1' ['/nix/store/izkldz9a5b7kbdlgfm1n7zrmmp6ihs1m-python3.12-tkinter-3.12.11']='1' ['/nix/store/j51w3hs146ky0pv6isv96imzx29sk71r-python3.12-ipython-9.2.0']='1' ['/nix/store/jbfq90qbbixrh2wh7cjm0pzdn310f41p-python3.12-python-json-logger-3.2.1']='1' ['/nix/store/jgm4h8svmb2wm618rz76wv3xahk7as4f-doxygen-1.13.2']='1' ['/nix/store/jjhw2phnaip4kg0qjas3x3fsaifi8y0w-no-broken-symlinks.sh']='1' ['/nix/store/jl19fdc7gdxqz9a1s368r9d15vpirnqy-zlib-1.3.1']='1' ['/nix/store/jrmf65p7pn32f0hxlg2qxj99s8sw2038-cups-2.4.11-dev']='1' ['/nix/store/k4qm3jlysf5crywc40d4v5w34kj5lksz-python3.12-python-dateutil-2.9.0.post0']='1' ['/nix/store/k6gi198r2cjjk70dnr1dwibgzf8gjbm2-sqlite-3.48.0-dev']='1' ['/nix/store/k6j4i4vq04r7marl5cpg3j64m4l76caz-qtsvg-6.9.1-dev']='1' ['/nix/store/kd4xwxjpjxi71jkm6ka0np72if9rm3y0-move-sbin.sh']='1' ['/nix/store/kn7qavpm13s6sx7qa7lc15yidanckzll-python3.12-kaleido-0.2.1']='1' ['/nix/store/kp9a1izahlwm9bp9rwa4da9v5rm3rly9-python3.12-send2trash-1.8.3']='1' ['/nix/store/kvnvq1pczf1m8p8vp3xm4y6lmry65apg-python3.12-contourpy-1.3.1']='1' ['/nix/store/ky9srnyb1q7kjnh7cqd1ny4w849fc9f2-python3.12-plotly-5.24.1']='1' ['/nix/store/kz658pyjy2glwnhgvq4vrziqirmnc5qs-libdatrie-2019-12-20-bin']='1' ['/nix/store/l0d83xf43lsyhzqziy0am1cidhkcxs9q-expat-2.7.1']='1' ['/nix/store/lc8ni1p2b6lljpb9sbx1v7yhjpv60pl3-sqlite-3.48.0']='1' ['/nix/store/ld8pfb6mln7r2jcva1rf30qxwmjzl7ya-python3.12-toml-0.10.2']='1' ['/nix/store/ljzk99jradqd279q8f5qw4fbwqrdzpf2-qttools-6.9.1-dev']='1' ['/nix/store/llqrkvzn5f08iwlq4xqy5av5mppgp7yp-brotli-1.1.0']='1' ['/nix/store/lnw0s088k1cvk39v9hravpddxdqwmd9a-python3.12-anyio-4.9.0']='1' ['/nix/store/lp1ak5dgh8fy09nrfryfsm0ayk6c0wwh-libdrm-2.4.124-bin']='1' ['/nix/store/lr67dv6pzm628cb2v3xraxz19d9iw23z-libdatrie-2019-12-20-lib']='1' ['/nix/store/lrrj9h7h1ifbdv82rrbddxracm5jjxwx-libjpeg-turbo-3.0.4-bin']='1' ['/nix/store/lskml5zq4kjfdbf7i4aczw4rqhbrvj9x-python3.12-tenacity-9.0.0']='1' ['/nix/store/m10ngkbjxbj0lqdq6rsyys9h2gj1f27d-util-linux-2.41-bin']='1' ['/nix/store/m54bmrhj6fqz8nds5zcj97w9s9bckc9v-compress-man-pages.sh']='1' ['/nix/store/mg09ypmxrqknb68wfxpdjzsm0msdvhqd-libXcomposite-0.4.6-dev']='1' ['/nix/store/mijswdfwx4yvqpfrxg6c0cs228w9v7ll-zstd-1.5.7-dev']='1' ['/nix/store/ms0wwgynanl2gp8c4fycx2d7fxdkw6mv-python3.12-comm-0.2.2']='1' ['/nix/store/mvfl8sbrx0mwk3w6a0m4k7i7m15pr7dn-python3.12-pandas-2.2.3']='1' ['/nix/store/n37x1z6fj8w9d03pyppb3yjlcmhvwxn9-python3.12-jupyter-console-6.6.3']='1' ['/nix/store/n7abw5wmqn1acq0399hzinl625r34vn8-systemd-257.6-dev']='1' ['/nix/store/n7q2p5a4f1shiz5szb3zf8mhg2bkbgmn-python3.12-sphinxcontrib-devhelp-2.0.0']='1' ['/nix/store/nardq58rbj3kxasq3fflgv6dy94nbl42-python3.12-pillow-11.2.1']='1' ['/nix/store/nizpkpri0bcrcz7rbn94w2pkms3gjg6k-liburcu-0.15.2']='1' ['/nix/store/njr0z1izs54hk2ic2v6qysz9nqwkgcyh-python3.12-jupyter-server-2.15.0']='1' ['/nix/store/nlga16dy7xdz3nz2gmp8arc9ap7whir4-qtdeclarative-6.9.1-dev']='1' ['/nix/store/nm07kfl411ig0yv61rvginj665b6c0ms-fontconfig-2.16.0-lib']='1' ['/nix/store/nr9x5ipvsdijav8nqckkma0gvaj57d4z-python3.12-notebook-shim-0.2.4']='1' ['/nix/store/nv6z25ghscygq6jzivn705ds5ycvak5q-python3.12-decorator-5.2.1']='1' ['/nix/store/nvzz66421j2a6icv4i2ayn1pqyngjwah-python3.12-pyyaml-6.0.2']='1' ['/nix/store/nx7714dykgirn35xqipcgz3s8vwlshzi-python3.12-jupyter-core-5.7.2']='1' ['/nix/store/p0n3rl23hx3qfb77rc1w5592zl0xfrzr-python3.12-jupyterlab-server-2.27.3']='1' ['/nix/store/p61f1q6kh1ds3wfzk3hghdh90ki10mqv-libepoxy-1.5.10']='1' ['/nix/store/pag6l61paj1dc9sv15l7bm5c17xn5kyk-move-systemd-user-units.sh']='1' ['/nix/store/pcm23dq8n6vj89kxzykw4gq9wbh5w7b4-qtbase-6.9.1']='1' ['/nix/store/pdr1w5nhp8nlf4y1jy6ngsvn5yvwkfmk-python3.12-defusedxml-0.8.0rc2']='1' ['/nix/store/ph2qfa0v53nm1fd297dl889dv4dcs5h1-python3.12-jupyterlab-4.4.1']='1' ['/nix/store/pilsssjjdxvdphlg2h19p0bfx5q0jzkn-strip.sh']='1' ['/nix/store/ppdjjhbs1ca9j0419xncjbxqx688a1ik-python3.12-sniffio-1.3.1']='1' ['/nix/store/prd5x4nfdvwj1z7lxy6j1bpvw0yf0bpx-python3.12-cycler-0.12.1']='1' ['/nix/store/psi78zvlzrali45b76kimqvbxyklxwb7-libffi-3.4.8-dev']='1' ['/nix/store/pvyr1cd1d1gc1m6fvc1znn1p3p4qqv9g-qtshadertools-6.9.1']='1' ['/nix/store/pzb93xkgl8pd5j06zw9viqgx0szd6dw5-qtshadertools-6.9.1-dev']='1' ['/nix/store/q152izwmf9qzy8hj2p8mjv3imzbh7s9w-python3.12-typing-extensions-4.13.2']='1' ['/nix/store/q7xlyki1r05ym96lw204hhk9sr2zwdfs-python3.12-webencodings-0.5.1']='1' ['/nix/store/q8bx93bxxvbk89f58wi60wnqqnyj3lw9-dbus-1.14.10-dev']='1' ['/nix/store/qag087rsjgikfj1a4mfqrmny8k9389wy-python3.12-jupyterlab-pygments-0.3.0']='1' ['/nix/store/qkkgz5r0z149pwnbvz8qdayh46d045hk-python3.12-ipykernel-6.29.5']='1' ['/nix/store/qr7sj7i9z4s66n99q88zm6xb2cqzqz10-util-linux-2.41-dev']='1' ['/nix/store/qy4zsnh13nzvq9xz5n0d57d9v4pw4i7c-gmp-with-cxx-6.3.0']='1' ['/nix/store/qzicnwci4dpqzykmlf91yvchhhbq968s-python3.12-jinja2-3.1.6']='1' ['/nix/store/r0qbdfnvm384fff52xkdkzxiyqqyswi1-python3.12-sphinxcontrib-websupport-2.0.0']='1' ['/nix/store/r31rgw3calmin99259z86p6lg90ah322-python3.12-ipython-pygments-lexers-1.1.1']='1' ['/nix/store/r6gnwzgamspmbxv48j1xhmb2h4kfnz4n-python3.12-platformdirs-4.3.7']='1' ['/nix/store/rnn29mhynsa4ncmk0fkcrdr29n0j20l4-libffi-3.4.8']='1' ['/nix/store/rx8n7pmsl4w4nv04dr1akili227jlz9m-python3.12-markupsafe-3.0.2']='1' ['/nix/store/rxd3kdsc7k72198g58wk0qp3xdip5x5d-zlib-1.3.1-dev']='1' ['/nix/store/s38laiz30qciawxn6bymqwyqmpf8s33j-lttng-ust-2.13.8-dev']='1' ['/nix/store/s5jwhvn7j2gyr4abfzkjrg0j9hlma2xr-glibc-iconv-2.40']='1' ['/nix/store/s7d15z67bjqii4s5pd226nvj56mix0rz-python3.12-roman-numerals-py-3.1.0']='1' ['/nix/store/saa7srm8fpm7ci3wn25kh51y2piw75an-libsepol-3.8.1-bin']='1' ['/nix/store/sd7j5a80idvl564g55kq7ylznv4hsy74-python3.12-soupsieve-2.6']='1' ['/nix/store/si92b84j9mqr3zshc8l78b7liq98sldc-cups-2.4.11']='1' ['/nix/store/sisfq9wihyqqjzmrpik9b4xksifw97ha-libxkbcommon-1.8.1']='1' ['/nix/store/sk67m13n9jbk0j8q3h8lzxyw5riah1km-icu4c-76.1']='1' ['/nix/store/smaydcvrcaz906653vbnps70y9j7w658-git-2.49.0']='1' ['/nix/store/sn1z0cl7h2pcpakqbpdsx6jiy5n9qpb2-libsepol-3.8.1-dev']='1' ['/nix/store/spg20iadf5ylh7pl1l9q8ydf7dqghdfi-xorgproto-2024.1']='1' ['/nix/store/sq69ar98w90jp9ghy163km5i8w65pri1-python3.12-matplotlib-inline-0.1.7']='1' ['/nix/store/v15f6hy2rc050dfk9nddwh3wb6q136sp-python3.12-isoduration-20.11.0']='1' ['/nix/store/v53v67k3s16wmak41qy0q54pd7dkbcvr-libXrender-0.9.12']='1' ['/nix/store/v82a7zyam3hill1chvhzj04akf6nm6sm-python3.12-nbclient-0.10.2']='1' ['/nix/store/vb6ni45a87mxrj7v5jygxwbg1794z07s-python3.12-tzdata-2025.2']='1' ['/nix/store/vgk0g17bxmy0z5f6xk2d0sl36xgqxbn5-libthai-0.1.29']='1' ['/nix/store/vjrxh9d2iwzb2njsdybq0y9cg87bnpxn-python3.12-numpy-2.2.5']='1' ['/nix/store/vk74kcsly0mda6hir54gcnw4w7vqha3x-python3.12-pandocfilters-1.5.1']='1' ['/nix/store/vmpcmgcnwk614p71rvbf8x5k9sn6z571-python3.12-prompt-toolkit-3.0.50']='1' ['/nix/store/vqpjh9b21bxgjh4z1hxhd1f75h4vh7fk-python3.12-pytz-2025.2']='1' ['/nix/store/vvp8hlss3d5q6hn0cifq04jrpnp6bini-pcre2-10.44']='1' ['/nix/store/vwaj7qjspl03bvagmja2zswydaj8gi8p-python3.12-notebook-7.4.1']='1' ['/nix/store/w0a0v3ripdb1x6hk37h9qiblc39mjma4-unixODBC-2.3.12']='1' ['/nix/store/w2df6m4469wqv2ivqwgaqm30rvkm4sgi-python3.12-jupyterlab-widgets-3.0.13']='1' ['/nix/store/w7xfpjinkid66kbzvpghwpbpzrkbl1ik-python3.12-psutil-7.0.0']='1' ['/nix/store/w9gmvrb8km8fp7dsgdzfvy6zwwdv1j0c-python3.12-certifi-2025.01.31']='1' ['/nix/store/w9qijf113qkgqcv54ydhbjh0rlslysbr-freetype-2.13.3-dev']='1' ['/nix/store/wbv7b4dc17n1azxan5m5mm07fifai44a-zstd-1.5.7']='1' ['/nix/store/wddbpvwf533jwv3qix0qiib8bvg4xf45-python3.12-attrs-25.3.0']='1' ['/nix/store/wf1vkvsdfvf239la9h54g4xnqvqhf7yb-tcpdump-4.99.5']='1' ['/nix/store/wf3dym6h0cyk6qxcfpjsbzqc3la0zpvj-python3.12-sphinxcontrib-serializinghtml-2.0.0']='1' ['/nix/store/wgrbkkaldkrlrni33ccvm3b6vbxzb656-make-symlinks-relative.sh']='1' ['/nix/store/whii77m56rwk130727iv7kyycl24fjcc-xcb-util-0.4.1']='1' ['/nix/store/wjqj8ncgdxqpn78qp23blp5ijprpavp9-bzip2-1.0.8-dev']='1' ['/nix/store/wkg70x83zky4l3l2hmarggq11jj8pgkv-libxml2-2.13.8-dev']='1' ['/nix/store/wp4nmh0byqn6w9885q10qm6v0vxq8m28-libxcb-1.17.0-dev']='1' ['/nix/store/wxp741p66xbd7lfmg75x9k77vcg48l21-qtsvg-6.9.1']='1' ['/nix/store/x4xkywkgmpfgmaccxv6vb1070nm16mvy-qtdeclarative-6.9.1']='1' ['/nix/store/x5jz0dmc4j76fidfskshgbim26v40685-qttools-6.9.1']='1' ['/nix/store/x5zwzk8lpwvam3vninpdar8hr6qvaww3-double-conversion-3.3.1']='1' ['/nix/store/xa8vcbz8133h9gmsl2x401kacdyrcc6j-python3.12-pygments-2.19.1']='1' ['/nix/store/xamb3iw9a481i5rgnhgs5fhhgz1cgwak-xcb-util-keysyms-0.4.1']='1' ['/nix/store/xdczp4bkrp2dff2apb1vbybbfmfi8f7d-brotli-1.1.0-dev']='1' ['/nix/store/xhi725m883jwry8ifkp2ilkl0xy64q6m-python3.12-sphinxcontrib-htmlhelp-2.1.0']='1' ['/nix/store/xj5lnv5hrh8myxbwagc11k4rhrzy2l7z-libselinux-3.8.1-bin']='1' ['/nix/store/xjli5d0sm0i0pr9s2qld9k9nqiq8jx7a-python3.12-jsonschema-4.23.0']='1' ['/nix/store/xm2418a7fclainspb35n6h05xfsxb6vn-cups-2.4.11-lib']='1' ['/nix/store/xpszkfp1gaf8jfmcsll93xg0pb4c0rk7-libdrm-2.4.124']='1' ['/nix/store/xscg3as6h8zkanp495sjq55nq2azr5ls-python3.12-wcwidth-0.2.13']='1' ['/nix/store/xy880mwxql4nhdrw15r0ay1dwx3bmwrh-python3.12-cffi-1.17.1']='1' ['/nix/store/xyff06pkhki3qy1ls77w10s0v79c9il0-reproducible-builds.sh']='1' ['/nix/store/y0mnc83lrdgll8bg6qll7lcbkhrr7b84-update-autotools-gnu-config-scripts-hook']='1' ['/nix/store/y0n9h3hcv2wfp2rv03ii862lhycx5wij-glib-2.84.3-dev']='1' ['/nix/store/y2jwi4a4pgmavi994lfdvc6nj45nxi4f-icu4c-76.1-dev']='1' ['/nix/store/y3nxdc2x8hwivppzgx5hkrhacsh87l21-glib-2.84.3']='1' ['/nix/store/y7kzbaf1bmaxg08ij3x9550jipdg17m5-python3.12-mistune-3.1.2']='1' ['/nix/store/y8c1xr5r8da92s3nbb58373vjbl88svl-python3.12-async-lru-2.0.5']='1' ['/nix/store/ycvsz2k1zqcg48as18fcb171rzfdn5ll-libXdmcp-1.1.5']='1' ['/nix/store/yfavw5qqp0pvgdy8p50rfrp5w77zra95-python3.12-pyzmq-26.3.0']='1' ['/nix/store/yfrv3rw3w96wxvgfga55dpb291v2x7cl-harfbuzz-10.2.0-dev']='1' ['/nix/store/yjyqllvcz5s4w9h33ars9zkyj08gislg-python3.12-six-1.17.0']='1' ['/nix/store/ykjgplyvyglqv4prarshqdxjsiszsdpf-lksctp-tools-1.0.21']='1' ['/nix/store/ymmaa926pv3f3wlgpw9y1aygdvqi1m7j-systemd-257.6']='1' ['/nix/store/yn2h8ycxri1gz28g5nw9xf1ckbgzb6pb-python3.12-pure-eval-0.2.3']='1' ['/nix/store/ysn1f98vdc2sxjkgvkmgpqy1ih7n0g56-libxml2-2.13.8-bin']='1' ['/nix/store/ysz568vfldxlf24bdmxn0v7zshvf9804-python3.12-matplotlib-3.10.1']='1' ['/nix/store/yvdmi1gvqjjil5ihka8qs9wrr92gns9j-libjpeg-turbo-3.0.4']='1' ['/nix/store/yw429hvy80x2hg00lsfdfhkkib7gz54g-freetype-2.13.3']='1' ['/nix/store/yx2avni6agq4m3mzhmlrmypflc9famxj-liburcu-0.15.2-dev']='1' ['/nix/store/z4iv8z25l4jklbk6wq5r0vx6pjvs6hm7-libproxy-0.5.9-dev']='1' ['/nix/store/z7k07ghr8xykfy2ms353sdgk7kr0k42h-python3.12-prometheus-client-0.21.1']='1' ['/nix/store/z7k98578dfzi6l3hsvbivzm7hfqlk0zc-set-source-date-epoch-to-latest.sh']='1' ['/nix/store/z8rwxyq3233ra0c81cb9yh5igljph7g7-libxslt-1.1.43-bin']='1' ['/nix/store/z8s46c3fm5mdbhi8fgw1md1hn6c3l9ik-libxslt-1.1.43']='1' ['/nix/store/zb406965xij4m5f793xvrr16sjaixi00-brotli-1.1.0-lib']='1' ['/nix/store/zbydgvn9gypb3vg88mzydn88ky6cibaz-dbus-1.14.10']='1' ['/nix/store/zcmp1znlrzry73kzxychljwda2lmlzj7-libxkbcommon-1.8.1-dev']='1' ['/nix/store/zkvl3npcgzc1w623pj0fag0qsczd5rxq-bzip2-1.0.8']='1' ['/nix/store/zyj3yixsd4vjgbz8nsp5z9yfv6fhnw3d-vulkan-headers-1.4.313.0']='1' )
+qtPluginPrefix='lib/qt-6/plugins'
+qtQmlPrefix='lib/qt-6/qml'
+qttoolsPathSeen='/nix/store/x5jz0dmc4j76fidfskshgbim26v40685-qttools-6.9.1'
+role_post='_FOR_BUILD'
+shell='/nix/store/ih68ar79msmj0496pgld4r3vqfr7bbin-bash-5.2p37/bin/bash'
+export shell
+shellHook='echo "📶 ns-3 analysis environment ready!"
+'
+export shellHook
+stdenv='/nix/store/qjjpd1310d6qi63pdmjigykcznfi3n4y-stdenv-linux'
+export stdenv
+strictDeps=''
+export strictDeps
+system='x86_64-linux'
+export system
+declare -a unpackCmdHooks=('_defaultUnpack' )
+_activatePkgs ()
+{
+ 
+    local hostOffset targetOffset;
+    local pkg;
+    for hostOffset in "${allPlatOffsets[@]}";
+    do
+        local pkgsVar="${pkgAccumVarVars[hostOffset + 1]}";
+        for targetOffset in "${allPlatOffsets[@]}";
+        do
+            (( hostOffset <= targetOffset )) || continue;
+            local pkgsRef="${pkgsVar}[$targetOffset - $hostOffset]";
+            local pkgsSlice="${!pkgsRef}[@]";
+            for pkg in ${!pkgsSlice+"${!pkgsSlice}"};
+            do
+                activatePackage "$pkg" "$hostOffset" "$targetOffset";
+            done;
+        done;
+    done
+}
+_addRpathPrefix ()
+{
+ 
+    if [ "${NIX_NO_SELF_RPATH:-0}" != 1 ]; then
+        export NIX_LDFLAGS="-rpath $1/lib ${NIX_LDFLAGS-}";
+    fi
+}
+_addToEnv ()
+{
+ 
+    local depHostOffset depTargetOffset;
+    local pkg;
+    for depHostOffset in "${allPlatOffsets[@]}";
+    do
+        local hookVar="${pkgHookVarVars[depHostOffset + 1]}";
+        local pkgsVar="${pkgAccumVarVars[depHostOffset + 1]}";
+        for depTargetOffset in "${allPlatOffsets[@]}";
+        do
+            (( depHostOffset <= depTargetOffset )) || continue;
+            local hookRef="${hookVar}[$depTargetOffset - $depHostOffset]";
+            if [[ -z "${strictDeps-}" ]]; then
+                local visitedPkgs="";
+                for pkg in "${pkgsBuildBuild[@]}" "${pkgsBuildHost[@]}" "${pkgsBuildTarget[@]}" "${pkgsHostHost[@]}" "${pkgsHostTarget[@]}" "${pkgsTargetTarget[@]}";
+                do
+                    if [[ "$visitedPkgs" = *"$pkg"* ]]; then
+                        continue;
+                    fi;
+                    runHook "${!hookRef}" "$pkg";
+                    visitedPkgs+=" $pkg";
+                done;
+            else
+                local pkgsRef="${pkgsVar}[$depTargetOffset - $depHostOffset]";
+                local pkgsSlice="${!pkgsRef}[@]";
+                for pkg in ${!pkgsSlice+"${!pkgsSlice}"};
+                do
+                    runHook "${!hookRef}" "$pkg";
+                done;
+            fi;
+        done;
+    done
+}
+_allFlags ()
+{
+ 
+    export system pname name version;
+    while IFS='' read -r varName; do
+        nixTalkativeLog "@${varName}@ -> ${!varName}";
+        args+=("--subst-var" "$varName");
+    done < <(awk 'BEGIN { for (v in ENVIRON) if (v ~ /^[a-z][a-zA-Z0-9_]*$/) print v }')
+}
+_assignFirst ()
+{
+ 
+    local varName="$1";
+    local _var;
+    local REMOVE=REMOVE;
+    shift;
+    for _var in "$@";
+    do
+        if [ -n "${!_var-}" ]; then
+            eval "${varName}"="${_var}";
+            return;
+        fi;
+    done;
+    echo;
+    echo "error: _assignFirst: could not find a non-empty variable whose name to assign to ${varName}.";
+    echo "       The following variables were all unset or empty:";
+    echo "           $*";
+    if [ -z "${out:-}" ]; then
+        echo '       If you do not want an "out" output in your derivation, make sure to define';
+        echo '       the other specific required outputs. This can be achieved by picking one';
+        echo "       of the above as an output.";
+        echo '       You do not have to remove "out" if you want to have a different default';
+        echo '       output, because the first output is taken as a default.';
+        echo;
+    fi;
+    return 1
+}
+_callImplicitHook ()
+{
+ 
+    local def="$1";
+    local hookName="$2";
+    if declare -F "$hookName" > /dev/null; then
+        nixTalkativeLog "calling implicit '$hookName' function hook";
+        "$hookName";
+    else
+        if type -p "$hookName" > /dev/null; then
+            nixTalkativeLog "sourcing implicit '$hookName' script hook";
+            source "$hookName";
+        else
+            if [ -n "${!hookName:-}" ]; then
+                nixTalkativeLog "evaling implicit '$hookName' string hook";
+                eval "${!hookName}";
+            else
+                return "$def";
+            fi;
+        fi;
+    fi
+}
+_defaultUnpack ()
+{
+ 
+    local fn="$1";
+    local destination;
+    if [ -d "$fn" ]; then
+        destination="$(stripHash "$fn")";
+        if [ -e "$destination" ]; then
+            echo "Cannot copy $fn to $destination: destination already exists!";
+            echo "Did you specify two \"srcs\" with the same \"name\"?";
+            return 1;
+        fi;
+        cp -r --preserve=mode,timestamps --reflink=auto -- "$fn" "$destination";
+    else
+        case "$fn" in 
+            *.tar.xz | *.tar.lzma | *.txz)
+                ( XZ_OPT="--threads=$NIX_BUILD_CORES" xz -d < "$fn";
+                true ) | tar xf - --mode=+w --warning=no-timestamp
+            ;;
+            *.tar | *.tar.* | *.tgz | *.tbz2 | *.tbz)
+                tar xf "$fn" --mode=+w --warning=no-timestamp
+            ;;
+            *)
+                return 1
+            ;;
+        esac;
+    fi
+}
+_doStrip ()
+{
+ 
+    local -ra flags=(dontStripHost dontStripTarget);
+    local -ra debugDirs=(stripDebugList stripDebugListTarget);
+    local -ra allDirs=(stripAllList stripAllListTarget);
+    local -ra stripCmds=(STRIP STRIP_FOR_TARGET);
+    local -ra ranlibCmds=(RANLIB RANLIB_FOR_TARGET);
+    stripDebugList=${stripDebugList[*]:-lib lib32 lib64 libexec bin sbin Applications Library/Frameworks};
+    stripDebugListTarget=${stripDebugListTarget[*]:-};
+    stripAllList=${stripAllList[*]:-};
+    stripAllListTarget=${stripAllListTarget[*]:-};
+    local i;
+    for i in ${!stripCmds[@]};
+    do
+        local -n flag="${flags[$i]}";
+        local -n debugDirList="${debugDirs[$i]}";
+        local -n allDirList="${allDirs[$i]}";
+        local -n stripCmd="${stripCmds[$i]}";
+        local -n ranlibCmd="${ranlibCmds[$i]}";
+        if [[ -n "${dontStrip-}" || -n "${flag-}" ]] || ! type -f "${stripCmd-}" 2> /dev/null 1>&2; then
+            continue;
+        fi;
+        stripDirs "$stripCmd" "$ranlibCmd" "$debugDirList" "${stripDebugFlags[*]:--S -p}";
+        stripDirs "$stripCmd" "$ranlibCmd" "$allDirList" "${stripAllFlags[*]:--s -p}";
+    done
+}
+_eval ()
+{
+ 
+    if declare -F "$1" > /dev/null 2>&1; then
+        "$@";
+    else
+        eval "$1";
+    fi
+}
+_logHook ()
+{
+ 
+    if [[ -z ${NIX_LOG_FD-} ]]; then
+        return;
+    fi;
+    local hookKind="$1";
+    local hookExpr="$2";
+    shift 2;
+    if declare -F "$hookExpr" > /dev/null 2>&1; then
+        nixTalkativeLog "calling '$hookKind' function hook '$hookExpr'" "$@";
+    else
+        if type -p "$hookExpr" > /dev/null; then
+            nixTalkativeLog "sourcing '$hookKind' script hook '$hookExpr'";
+        else
+            if [[ "$hookExpr" != "_callImplicitHook"* ]]; then
+                local exprToOutput;
+                if [[ ${NIX_DEBUG:-0} -ge 5 ]]; then
+                    exprToOutput="$hookExpr";
+                else
+                    local hookExprLine;
+                    while IFS= read -r hookExprLine; do
+                        hookExprLine="${hookExprLine#"${hookExprLine%%[![:space:]]*}"}";
+                        if [[ -n "$hookExprLine" ]]; then
+                            exprToOutput+="$hookExprLine\\n ";
+                        fi;
+                    done <<< "$hookExpr";
+                    exprToOutput="${exprToOutput%%\\n }";
+                fi;
+                nixTalkativeLog "evaling '$hookKind' string hook '$exprToOutput'";
+            fi;
+        fi;
+    fi
+}
+_makeSymlinksRelative ()
+{
+ 
+    local symlinkTarget;
+    if [ "${dontRewriteSymlinks-}" ] || [ ! -e "$prefix" ]; then
+        return;
+    fi;
+    while IFS= read -r -d '' f; do
+        symlinkTarget=$(readlink "$f");
+        if [[ "$symlinkTarget"/ != "$prefix"/* ]]; then
+            continue;
+        fi;
+        if [ ! -e "$symlinkTarget" ]; then
+            echo "the symlink $f is broken, it points to $symlinkTarget (which is missing)";
+        fi;
+        echo "rewriting symlink $f to be relative to $prefix";
+        ln -snrf "$symlinkTarget" "$f";
+    done < <(find $prefix -type l -print0)
+}
+_makeSymlinksRelativeInAllOutputs ()
+{
+ 
+    local output;
+    for output in $(getAllOutputNames);
+    do
+        prefix="${!output}" _makeSymlinksRelative;
+    done
+}
+_moveLib64 ()
+{
+ 
+    if [ "${dontMoveLib64-}" = 1 ]; then
+        return;
+    fi;
+    if [ ! -e "$prefix/lib64" -o -L "$prefix/lib64" ]; then
+        return;
+    fi;
+    echo "moving $prefix/lib64/* to $prefix/lib";
+    mkdir -p $prefix/lib;
+    shopt -s dotglob;
+    for i in $prefix/lib64/*;
+    do
+        mv --no-clobber "$i" $prefix/lib;
+    done;
+    shopt -u dotglob;
+    rmdir $prefix/lib64;
+    ln -s lib $prefix/lib64
+}
+_moveSbin ()
+{
+ 
+    if [ "${dontMoveSbin-}" = 1 ]; then
+        return;
+    fi;
+    if [ ! -e "$prefix/sbin" -o -L "$prefix/sbin" ]; then
+        return;
+    fi;
+    echo "moving $prefix/sbin/* to $prefix/bin";
+    mkdir -p $prefix/bin;
+    shopt -s dotglob;
+    for i in $prefix/sbin/*;
+    do
+        mv "$i" $prefix/bin;
+    done;
+    shopt -u dotglob;
+    rmdir $prefix/sbin;
+    ln -s bin $prefix/sbin
+}
+_moveSystemdUserUnits ()
+{
+ 
+    if [ "${dontMoveSystemdUserUnits:-0}" = 1 ]; then
+        return;
+    fi;
+    if [ ! -e "${prefix:?}/lib/systemd/user" ]; then
+        return;
+    fi;
+    local source="$prefix/lib/systemd/user";
+    local target="$prefix/share/systemd/user";
+    echo "moving $source/* to $target";
+    mkdir -p "$target";
+    ( shopt -s dotglob;
+    for i in "$source"/*;
+    do
+        mv "$i" "$target";
+    done );
+    rmdir "$source";
+    ln -s "$target" "$source"
+}
+_moveToShare ()
+{
+ 
+    if [ -n "$__structuredAttrs" ]; then
+        if [ -z "${forceShare-}" ]; then
+            forceShare=(man doc info);
+        fi;
+    else
+        forceShare=(${forceShare:-man doc info});
+    fi;
+    if [[ -z "$out" ]]; then
+        return;
+    fi;
+    for d in "${forceShare[@]}";
+    do
+        if [ -d "$out/$d" ]; then
+            if [ -d "$out/share/$d" ]; then
+                echo "both $d/ and share/$d/ exist!";
+            else
+                echo "moving $out/$d to $out/share/$d";
+                mkdir -p $out/share;
+                mv $out/$d $out/share/;
+            fi;
+        fi;
+    done
+}
+_multioutConfig ()
+{
+ 
+    if [ "$(getAllOutputNames)" = "out" ] || [ -z "${setOutputFlags-1}" ]; then
+        return;
+    fi;
+    if [ -z "${shareDocName:-}" ]; then
+        local confScript="${configureScript:-}";
+        if [ -z "$confScript" ] && [ -x ./configure ]; then
+            confScript=./configure;
+        fi;
+        if [ -f "$confScript" ]; then
+            local shareDocName="$(sed -n "s/^PACKAGE_TARNAME='\(.*\)'$/\1/p" < "$confScript")";
+        fi;
+        if [ -z "$shareDocName" ] || echo "$shareDocName" | grep -q '[^a-zA-Z0-9_-]'; then
+            shareDocName="$(echo "$name" | sed 's/-[^a-zA-Z].*//')";
+        fi;
+    fi;
+    prependToVar configureFlags --bindir="${!outputBin}"/bin --sbindir="${!outputBin}"/sbin --includedir="${!outputInclude}"/include --mandir="${!outputMan}"/share/man --infodir="${!outputInfo}"/share/info --docdir="${!outputDoc}"/share/doc/"${shareDocName}" --libdir="${!outputLib}"/lib --libexecdir="${!outputLib}"/libexec --localedir="${!outputLib}"/share/locale;
+    prependToVar installFlags pkgconfigdir="${!outputDev}"/lib/pkgconfig m4datadir="${!outputDev}"/share/aclocal aclocaldir="${!outputDev}"/share/aclocal
+}
+_multioutDevs ()
+{
+ 
+    if [ "$(getAllOutputNames)" = "out" ] || [ -z "${moveToDev-1}" ]; then
+        return;
+    fi;
+    moveToOutput include "${!outputInclude}";
+    moveToOutput lib/pkgconfig "${!outputDev}";
+    moveToOutput share/pkgconfig "${!outputDev}";
+    moveToOutput lib/cmake "${!outputDev}";
+    moveToOutput share/aclocal "${!outputDev}";
+    for f in "${!outputDev}"/{lib,share}/pkgconfig/*.pc;
+    do
+        echo "Patching '$f' includedir to output ${!outputInclude}";
+        sed -i "/^includedir=/s,=\${prefix},=${!outputInclude}," "$f";
+    done
+}
+_multioutDocs ()
+{
+ 
+    local REMOVE=REMOVE;
+    moveToOutput share/info "${!outputInfo}";
+    moveToOutput share/doc "${!outputDoc}";
+    moveToOutput share/gtk-doc "${!outputDevdoc}";
+    moveToOutput share/devhelp/books "${!outputDevdoc}";
+    moveToOutput share/man "${!outputMan}";
+    moveToOutput share/man/man3 "${!outputDevman}"
+}
+_multioutPropagateDev ()
+{
+ 
+    if [ "$(getAllOutputNames)" = "out" ]; then
+        return;
+    fi;
+    local outputFirst;
+    for outputFirst in $(getAllOutputNames);
+    do
+        break;
+    done;
+    local propagaterOutput="$outputDev";
+    if [ -z "$propagaterOutput" ]; then
+        propagaterOutput="$outputFirst";
+    fi;
+    if [ -z "${propagatedBuildOutputs+1}" ]; then
+        local po_dirty="$outputBin $outputInclude $outputLib";
+        set +o pipefail;
+        propagatedBuildOutputs=`echo "$po_dirty"             | tr -s ' ' '\n' | grep -v -F "$propagaterOutput"             | sort -u | tr '\n' ' ' `;
+        set -o pipefail;
+    fi;
+    if [ -z "$propagatedBuildOutputs" ]; then
+        return;
+    fi;
+    mkdir -p "${!propagaterOutput}"/nix-support;
+    for output in $propagatedBuildOutputs;
+    do
+        echo -n " ${!output}" >> "${!propagaterOutput}"/nix-support/propagated-build-inputs;
+    done
+}
+_nixLogWithLevel ()
+{
+ 
+    [[ -z ${NIX_LOG_FD-} || ${NIX_DEBUG:-0} -lt ${1:?} ]] && return 0;
+    local logLevel;
+    case "${1:?}" in 
+        0)
+            logLevel=ERROR
+        ;;
+        1)
+            logLevel=WARN
+        ;;
+        2)
+            logLevel=NOTICE
+        ;;
+        3)
+            logLevel=INFO
+        ;;
+        4)
+            logLevel=TALKATIVE
+        ;;
+        5)
+            logLevel=CHATTY
+        ;;
+        6)
+            logLevel=DEBUG
+        ;;
+        7)
+            logLevel=VOMIT
+        ;;
+        *)
+            echo "_nixLogWithLevel: called with invalid log level: ${1:?}" >&"$NIX_LOG_FD";
+            return 1
+        ;;
+    esac;
+    local callerName="${FUNCNAME[2]}";
+    if [[ $callerName == "_callImplicitHook" ]]; then
+        callerName="${hookName:?}";
+    fi;
+    printf "%s: %s: %s\n" "$logLevel" "$callerName" "${2:?}" >&"$NIX_LOG_FD"
+}
+_overrideFirst ()
+{
+ 
+    if [ -z "${!1-}" ]; then
+        _assignFirst "$@";
+    fi
+}
+_pruneLibtoolFiles ()
+{
+ 
+    if [ "${dontPruneLibtoolFiles-}" ] || [ ! -e "$prefix" ]; then
+        return;
+    fi;
+    find "$prefix" -type f -name '*.la' -exec grep -q '^# Generated by .*libtool' {} \; -exec grep -q "^old_library=''" {} \; -exec sed -i {} -e "/^dependency_libs='[^']/ c dependency_libs='' #pruned" \;
+}
+_updateSourceDateEpochFromSourceRoot ()
+{
+ 
+    if [ -n "$sourceRoot" ]; then
+        updateSourceDateEpoch "$sourceRoot";
+    fi
+}
+activatePackage ()
+{
+ 
+    local pkg="$1";
+    local -r hostOffset="$2";
+    local -r targetOffset="$3";
+    (( hostOffset <= targetOffset )) || exit 1;
+    if [ -f "$pkg" ]; then
+        nixTalkativeLog "sourcing setup hook '$pkg'";
+        source "$pkg";
+    fi;
+    if [[ -z "${strictDeps-}" || "$hostOffset" -le -1 ]]; then
+        addToSearchPath _PATH "$pkg/bin";
+    fi;
+    if (( hostOffset <= -1 )); then
+        addToSearchPath _XDG_DATA_DIRS "$pkg/share";
+    fi;
+    if [[ "$hostOffset" -eq 0 && -d "$pkg/bin" ]]; then
+        addToSearchPath _HOST_PATH "$pkg/bin";
+    fi;
+    if [[ -f "$pkg/nix-support/setup-hook" ]]; then
+        nixTalkativeLog "sourcing setup hook '$pkg/nix-support/setup-hook'";
+        source "$pkg/nix-support/setup-hook";
+    fi
+}
+addEnvHooks ()
+{
+ 
+    local depHostOffset="$1";
+    shift;
+    local pkgHookVarsSlice="${pkgHookVarVars[$depHostOffset + 1]}[@]";
+    local pkgHookVar;
+    for pkgHookVar in "${!pkgHookVarsSlice}";
+    do
+        eval "${pkgHookVar}s"'+=("$@")';
+    done
+}
+addPythonPath ()
+{
+ 
+    addToSearchPathWithCustomDelimiter : PYTHONPATH $1/lib/python3.12/site-packages
+}
+addQtModulePrefix ()
+{
+ 
+    addToSearchPath QT_ADDITIONAL_PACKAGES_PREFIX_PATH $1
+}
+addToSearchPath ()
+{
+ 
+    addToSearchPathWithCustomDelimiter ":" "$@"
+}
+addToSearchPathWithCustomDelimiter ()
+{
+ 
+    local delimiter="$1";
+    local varName="$2";
+    local dir="$3";
+    if [[ -d "$dir" && "${!varName:+${delimiter}${!varName}${delimiter}}" != *"${delimiter}${dir}${delimiter}"* ]]; then
+        export "${varName}=${!varName:+${!varName}${delimiter}}${dir}";
+    fi
+}
+addXMLCatalogs ()
+{
+ 
+    local d i;
+    for d in $1/share/xml $1/xml/dtd $1/xml/xsl;
+    do
+        if [ -d $d ]; then
+            for i in $(find $d -name catalog.xml);
+            do
+                XML_CATALOG_FILES+=" $i";
+            done;
+        fi;
+    done
+}
+appendToVar ()
+{
+ 
+    local -n nameref="$1";
+    local useArray type;
+    if [ -n "$__structuredAttrs" ]; then
+        useArray=true;
+    else
+        useArray=false;
+    fi;
+    if type=$(declare -p "$1" 2> /dev/null); then
+        case "${type#* }" in 
+            -A*)
+                echo "appendToVar(): ERROR: trying to use appendToVar on an associative array, use variable+=([\"X\"]=\"Y\") instead." 1>&2;
+                return 1
+            ;;
+            -a*)
+                useArray=true
+            ;;
+            *)
+                useArray=false
+            ;;
+        esac;
+    fi;
+    shift;
+    if $useArray; then
+        nameref=(${nameref+"${nameref[@]}"} "$@");
+    else
+        nameref="${nameref-} $*";
+    fi
+}
+auditTmpdir ()
+{
+ 
+    local dir="$1";
+    [ -e "$dir" ] || return 0;
+    echo "checking for references to $TMPDIR/ in $dir...";
+    local i;
+    find "$dir" -type f -print0 | while IFS= read -r -d '' i; do
+        if [[ "$i" =~ .build-id ]]; then
+            continue;
+        fi;
+        if isELF "$i"; then
+            if { 
+                printf :;
+                patchelf --print-rpath "$i"
+            } | grep -q -F ":$TMPDIR/"; then
+                echo "RPATH of binary $i contains a forbidden reference to $TMPDIR/";
+                exit 1;
+            fi;
+        fi;
+        if isScript "$i"; then
+            if [ -e "$(dirname "$i")/.$(basename "$i")-wrapped" ]; then
+                if grep -q -F "$TMPDIR/" "$i"; then
+                    echo "wrapper script $i contains a forbidden reference to $TMPDIR/";
+                    exit 1;
+                fi;
+            fi;
+        fi;
+    done
+}
+bintoolsWrapper_addLDVars ()
+{
+ 
+    local role_post;
+    getHostRoleEnvHook;
+    if [[ -d "$1/lib64" && ! -L "$1/lib64" ]]; then
+        export NIX_LDFLAGS${role_post}+=" -L$1/lib64";
+    fi;
+    if [[ -d "$1/lib" ]]; then
+        local -a glob=($1/lib/lib*);
+        if [ "${#glob[*]}" -gt 0 ]; then
+            export NIX_LDFLAGS${role_post}+=" -L$1/lib";
+        fi;
+    fi
+}
+buildPhase ()
+{
+ 
+    runHook preBuild;
+    if [[ -z "${makeFlags-}" && -z "${makefile:-}" && ! ( -e Makefile || -e makefile || -e GNUmakefile ) ]]; then
+        echo "no Makefile or custom buildPhase, doing nothing";
+    else
+        foundMakefile=1;
+        local flagsArray=(${enableParallelBuilding:+-j${NIX_BUILD_CORES}} SHELL="$SHELL");
+        concatTo flagsArray makeFlags makeFlagsArray buildFlags buildFlagsArray;
+        echoCmd 'build flags' "${flagsArray[@]}";
+        make ${makefile:+-f $makefile} "${flagsArray[@]}";
+        unset flagsArray;
+    fi;
+    runHook postBuild
+}
+ccWrapper_addCVars ()
+{
+ 
+    local role_post;
+    getHostRoleEnvHook;
+    if [ -d "$1/include" ]; then
+        export NIX_CFLAGS_COMPILE${role_post}+=" -isystem $1/include";
+    fi;
+    if [ -d "$1/Library/Frameworks" ]; then
+        export NIX_CFLAGS_COMPILE${role_post}+=" -iframework $1/Library/Frameworks";
+    fi
+}
+checkPhase ()
+{
+ 
+    runHook preCheck;
+    if [[ -z "${foundMakefile:-}" ]]; then
+        echo "no Makefile or custom checkPhase, doing nothing";
+        runHook postCheck;
+        return;
+    fi;
+    if [[ -z "${checkTarget:-}" ]]; then
+        if make -n ${makefile:+-f $makefile} check > /dev/null 2>&1; then
+            checkTarget="check";
+        else
+            if make -n ${makefile:+-f $makefile} test > /dev/null 2>&1; then
+                checkTarget="test";
+            fi;
+        fi;
+    fi;
+    if [[ -z "${checkTarget:-}" ]]; then
+        echo "no check/test target in ${makefile:-Makefile}, doing nothing";
+    else
+        local flagsArray=(${enableParallelChecking:+-j${NIX_BUILD_CORES}} SHELL="$SHELL");
+        concatTo flagsArray makeFlags makeFlagsArray checkFlags=VERBOSE=y checkFlagsArray checkTarget;
+        echoCmd 'check flags' "${flagsArray[@]}";
+        make ${makefile:+-f $makefile} "${flagsArray[@]}";
+        unset flagsArray;
+    fi;
+    runHook postCheck
+}
+compressManPages ()
+{
+ 
+    local dir="$1";
+    if [ -L "$dir"/share ] || [ -L "$dir"/share/man ] || [ ! -d "$dir/share/man" ]; then
+        return;
+    fi;
+    echo "gzipping man pages under $dir/share/man/";
+    find "$dir"/share/man/ -type f -a '!' -regex '.*\.\(bz2\|gz\|xz\)$' -print0 | while IFS= read -r -d '' f; do
+        if gzip -c -n "$f" > "$f".gz; then
+            rm "$f";
+        else
+            rm "$f".gz;
+        fi;
+    done;
+    find "$dir"/share/man/ -type l -a '!' -regex '.*\.\(bz2\|gz\|xz\)$' -print0 | sort -z | while IFS= read -r -d '' f; do
+        local target;
+        target="$(readlink -f "$f")";
+        if [ -f "$target".gz ]; then
+            ln -sf "$target".gz "$f".gz && rm "$f";
+        fi;
+    done
+}
+concatStringsSep ()
+{
+ 
+    local sep="$1";
+    local name="$2";
+    local type oldifs;
+    if type=$(declare -p "$name" 2> /dev/null); then
+        local -n nameref="$name";
+        case "${type#* }" in 
+            -A*)
+                echo "concatStringsSep(): ERROR: trying to use concatStringsSep on an associative array." 1>&2;
+                return 1
+            ;;
+            -a*)
+                local IFS="$(printf '\036')"
+            ;;
+            *)
+                local IFS=" "
+            ;;
+        esac;
+        local ifs_separated="${nameref[*]}";
+        echo -n "${ifs_separated//"$IFS"/"$sep"}";
+    fi
+}
+concatTo ()
+{
+ 
+    local -;
+    set -o noglob;
+    local -n targetref="$1";
+    shift;
+    local arg default name type;
+    for arg in "$@";
+    do
+        IFS="=" read -r name default <<< "$arg";
+        local -n nameref="$name";
+        if [[ -z "${nameref[*]}" && -n "$default" ]]; then
+            targetref+=("$default");
+        else
+            if type=$(declare -p "$name" 2> /dev/null); then
+                case "${type#* }" in 
+                    -A*)
+                        echo "concatTo(): ERROR: trying to use concatTo on an associative array." 1>&2;
+                        return 1
+                    ;;
+                    -a*)
+                        targetref+=("${nameref[@]}")
+                    ;;
+                    *)
+                        if [[ "$name" = *"Array" ]]; then
+                            nixErrorLog "concatTo(): $name is not declared as array, treating as a singleton. This will become an error in future";
+                            targetref+=(${nameref+"${nameref[@]}"});
+                        else
+                            targetref+=(${nameref-});
+                        fi
+                    ;;
+                esac;
+            fi;
+        fi;
+    done
+}
+configurePhase ()
+{
+ 
+    runHook preConfigure;
+    : "${configureScript=}";
+    if [[ -z "$configureScript" && -x ./configure ]]; then
+        configureScript=./configure;
+    fi;
+    if [ -z "${dontFixLibtool:-}" ]; then
+        export lt_cv_deplibs_check_method="${lt_cv_deplibs_check_method-pass_all}";
+        local i;
+        find . -iname "ltmain.sh" -print0 | while IFS='' read -r -d '' i; do
+            echo "fixing libtool script $i";
+            fixLibtool "$i";
+        done;
+        CONFIGURE_MTIME_REFERENCE=$(mktemp configure.mtime.reference.XXXXXX);
+        find . -executable -type f -name configure -exec grep -l 'GNU Libtool is free software; you can redistribute it and/or modify' {} \; -exec touch -r {} "$CONFIGURE_MTIME_REFERENCE" \; -exec sed -i s_/usr/bin/file_file_g {} \; -exec touch -r "$CONFIGURE_MTIME_REFERENCE" {} \;;
+        rm -f "$CONFIGURE_MTIME_REFERENCE";
+    fi;
+    if [[ -z "${dontAddPrefix:-}" && -n "$prefix" ]]; then
+        prependToVar configureFlags "${prefixKey:---prefix=}$prefix";
+    fi;
+    if [[ -f "$configureScript" ]]; then
+        if [ -z "${dontAddDisableDepTrack:-}" ]; then
+            if grep -q dependency-tracking "$configureScript"; then
+                prependToVar configureFlags --disable-dependency-tracking;
+            fi;
+        fi;
+        if [ -z "${dontDisableStatic:-}" ]; then
+            if grep -q enable-static "$configureScript"; then
+                prependToVar configureFlags --disable-static;
+            fi;
+        fi;
+        if [ -z "${dontPatchShebangsInConfigure:-}" ]; then
+            patchShebangs --build "$configureScript";
+        fi;
+    fi;
+    if [ -n "$configureScript" ]; then
+        local -a flagsArray;
+        concatTo flagsArray configureFlags configureFlagsArray;
+        echoCmd 'configure flags' "${flagsArray[@]}";
+        $configureScript "${flagsArray[@]}";
+        unset flagsArray;
+    else
+        echo "no configure script, doing nothing";
+    fi;
+    runHook postConfigure
+}
+consumeEntire ()
+{
+ 
+    if IFS='' read -r -d '' "$1"; then
+        echo "consumeEntire(): ERROR: Input null bytes, won't process" 1>&2;
+        return 1;
+    fi
+}
+distPhase ()
+{
+ 
+    runHook preDist;
+    local flagsArray=();
+    concatTo flagsArray distFlags distFlagsArray distTarget=dist;
+    echo 'dist flags: %q' "${flagsArray[@]}";
+    make ${makefile:+-f $makefile} "${flagsArray[@]}";
+    if [ "${dontCopyDist:-0}" != 1 ]; then
+        mkdir -p "$out/tarballs";
+        cp -pvd ${tarballs[*]:-*.tar.gz} "$out/tarballs";
+    fi;
+    runHook postDist
+}
+dumpVars ()
+{
+ 
+    if [ "${noDumpEnvVars:-0}" != 1 ]; then
+        { 
+            install -m 0600 /dev/null "$NIX_BUILD_TOP/env-vars" && export 2> /dev/null >| "$NIX_BUILD_TOP/env-vars"
+        } || true;
+    fi
+}
+echoCmd ()
+{
+ 
+    printf "%s:" "$1";
+    shift;
+    printf ' %q' "$@";
+    echo
+}
+exitHandler ()
+{
+ 
+    exitCode="$?";
+    set +e;
+    if [ -n "${showBuildStats:-}" ]; then
+        read -r -d '' -a buildTimes < <(times);
+        echo "build times:";
+        echo "user time for the shell             ${buildTimes[0]}";
+        echo "system time for the shell           ${buildTimes[1]}";
+        echo "user time for all child processes   ${buildTimes[2]}";
+        echo "system time for all child processes ${buildTimes[3]}";
+    fi;
+    if (( "$exitCode" != 0 )); then
+        runHook failureHook;
+        if [ -n "${succeedOnFailure:-}" ]; then
+            echo "build failed with exit code $exitCode (ignored)";
+            mkdir -p "$out/nix-support";
+            printf "%s" "$exitCode" > "$out/nix-support/failed";
+            exit 0;
+        fi;
+    else
+        runHook exitHook;
+    fi;
+    return "$exitCode"
+}
+findInputs ()
+{
+ 
+    local -r pkg="$1";
+    local -r hostOffset="$2";
+    local -r targetOffset="$3";
+    (( hostOffset <= targetOffset )) || exit 1;
+    local varVar="${pkgAccumVarVars[hostOffset + 1]}";
+    local varRef="$varVar[$((targetOffset - hostOffset))]";
+    local var="${!varRef}";
+    unset -v varVar varRef;
+    local varSlice="$var[*]";
+    case " ${!varSlice-} " in 
+        *" $pkg "*)
+            return 0
+        ;;
+    esac;
+    unset -v varSlice;
+    eval "$var"'+=("$pkg")';
+    if ! [ -e "$pkg" ]; then
+        echo "build input $pkg does not exist" 1>&2;
+        exit 1;
+    fi;
+    function mapOffset () 
+    { 
+        local -r inputOffset="$1";
+        local -n outputOffset="$2";
+        if (( inputOffset <= 0 )); then
+            outputOffset=$((inputOffset + hostOffset));
+        else
+            outputOffset=$((inputOffset - 1 + targetOffset));
+        fi
+    };
+    local relHostOffset;
+    for relHostOffset in "${allPlatOffsets[@]}";
+    do
+        local files="${propagatedDepFilesVars[relHostOffset + 1]}";
+        local hostOffsetNext;
+        mapOffset "$relHostOffset" hostOffsetNext;
+        (( -1 <= hostOffsetNext && hostOffsetNext <= 1 )) || continue;
+        local relTargetOffset;
+        for relTargetOffset in "${allPlatOffsets[@]}";
+        do
+            (( "$relHostOffset" <= "$relTargetOffset" )) || continue;
+            local fileRef="${files}[$relTargetOffset - $relHostOffset]";
+            local file="${!fileRef}";
+            unset -v fileRef;
+            local targetOffsetNext;
+            mapOffset "$relTargetOffset" targetOffsetNext;
+            (( -1 <= hostOffsetNext && hostOffsetNext <= 1 )) || continue;
+            [[ -f "$pkg/nix-support/$file" ]] || continue;
+            local pkgNext;
+            read -r -d '' pkgNext < "$pkg/nix-support/$file" || true;
+            for pkgNext in $pkgNext;
+            do
+                findInputs "$pkgNext" "$hostOffsetNext" "$targetOffsetNext";
+            done;
+        done;
+    done
+}
+fixLibtool ()
+{
+ 
+    local search_path;
+    for flag in $NIX_LDFLAGS;
+    do
+        case $flag in 
+            -L*)
+                search_path+=" ${flag#-L}"
+            ;;
+        esac;
+    done;
+    sed -i "$1" -e "s^eval \(sys_lib_search_path=\).*^\1'${search_path:-}'^" -e 's^eval sys_lib_.+search_path=.*^^'
+}
+fixQtBuiltinPaths ()
+{
+ 
+    local dir="$1";
+    local pattern="$2";
+    local lib="${!outputLib}";
+    if [ -d "$dir" ]; then
+        find "$dir" -name "$pattern" | while read pr_; do
+            if grep -q '\$\$\[QT_' "${pr_:?}"; then
+                echo "fixQtBuiltinPaths: Fixing Qt builtin paths in \`${pr_:?}'...";
+                sed -i "${pr_:?}" -e "s|\\\$\\\$\\[QT_HOST_BINS[^]]*\\]|$lib/bin|g" -e "s|\\\$\\\$\\[QT_HOST_LIBEXECS[^]]*\\]|$lib/libexec|g" -e "s|\\\$\\\$\\[QT_HOST_DATA[^]]*\\]/mkspecs|$lib/mkspecs|g" -e "s|\\\$\\\$\\[QT_HOST_PREFIX[^]]*\\]|$lib|g" -e "s|\\\$\\\$\\[QT_INSTALL_ARCHDATA[^]]*\\]|$lib|g" -e "s|\\\$\\\$\\[QT_INSTALL_BINS[^]]*\\]|$lib/bin|g" -e "s|\\\$\\\$\\[QT_INSTALL_CONFIGURATION[^]]*\\]|$lib|g" -e "s|\\\$\\\$\\[QT_INSTALL_DATA[^]]*\\]|$lib|g" -e "s|\\\$\\\$\\[QT_INSTALL_DOCS[^]]*\\]|$lib/share/doc|g" -e "s|\\\$\\\$\\[QT_INSTALL_EXAMPLES[^]]*\\]|$lib/examples|g" -e "s|\\\$\\\$\\[QT_INSTALL_HEADERS[^]]*\\]|$lib/include|g" -e "s|\\\$\\\$\\[QT_INSTALL_LIBS[^]]*\\]|$lib/lib|g" -e "s|\\\$\\\$\\[QT_INSTALL_LIBEXECS[^]]*\\]|$lib/libexec|g" -e "s|\\\$\\\$\\[QT_INSTALL_PLUGINS[^]]*\\]|$lib/$qtPluginPrefix|g" -e "s|\\\$\\\$\\[QT_INSTALL_PREFIX[^]]*\\]|$lib|g" -e "s|\\\$\\\$\\[QT_INSTALL_TESTS[^]]*\\]|$lib/tests|g" -e "s|\\\$\\\$\\[QT_INSTALL_TRANSLATIONS[^]]*\\]|$lib/translations|g" -e "s|\\\$\\\$\\[QT_INSTALL_QML[^]]*\\]|$lib/$qtQmlPrefix|g";
+            fi;
+        done;
+    else
+        if [ -e "$dir" ]; then
+            if grep -q '\$\$\[QT_' "${dir:?}"; then
+                echo "fixQtBuiltinPaths: Fixing Qt builtin paths in \`${dir:?}'...";
+                sed -i "${dir:?}" -e "s|\\\$\\\$\\[QT_HOST_BINS[^]]*\\]|$lib/bin|g" -e "s|\\\$\\\$\\[QT_HOST_LIBEXECS[^]]*\\]|$lib/libexec|g" -e "s|\\\$\\\$\\[QT_HOST_DATA[^]]*\\]/mkspecs|$lib/mkspecs|g" -e "s|\\\$\\\$\\[QT_HOST_PREFIX[^]]*\\]|$lib|g" -e "s|\\\$\\\$\\[QT_INSTALL_ARCHDATA[^]]*\\]|$lib|g" -e "s|\\\$\\\$\\[QT_INSTALL_BINS[^]]*\\]|$lib/bin|g" -e "s|\\\$\\\$\\[QT_INSTALL_CONFIGURATION[^]]*\\]|$lib|g" -e "s|\\\$\\\$\\[QT_INSTALL_DATA[^]]*\\]|$lib|g" -e "s|\\\$\\\$\\[QT_INSTALL_DOCS[^]]*\\]|$lib/share/doc|g" -e "s|\\\$\\\$\\[QT_INSTALL_EXAMPLES[^]]*\\]|$lib/examples|g" -e "s|\\\$\\\$\\[QT_INSTALL_HEADERS[^]]*\\]|$lib/include|g" -e "s|\\\$\\\$\\[QT_INSTALL_LIBS[^]]*\\]|$lib/lib|g" -e "s|\\\$\\\$\\[QT_INSTALL_LIBEXECS[^]]*\\]|$lib/libexec|g" -e "s|\\\$\\\$\\[QT_INSTALL_PLUGINS[^]]*\\]|$lib/$qtPluginPrefix|g" -e "s|\\\$\\\$\\[QT_INSTALL_PREFIX[^]]*\\]|$lib|g" -e "s|\\\$\\\$\\[QT_INSTALL_TESTS[^]]*\\]|$lib/tests|g" -e "s|\\\$\\\$\\[QT_INSTALL_TRANSLATIONS[^]]*\\]|$lib/translations|g" -e "s|\\\$\\\$\\[QT_INSTALL_QML[^]]*\\]|$lib/$qtQmlPrefix|g";
+            fi;
+        else
+            echo "fixQtBuiltinPaths: Warning: \`$dir' does not exist";
+        fi;
+    fi
+}
+fixQtModulePaths ()
+{
+ 
+    local dir="$1";
+    local lib="${!outputLib}";
+    if [ -d "$dir" ]; then
+        find "$dir" -name 'qt_*.pri' | while read pr; do
+            if grep -q '\$\$QT_MODULE_' "${pr:?}"; then
+                echo "fixQtModulePaths: Fixing module paths in \`${pr:?}'...";
+                sed -i "${pr:?}" -e "s|\\\$\\\$QT_MODULE_LIB_BASE|$lib/lib|g" -e "s|\\\$\\\$QT_MODULE_HOST_LIB_BASE|$lib/lib|g" -e "s|\\\$\\\$QT_MODULE_INCLUDE_BASE|$lib/include|g" -e "s|\\\$\\\$QT_MODULE_BIN_BASE|$lib/bin|g";
+            fi;
+        done;
+    else
+        if [ -e "$dir" ]; then
+            echo "fixQtModulePaths: Warning: \`$dir' is not a directory";
+        else
+            echo "fixQtModulePaths: Warning: \`$dir' does not exist";
+        fi;
+    fi
+}
+fixupPhase ()
+{
+ 
+    local output;
+    for output in $(getAllOutputNames);
+    do
+        if [ -e "${!output}" ]; then
+            chmod -R u+w,u-s,g-s "${!output}";
+        fi;
+    done;
+    runHook preFixup;
+    local output;
+    for output in $(getAllOutputNames);
+    do
+        prefix="${!output}" runHook fixupOutput;
+    done;
+    recordPropagatedDependencies;
+    if [ -n "${setupHook:-}" ]; then
+        mkdir -p "${!outputDev}/nix-support";
+        substituteAll "$setupHook" "${!outputDev}/nix-support/setup-hook";
+    fi;
+    if [ -n "${setupHooks:-}" ]; then
+        mkdir -p "${!outputDev}/nix-support";
+        local hook;
+        for hook in ${setupHooks[@]};
+        do
+            local content;
+            consumeEntire content < "$hook";
+            substituteAllStream content "file '$hook'" >> "${!outputDev}/nix-support/setup-hook";
+            unset -v content;
+        done;
+        unset -v hook;
+    fi;
+    if [ -n "${propagatedUserEnvPkgs[*]:-}" ]; then
+        mkdir -p "${!outputBin}/nix-support";
+        printWords "${propagatedUserEnvPkgs[@]}" > "${!outputBin}/nix-support/propagated-user-env-packages";
+    fi;
+    runHook postFixup
+}
+genericBuild ()
+{
+ 
+    export GZIP_NO_TIMESTAMPS=1;
+    if [ -f "${buildCommandPath:-}" ]; then
+        source "$buildCommandPath";
+        return;
+    fi;
+    if [ -n "${buildCommand:-}" ]; then
+        eval "$buildCommand";
+        return;
+    fi;
+    if [ -z "${phases[*]:-}" ]; then
+        phases="${prePhases[*]:-} unpackPhase patchPhase ${preConfigurePhases[*]:-}             configurePhase ${preBuildPhases[*]:-} buildPhase checkPhase             ${preInstallPhases[*]:-} installPhase ${preFixupPhases[*]:-} fixupPhase installCheckPhase             ${preDistPhases[*]:-} distPhase ${postPhases[*]:-}";
+    fi;
+    for curPhase in ${phases[*]};
+    do
+        runPhase "$curPhase";
+    done
+}
+getAllOutputNames ()
+{
+ 
+    if [ -n "$__structuredAttrs" ]; then
+        echo "${!outputs[*]}";
+    else
+        echo "$outputs";
+    fi
+}
+getHostRole ()
+{
+ 
+    getRole "$hostOffset"
+}
+getHostRoleEnvHook ()
+{
+ 
+    getRole "$depHostOffset"
+}
+getRole ()
+{
+ 
+    case $1 in 
+        -1)
+            role_post='_FOR_BUILD'
+        ;;
+        0)
+            role_post=''
+        ;;
+        1)
+            role_post='_FOR_TARGET'
+        ;;
+        *)
+            echo "binutils-wrapper-2.44: used as improper sort of dependency" 1>&2;
+            return 1
+        ;;
+    esac
+}
+getTargetRole ()
+{
+ 
+    getRole "$targetOffset"
+}
+getTargetRoleEnvHook ()
+{
+ 
+    getRole "$depTargetOffset"
+}
+getTargetRoleWrapper ()
+{
+ 
+    case $targetOffset in 
+        -1)
+            export NIX_BINTOOLS_WRAPPER_TARGET_BUILD_x86_64_unknown_linux_gnu=1
+        ;;
+        0)
+            export NIX_BINTOOLS_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu=1
+        ;;
+        1)
+            export NIX_BINTOOLS_WRAPPER_TARGET_TARGET_x86_64_unknown_linux_gnu=1
+        ;;
+        *)
+            echo "binutils-wrapper-2.44: used as improper sort of dependency" 1>&2;
+            return 1
+        ;;
+    esac
+}
+gettextDataDirsHook ()
+{
+ 
+    getHostRoleEnvHook;
+    if [ -d "$1/share/gettext" ]; then
+        addToSearchPath "GETTEXTDATADIRS${role_post}" "$1/share/gettext";
+    fi
+}
+glibPostInstallHook ()
+{
+ 
+    if [ -d "$prefix/share/glib-2.0/schemas" ]; then
+        mkdir -p "${!outputLib}/share/gsettings-schemas/$name/glib-2.0";
+        mv "$prefix/share/glib-2.0/schemas" "${!outputLib}/share/gsettings-schemas/$name/glib-2.0/";
+    fi;
+    addToSearchPath GSETTINGS_SCHEMAS_PATH "${!outputLib}/share/gsettings-schemas/$name"
+}
+glibPreInstallPhase ()
+{
+ 
+    makeFlagsArray+=("gsettingsschemadir=${!outputLib}/share/gsettings-schemas/$name/glib-2.0/schemas/")
+}
+httpxSslCertFileUnset ()
+{
+ 
+    unset SSL_CERT_FILE
+}
+installCheckPhase ()
+{
+ 
+    runHook preInstallCheck;
+    if [[ -z "${foundMakefile:-}" ]]; then
+        echo "no Makefile or custom installCheckPhase, doing nothing";
+    else
+        if [[ -z "${installCheckTarget:-}" ]] && ! make -n ${makefile:+-f $makefile} "${installCheckTarget:-installcheck}" > /dev/null 2>&1; then
+            echo "no installcheck target in ${makefile:-Makefile}, doing nothing";
+        else
+            local flagsArray=(${enableParallelChecking:+-j${NIX_BUILD_CORES}} SHELL="$SHELL");
+            concatTo flagsArray makeFlags makeFlagsArray installCheckFlags installCheckFlagsArray installCheckTarget=installcheck;
+            echoCmd 'installcheck flags' "${flagsArray[@]}";
+            make ${makefile:+-f $makefile} "${flagsArray[@]}";
+            unset flagsArray;
+        fi;
+    fi;
+    runHook postInstallCheck
+}
+installPhase ()
+{
+ 
+    runHook preInstall;
+    if [[ -z "${makeFlags-}" && -z "${makefile:-}" && ! ( -e Makefile || -e makefile || -e GNUmakefile ) ]]; then
+        echo "no Makefile or custom installPhase, doing nothing";
+        runHook postInstall;
+        return;
+    else
+        foundMakefile=1;
+    fi;
+    if [ -n "$prefix" ]; then
+        mkdir -p "$prefix";
+    fi;
+    local flagsArray=(${enableParallelInstalling:+-j${NIX_BUILD_CORES}} SHELL="$SHELL");
+    concatTo flagsArray makeFlags makeFlagsArray installFlags installFlagsArray installTargets=install;
+    echoCmd 'install flags' "${flagsArray[@]}";
+    make ${makefile:+-f $makefile} "${flagsArray[@]}";
+    unset flagsArray;
+    runHook postInstall
+}
+isELF ()
+{
+ 
+    local fn="$1";
+    local fd;
+    local magic;
+    exec {fd}< "$fn";
+    read -r -n 4 -u "$fd" magic;
+    exec {fd}>&-;
+    if [ "$magic" = 'ELF' ]; then
+        return 0;
+    else
+        return 1;
+    fi
+}
+isMachO ()
+{
+ 
+    local fn="$1";
+    local fd;
+    local magic;
+    exec {fd}< "$fn";
+    read -r -n 4 -u "$fd" magic;
+    exec {fd}>&-;
+    if [[ "$magic" = $(echo -ne "\xfe\xed\xfa\xcf") || "$magic" = $(echo -ne "\xcf\xfa\xed\xfe") ]]; then
+        return 0;
+    else
+        if [[ "$magic" = $(echo -ne "\xfe\xed\xfa\xce") || "$magic" = $(echo -ne "\xce\xfa\xed\xfe") ]]; then
+            return 0;
+        else
+            if [[ "$magic" = $(echo -ne "\xca\xfe\xba\xbe") || "$magic" = $(echo -ne "\xbe\xba\xfe\xca") ]]; then
+                return 0;
+            else
+                return 1;
+            fi;
+        fi;
+    fi
+}
+isScript ()
+{
+ 
+    local fn="$1";
+    local fd;
+    local magic;
+    exec {fd}< "$fn";
+    read -r -n 2 -u "$fd" magic;
+    exec {fd}>&-;
+    if [[ "$magic" =~ \#! ]]; then
+        return 0;
+    else
+        return 1;
+    fi
+}
+make_glib_find_gsettings_schemas ()
+{
+ 
+    for maybe_dir in "$1"/share/gsettings-schemas/*;
+    do
+        if [[ -d "$maybe_dir/glib-2.0/schemas" ]]; then
+            addToSearchPath GSETTINGS_SCHEMAS_PATH "$maybe_dir";
+        fi;
+    done
+}
+mapOffset ()
+{
+ 
+    local -r inputOffset="$1";
+    local -n outputOffset="$2";
+    if (( inputOffset <= 0 )); then
+        outputOffset=$((inputOffset + hostOffset));
+    else
+        outputOffset=$((inputOffset - 1 + targetOffset));
+    fi
+}
+moveToOutput ()
+{
+ 
+    local patt="$1";
+    local dstOut="$2";
+    local output;
+    for output in $(getAllOutputNames);
+    do
+        if [ "${!output}" = "$dstOut" ]; then
+            continue;
+        fi;
+        local srcPath;
+        for srcPath in "${!output}"/$patt;
+        do
+            if [ ! -e "$srcPath" ] && [ ! -L "$srcPath" ]; then
+                continue;
+            fi;
+            if [ "$dstOut" = REMOVE ]; then
+                echo "Removing $srcPath";
+                rm -r "$srcPath";
+            else
+                local dstPath="$dstOut${srcPath#${!output}}";
+                echo "Moving $srcPath to $dstPath";
+                if [ -d "$dstPath" ] && [ -d "$srcPath" ]; then
+                    rmdir "$srcPath" --ignore-fail-on-non-empty;
+                    if [ -d "$srcPath" ]; then
+                        mv -t "$dstPath" "$srcPath"/*;
+                        rmdir "$srcPath";
+                    fi;
+                else
+                    mkdir -p "$(readlink -m "$dstPath/..")";
+                    mv "$srcPath" "$dstPath";
+                fi;
+            fi;
+            local srcParent="$(readlink -m "$srcPath/..")";
+            if [ -n "$(find "$srcParent" -maxdepth 0 -type d -empty 2> /dev/null)" ]; then
+                echo "Removing empty $srcParent/ and (possibly) its parents";
+                rmdir -p --ignore-fail-on-non-empty "$srcParent" 2> /dev/null || true;
+            fi;
+        done;
+    done
+}
+nixChattyLog ()
+{
+ 
+    _nixLogWithLevel 5 "$*"
+}
+nixDebugLog ()
+{
+ 
+    _nixLogWithLevel 6 "$*"
+}
+nixErrorLog ()
+{
+ 
+    _nixLogWithLevel 0 "$*"
+}
+nixInfoLog ()
+{
+ 
+    _nixLogWithLevel 3 "$*"
+}
+nixLog ()
+{
+ 
+    [[ -z ${NIX_LOG_FD-} ]] && return 0;
+    local callerName="${FUNCNAME[1]}";
+    if [[ $callerName == "_callImplicitHook" ]]; then
+        callerName="${hookName:?}";
+    fi;
+    printf "%s: %s\n" "$callerName" "$*" >&"$NIX_LOG_FD"
+}
+nixNoticeLog ()
+{
+ 
+    _nixLogWithLevel 2 "$*"
+}
+nixTalkativeLog ()
+{
+ 
+    _nixLogWithLevel 4 "$*"
+}
+nixVomitLog ()
+{
+ 
+    _nixLogWithLevel 7 "$*"
+}
+nixWarnLog ()
+{
+ 
+    _nixLogWithLevel 1 "$*"
+}
+noBrokenSymlinks ()
+{
+ 
+    local -r output="${1:?}";
+    local path;
+    local pathParent;
+    local symlinkTarget;
+    local -i numDanglingSymlinks=0;
+    local -i numReflexiveSymlinks=0;
+    local -i numUnreadableSymlinks=0;
+    if [[ ! -e $output ]]; then
+        nixWarnLog "skipping non-existent output $output";
+        return 0;
+    fi;
+    nixInfoLog "running on $output";
+    while IFS= read -r -d '' path; do
+        pathParent="$(dirname "$path")";
+        if ! symlinkTarget="$(readlink "$path")"; then
+            nixErrorLog "the symlink $path is unreadable";
+            numUnreadableSymlinks+=1;
+            continue;
+        fi;
+        if [[ $symlinkTarget == /* ]]; then
+            nixInfoLog "symlink $path points to absolute target $symlinkTarget";
+        else
+            nixInfoLog "symlink $path points to relative target $symlinkTarget";
+            symlinkTarget="$(realpath --no-symlinks --canonicalize-missing "$pathParent/$symlinkTarget")";
+        fi;
+        if [[ $symlinkTarget != "$NIX_STORE"/* ]]; then
+            nixInfoLog "symlink $path points outside the Nix store; ignoring";
+            continue;
+        fi;
+        if [[ $path == "$symlinkTarget" ]]; then
+            nixErrorLog "the symlink $path is reflexive";
+            numReflexiveSymlinks+=1;
+        else
+            if [[ ! -e $symlinkTarget ]]; then
+                nixErrorLog "the symlink $path points to a missing target: $symlinkTarget";
+                numDanglingSymlinks+=1;
+            else
+                nixDebugLog "the symlink $path is irreflexive and points to a target which exists";
+            fi;
+        fi;
+    done < <(find "$output" -type l -print0);
+    if ((numDanglingSymlinks > 0 || numReflexiveSymlinks > 0 || numUnreadableSymlinks > 0)); then
+        nixErrorLog "found $numDanglingSymlinks dangling symlinks, $numReflexiveSymlinks reflexive symlinks and $numUnreadableSymlinks unreadable symlinks";
+        exit 1;
+    fi;
+    return 0
+}
+noBrokenSymlinksInAllOutputs ()
+{
+ 
+    if [[ -z ${dontCheckForBrokenSymlinks-} ]]; then
+        for output in $(getAllOutputNames);
+        do
+            noBrokenSymlinks "${!output}";
+        done;
+    fi
+}
+patchELF ()
+{
+ 
+    local dir="$1";
+    [ -e "$dir" ] || return 0;
+    echo "shrinking RPATHs of ELF executables and libraries in $dir";
+    local i;
+    while IFS= read -r -d '' i; do
+        if [[ "$i" =~ .build-id ]]; then
+            continue;
+        fi;
+        if ! isELF "$i"; then
+            continue;
+        fi;
+        echo "shrinking $i";
+        patchelf --shrink-rpath "$i" || true;
+    done < <(find "$dir" -type f -print0)
+}
+patchPhase ()
+{
+ 
+    runHook prePatch;
+    local -a patchesArray;
+    concatTo patchesArray patches;
+    for i in "${patchesArray[@]}";
+    do
+        echo "applying patch $i";
+        local uncompress=cat;
+        case "$i" in 
+            *.gz)
+                uncompress="gzip -d"
+            ;;
+            *.bz2)
+                uncompress="bzip2 -d"
+            ;;
+            *.xz)
+                uncompress="xz -d"
+            ;;
+            *.lzma)
+                uncompress="lzma -d"
+            ;;
+        esac;
+        local -a flagsArray;
+        concatTo flagsArray patchFlags=-p1;
+        $uncompress < "$i" 2>&1 | patch "${flagsArray[@]}";
+    done;
+    runHook postPatch
+}
+patchShebangs ()
+{
+ 
+    local pathName;
+    local update=false;
+    while [[ $# -gt 0 ]]; do
+        case "$1" in 
+            --host)
+                pathName=HOST_PATH;
+                shift
+            ;;
+            --build)
+                pathName=PATH;
+                shift
+            ;;
+            --update)
+                update=true;
+                shift
+            ;;
+            --)
+                shift;
+                break
+            ;;
+            -* | --*)
+                echo "Unknown option $1 supplied to patchShebangs" 1>&2;
+                return 1
+            ;;
+            *)
+                break
+            ;;
+        esac;
+    done;
+    echo "patching script interpreter paths in $@";
+    local f;
+    local oldPath;
+    local newPath;
+    local arg0;
+    local args;
+    local oldInterpreterLine;
+    local newInterpreterLine;
+    if [[ $# -eq 0 ]]; then
+        echo "No arguments supplied to patchShebangs" 1>&2;
+        return 0;
+    fi;
+    local f;
+    while IFS= read -r -d '' f; do
+        isScript "$f" || continue;
+        read -r oldInterpreterLine < "$f" || [ "$oldInterpreterLine" ];
+        read -r oldPath arg0 args <<< "${oldInterpreterLine:2}";
+        if [[ -z "${pathName:-}" ]]; then
+            if [[ -n $strictDeps && $f == "$NIX_STORE"* ]]; then
+                pathName=HOST_PATH;
+            else
+                pathName=PATH;
+            fi;
+        fi;
+        if [[ "$oldPath" == *"/bin/env" ]]; then
+            if [[ $arg0 == "-S" ]]; then
+                arg0=${args%% *};
+                [[ "$args" == *" "* ]] && args=${args#* } || args=;
+                newPath="$(PATH="${!pathName}" type -P "env" || true)";
+                args="-S $(PATH="${!pathName}" type -P "$arg0" || true) $args";
+            else
+                if [[ $arg0 == "-"* || $arg0 == *"="* ]]; then
+                    echo "$f: unsupported interpreter directive \"$oldInterpreterLine\" (set dontPatchShebangs=1 and handle shebang patching yourself)" 1>&2;
+                    exit 1;
+                else
+                    newPath="$(PATH="${!pathName}" type -P "$arg0" || true)";
+                fi;
+            fi;
+        else
+            if [[ -z $oldPath ]]; then
+                oldPath="/bin/sh";
+            fi;
+            newPath="$(PATH="${!pathName}" type -P "$(basename "$oldPath")" || true)";
+            args="$arg0 $args";
+        fi;
+        newInterpreterLine="$newPath $args";
+        newInterpreterLine=${newInterpreterLine%${newInterpreterLine##*[![:space:]]}};
+        if [[ -n "$oldPath" && ( "$update" == true || "${oldPath:0:${#NIX_STORE}}" != "$NIX_STORE" ) ]]; then
+            if [[ -n "$newPath" && "$newPath" != "$oldPath" ]]; then
+                echo "$f: interpreter directive changed from \"$oldInterpreterLine\" to \"$newInterpreterLine\"";
+                escapedInterpreterLine=${newInterpreterLine//\\/\\\\};
+                timestamp=$(stat --printf "%y" "$f");
+                sed -i -e "1 s|.*|#\!$escapedInterpreterLine|" "$f";
+                touch --date "$timestamp" "$f";
+            fi;
+        fi;
+    done < <(find "$@" -type f -perm -0100 -print0)
+}
+patchShebangsAuto ()
+{
+ 
+    if [[ -z "${dontPatchShebangs-}" && -e "$prefix" ]]; then
+        if [[ "$output" != out && "$output" = "$outputDev" ]]; then
+            patchShebangs --build "$prefix";
+        else
+            patchShebangs --host "$prefix";
+        fi;
+    fi
+}
+postPatchMkspecs ()
+{
+ 
+    dontPatchMkspecs=1;
+    local lib="${!outputLib}";
+    local dev="${!outputDev}";
+    moveToOutput "mkspecs/modules" "$dev";
+    if [ -d "$dev/mkspecs/modules" ]; then
+        fixQtModulePaths "$dev/mkspecs/modules";
+    fi;
+    if [ -d "$lib/mkspecs" ]; then
+        fixQtBuiltinPaths "$lib/mkspecs" '*.pr?';
+    fi;
+    if [ -d "$lib/lib" ]; then
+        fixQtBuiltinPaths "$lib/lib" '*.pr?';
+    fi
+}
+prependToVar ()
+{
+ 
+    local -n nameref="$1";
+    local useArray type;
+    if [ -n "$__structuredAttrs" ]; then
+        useArray=true;
+    else
+        useArray=false;
+    fi;
+    if type=$(declare -p "$1" 2> /dev/null); then
+        case "${type#* }" in 
+            -A*)
+                echo "prependToVar(): ERROR: trying to use prependToVar on an associative array." 1>&2;
+                return 1
+            ;;
+            -a*)
+                useArray=true
+            ;;
+            *)
+                useArray=false
+            ;;
+        esac;
+    fi;
+    shift;
+    if $useArray; then
+        nameref=("$@" ${nameref+"${nameref[@]}"});
+    else
+        nameref="$* ${nameref-}";
+    fi
+}
+printLines ()
+{
+ 
+    (( "$#" > 0 )) || return 0;
+    printf '%s\n' "$@"
+}
+printWords ()
+{
+ 
+    (( "$#" > 0 )) || return 0;
+    printf '%s ' "$@"
+}
+qmakePathHook ()
+{
+ 
+    if [ -n "${qmakePathSeen[$1]-}" ]; then
+        return;
+    fi;
+    qmakePathSeen[$1]=1;
+    if [ -d "$1/mkspecs" ]; then
+        QMAKEMODULES="${QMAKEMODULES}${QMAKEMODULES:+:}/mkspecs";
+        QMAKEPATH="${QMAKEPATH}${QMAKEPATH:+:}$1";
+    fi
+}
+qtPreHook ()
+{
+ 
+    if [[ -z "$__nix_wrapQtAppsHook" && -z "$dontWrapQtApps" ]]; then
+        echo "Error: this derivation depends on qtbase, but no wrapping behavior was specified." 1>&2;
+        echo "  - If this is a graphical application, add wrapQtAppsHook to nativeBuildInputs" 1>&2;
+        echo "  - If this is a CLI application, add wrapQtAppsNoGuiHook to nativeBuildInputs" 1>&2;
+        echo "  - If this is a library or you need custom wrapping logic, set dontWrapQtApps = true" 1>&2;
+        exit 1;
+    fi
+}
+qtToolsHook ()
+{
+ 
+    if [ -f "$1/libexec/qhelpgenerator" ]; then
+        if [[ -n "${qtToolsPathSeen:-}" && "${qttoolsPathSeen:-}" != "$1" ]]; then
+            echo "Error: detected mismatched Qt dependencies:" 1>&2;
+            echo "    $1" 1>&2;
+            echo "    $qttoolsPathSeen" 1>&2;
+            exit 1;
+        fi;
+        qttoolsPathSeen=$1;
+        appendToVar cmakeFlags "-DQT_OPTIONAL_TOOLS_PATH=$1";
+    fi
+}
+recordPropagatedDependencies ()
+{
+ 
+    declare -ra flatVars=(depsBuildBuildPropagated propagatedNativeBuildInputs depsBuildTargetPropagated depsHostHostPropagated propagatedBuildInputs depsTargetTargetPropagated);
+    declare -ra flatFiles=("${propagatedBuildDepFiles[@]}" "${propagatedHostDepFiles[@]}" "${propagatedTargetDepFiles[@]}");
+    local propagatedInputsIndex;
+    for propagatedInputsIndex in "${!flatVars[@]}";
+    do
+        local propagatedInputsSlice="${flatVars[$propagatedInputsIndex]}[@]";
+        local propagatedInputsFile="${flatFiles[$propagatedInputsIndex]}";
+        [[ -n "${!propagatedInputsSlice}" ]] || continue;
+        mkdir -p "${!outputDev}/nix-support";
+        printWords ${!propagatedInputsSlice} > "${!outputDev}/nix-support/$propagatedInputsFile";
+    done
+}
+runHook ()
+{
+ 
+    local hookName="$1";
+    shift;
+    local hooksSlice="${hookName%Hook}Hooks[@]";
+    local hook;
+    for hook in "_callImplicitHook 0 $hookName" ${!hooksSlice+"${!hooksSlice}"};
+    do
+        _logHook "$hookName" "$hook" "$@";
+        _eval "$hook" "$@";
+    done;
+    return 0
+}
+runOneHook ()
+{
+ 
+    local hookName="$1";
+    shift;
+    local hooksSlice="${hookName%Hook}Hooks[@]";
+    local hook ret=1;
+    for hook in "_callImplicitHook 1 $hookName" ${!hooksSlice+"${!hooksSlice}"};
+    do
+        _logHook "$hookName" "$hook" "$@";
+        if _eval "$hook" "$@"; then
+            ret=0;
+            break;
+        fi;
+    done;
+    return "$ret"
+}
+runPhase ()
+{
+ 
+    local curPhase="$*";
+    if [[ "$curPhase" = unpackPhase && -n "${dontUnpack:-}" ]]; then
+        return;
+    fi;
+    if [[ "$curPhase" = patchPhase && -n "${dontPatch:-}" ]]; then
+        return;
+    fi;
+    if [[ "$curPhase" = configurePhase && -n "${dontConfigure:-}" ]]; then
+        return;
+    fi;
+    if [[ "$curPhase" = buildPhase && -n "${dontBuild:-}" ]]; then
+        return;
+    fi;
+    if [[ "$curPhase" = checkPhase && -z "${doCheck:-}" ]]; then
+        return;
+    fi;
+    if [[ "$curPhase" = installPhase && -n "${dontInstall:-}" ]]; then
+        return;
+    fi;
+    if [[ "$curPhase" = fixupPhase && -n "${dontFixup:-}" ]]; then
+        return;
+    fi;
+    if [[ "$curPhase" = installCheckPhase && -z "${doInstallCheck:-}" ]]; then
+        return;
+    fi;
+    if [[ "$curPhase" = distPhase && -z "${doDist:-}" ]]; then
+        return;
+    fi;
+    showPhaseHeader "$curPhase";
+    dumpVars;
+    local startTime endTime;
+    startTime=$(date +"%s");
+    eval "${!curPhase:-$curPhase}";
+    endTime=$(date +"%s");
+    showPhaseFooter "$curPhase" "$startTime" "$endTime";
+    if [ "$curPhase" = unpackPhase ]; then
+        [ -n "${sourceRoot:-}" ] && chmod +x -- "${sourceRoot}";
+        cd -- "${sourceRoot:-.}";
+    fi
+}
+showPhaseFooter ()
+{
+ 
+    local phase="$1";
+    local startTime="$2";
+    local endTime="$3";
+    local delta=$(( endTime - startTime ));
+    (( delta < 30 )) && return;
+    local H=$((delta/3600));
+    local M=$((delta%3600/60));
+    local S=$((delta%60));
+    echo -n "$phase completed in ";
+    (( H > 0 )) && echo -n "$H hours ";
+    (( M > 0 )) && echo -n "$M minutes ";
+    echo "$S seconds"
+}
+showPhaseHeader ()
+{
+ 
+    local phase="$1";
+    echo "Running phase: $phase";
+    if [[ -z ${NIX_LOG_FD-} ]]; then
+        return;
+    fi;
+    printf "@nix { \"action\": \"setPhase\", \"phase\": \"%s\" }\n" "$phase" >&"$NIX_LOG_FD"
+}
+stripDirs ()
+{
+ 
+    local cmd="$1";
+    local ranlibCmd="$2";
+    local paths="$3";
+    local stripFlags="$4";
+    local excludeFlags=();
+    local pathsNew=;
+    [ -z "$cmd" ] && echo "stripDirs: Strip command is empty" 1>&2 && exit 1;
+    [ -z "$ranlibCmd" ] && echo "stripDirs: Ranlib command is empty" 1>&2 && exit 1;
+    local pattern;
+    if [ -n "${stripExclude:-}" ]; then
+        for pattern in "${stripExclude[@]}";
+        do
+            excludeFlags+=(-a '!' '(' -name "$pattern" -o -wholename "$prefix/$pattern" ')');
+        done;
+    fi;
+    local p;
+    for p in ${paths};
+    do
+        if [ -e "$prefix/$p" ]; then
+            pathsNew="${pathsNew} $prefix/$p";
+        fi;
+    done;
+    paths=${pathsNew};
+    if [ -n "${paths}" ]; then
+        echo "stripping (with command $cmd and flags $stripFlags) in $paths";
+        local striperr;
+        striperr="$(mktemp --tmpdir="$TMPDIR" 'striperr.XXXXXX')";
+        find $paths -type f "${excludeFlags[@]}" -a '!' -path "$prefix/lib/debug/*" -printf '%D-%i,%p\0' | sort -t, -k1,1 -u -z | cut -d, -f2- -z | xargs -r -0 -n1 -P "$NIX_BUILD_CORES" -- $cmd $stripFlags 2> "$striperr" || exit_code=$?;
+        [[ "$exit_code" = 123 || -z "$exit_code" ]] || ( cat "$striperr" 1>&2 && exit 1 );
+        rm "$striperr";
+        find $paths -name '*.a' -type f -exec $ranlibCmd '{}' \; 2> /dev/null;
+    fi
+}
+stripHash ()
+{
+ 
+    local strippedName casematchOpt=0;
+    strippedName="$(basename -- "$1")";
+    shopt -q nocasematch && casematchOpt=1;
+    shopt -u nocasematch;
+    if [[ "$strippedName" =~ ^[a-z0-9]{32}- ]]; then
+        echo "${strippedName:33}";
+    else
+        echo "$strippedName";
+    fi;
+    if (( casematchOpt )); then
+        shopt -s nocasematch;
+    fi
+}
+substitute ()
+{
+ 
+    local input="$1";
+    local output="$2";
+    shift 2;
+    if [ ! -f "$input" ]; then
+        echo "substitute(): ERROR: file '$input' does not exist" 1>&2;
+        return 1;
+    fi;
+    local content;
+    consumeEntire content < "$input";
+    if [ -e "$output" ]; then
+        chmod +w "$output";
+    fi;
+    substituteStream content "file '$input'" "$@" > "$output"
+}
+substituteAll ()
+{
+ 
+    local input="$1";
+    local output="$2";
+    local -a args=();
+    _allFlags;
+    substitute "$input" "$output" "${args[@]}"
+}
+substituteAllInPlace ()
+{
+ 
+    local fileName="$1";
+    shift;
+    substituteAll "$fileName" "$fileName" "$@"
+}
+substituteAllStream ()
+{
+ 
+    local -a args=();
+    _allFlags;
+    substituteStream "$1" "$2" "${args[@]}"
+}
+substituteInPlace ()
+{
+ 
+    local -a fileNames=();
+    for arg in "$@";
+    do
+        if [[ "$arg" = "--"* ]]; then
+            break;
+        fi;
+        fileNames+=("$arg");
+        shift;
+    done;
+    if ! [[ "${#fileNames[@]}" -gt 0 ]]; then
+        echo "substituteInPlace called without any files to operate on (files must come before options!)" 1>&2;
+        return 1;
+    fi;
+    for file in "${fileNames[@]}";
+    do
+        substitute "$file" "$file" "$@";
+    done
+}
+substituteStream ()
+{
+ 
+    local var=$1;
+    local description=$2;
+    shift 2;
+    while (( "$#" )); do
+        local replace_mode="$1";
+        case "$1" in 
+            --replace)
+                if ! "$_substituteStream_has_warned_replace_deprecation"; then
+                    echo "substituteStream() in derivation $name: WARNING: '--replace' is deprecated, use --replace-{fail,warn,quiet}. ($description)" 1>&2;
+                    _substituteStream_has_warned_replace_deprecation=true;
+                fi;
+                replace_mode='--replace-warn'
+            ;&
+            --replace-quiet | --replace-warn | --replace-fail)
+                pattern="$2";
+                replacement="$3";
+                shift 3;
+                if ! [[ "${!var}" == *"$pattern"* ]]; then
+                    if [ "$replace_mode" == --replace-warn ]; then
+                        printf "substituteStream() in derivation $name: WARNING: pattern %q doesn't match anything in %s\n" "$pattern" "$description" 1>&2;
+                    else
+                        if [ "$replace_mode" == --replace-fail ]; then
+                            printf "substituteStream() in derivation $name: ERROR: pattern %q doesn't match anything in %s\n" "$pattern" "$description" 1>&2;
+                            return 1;
+                        fi;
+                    fi;
+                fi;
+                eval "$var"'=${'"$var"'//"$pattern"/"$replacement"}'
+            ;;
+            --subst-var)
+                local varName="$2";
+                shift 2;
+                if ! [[ "$varName" =~ ^[a-zA-Z_][a-zA-Z0-9_]*$ ]]; then
+                    echo "substituteStream() in derivation $name: ERROR: substitution variables must be valid Bash names, \"$varName\" isn't." 1>&2;
+                    return 1;
+                fi;
+                if [ -z ${!varName+x} ]; then
+                    echo "substituteStream() in derivation $name: ERROR: variable \$$varName is unset" 1>&2;
+                    return 1;
+                fi;
+                pattern="@$varName@";
+                replacement="${!varName}";
+                eval "$var"'=${'"$var"'//"$pattern"/"$replacement"}'
+            ;;
+            --subst-var-by)
+                pattern="@$2@";
+                replacement="$3";
+                eval "$var"'=${'"$var"'//"$pattern"/"$replacement"}';
+                shift 3
+            ;;
+            *)
+                echo "substituteStream() in derivation $name: ERROR: Invalid command line argument: $1" 1>&2;
+                return 1
+            ;;
+        esac;
+    done;
+    printf "%s" "${!var}"
+}
+sysconfigdataHook ()
+{
+ 
+    if [ "$1" = '/nix/store/h097imm3w6dpx10qynrd2sz9fks2wbq8-python3-3.12.11' ]; then
+        export _PYTHON_HOST_PLATFORM='linux-x86_64';
+        export _PYTHON_SYSCONFIGDATA_NAME='_sysconfigdata__linux_x86_64-linux-gnu';
+    fi
+}
+toPythonPath ()
+{
+ 
+    local paths="$1";
+    local result=;
+    for i in $paths;
+    do
+        p="$i/lib/python3.12/site-packages";
+        result="${result}${result:+:}$p";
+    done;
+    echo $result
+}
+unpackFile ()
+{
+ 
+    curSrc="$1";
+    echo "unpacking source archive $curSrc";
+    if ! runOneHook unpackCmd "$curSrc"; then
+        echo "do not know how to unpack source archive $curSrc";
+        exit 1;
+    fi
+}
+unpackPhase ()
+{
+ 
+    runHook preUnpack;
+    if [ -z "${srcs:-}" ]; then
+        if [ -z "${src:-}" ]; then
+            echo 'variable $src or $srcs should point to the source';
+            exit 1;
+        fi;
+        srcs="$src";
+    fi;
+    local -a srcsArray;
+    concatTo srcsArray srcs;
+    local dirsBefore="";
+    for i in *;
+    do
+        if [ -d "$i" ]; then
+            dirsBefore="$dirsBefore $i ";
+        fi;
+    done;
+    for i in "${srcsArray[@]}";
+    do
+        unpackFile "$i";
+    done;
+    : "${sourceRoot=}";
+    if [ -n "${setSourceRoot:-}" ]; then
+        runOneHook setSourceRoot;
+    else
+        if [ -z "$sourceRoot" ]; then
+            for i in *;
+            do
+                if [ -d "$i" ]; then
+                    case $dirsBefore in 
+                        *\ $i\ *)
+
+                        ;;
+                        *)
+                            if [ -n "$sourceRoot" ]; then
+                                echo "unpacker produced multiple directories";
+                                exit 1;
+                            fi;
+                            sourceRoot="$i"
+                        ;;
+                    esac;
+                fi;
+            done;
+        fi;
+    fi;
+    if [ -z "$sourceRoot" ]; then
+        echo "unpacker appears to have produced no directories";
+        exit 1;
+    fi;
+    echo "source root is $sourceRoot";
+    if [ "${dontMakeSourcesWritable:-0}" != 1 ]; then
+        chmod -R u+w -- "$sourceRoot";
+    fi;
+    runHook postUnpack
+}
+updateAutotoolsGnuConfigScriptsPhase ()
+{
+ 
+    if [ -n "${dontUpdateAutotoolsGnuConfigScripts-}" ]; then
+        return;
+    fi;
+    for script in config.sub config.guess;
+    do
+        for f in $(find . -type f -name "$script");
+        do
+            echo "Updating Autotools / GNU config script to a newer upstream version: $f";
+            cp -f "/nix/store/kbkh5q57h5crz1mjr2qiayq4xdi6sxhl-gnu-config-2024-01-01/$script" "$f";
+        done;
+    done
+}
+updateSourceDateEpoch ()
+{
+ 
+    local path="$1";
+    [[ $path == -* ]] && path="./$path";
+    local -a res=($(find "$path" -type f -not -newer "$NIX_BUILD_TOP/.." -printf '%T@ "%p"\0' | sort -n --zero-terminated | tail -n1 --zero-terminated | head -c -1));
+    local time="${res[0]//\.[0-9]*/}";
+    local newestFile="${res[1]}";
+    if [ "${time:-0}" -gt "$SOURCE_DATE_EPOCH" ]; then
+        echo "setting SOURCE_DATE_EPOCH to timestamp $time of file $newestFile";
+        export SOURCE_DATE_EPOCH="$time";
+        local now="$(date +%s)";
+        if [ "$time" -gt $((now - 60)) ]; then
+            echo "warning: file $newestFile may be generated; SOURCE_DATE_EPOCH may be non-deterministic";
+        fi;
+    fi
+}
+PATH="$PATH${nix_saved_PATH:+:$nix_saved_PATH}"
+XDG_DATA_DIRS="$XDG_DATA_DIRS${nix_saved_XDG_DATA_DIRS:+:$nix_saved_XDG_DATA_DIRS}"
+export NIX_BUILD_TOP="$(mktemp -d -t nix-shell.XXXXXX)"
+export TMP="$NIX_BUILD_TOP"
+export TMPDIR="$NIX_BUILD_TOP"
+export TEMP="$NIX_BUILD_TOP"
+export TEMPDIR="$NIX_BUILD_TOP"
+eval "${shellHook:-}"
