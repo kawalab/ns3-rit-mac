@@ -9,7 +9,7 @@ from .config import PLOT_STYLE, FIGURE_SIZE, DPI, OUTPUT_FORMATS
 
 
 def set_plot_style():
-    """全体に適用するスタイルやフォントの初期化"""
+    """Initialize global plotting styles and fonts."""
     mplstyle.use(PLOT_STYLE)
     plt.rcParams['figure.figsize'] = FIGURE_SIZE
     plt.rcParams['figure.dpi'] = DPI
@@ -22,7 +22,7 @@ def set_plot_style():
 
 
 def save_fig(fig, path: str, formats: list = None):
-    """Figureオブジェクトをファイルとして保存"""
+    """Save a matplotlib Figure object to one or more files."""
     if formats is None:
         formats = OUTPUT_FORMATS
 
@@ -37,7 +37,7 @@ def save_fig(fig, path: str, formats: list = None):
 
 
 def create_subplot_grid(rows: int, cols: int, figsize: tuple = None):
-    """サブプロットグリッドの作成"""
+    """Create a grid of subplots."""
     if figsize is None:
         figsize = (FIGURE_SIZE[0], FIGURE_SIZE[1] * rows / 2)
 
@@ -51,7 +51,7 @@ def create_subplot_grid(rows: int, cols: int, figsize: tuple = None):
 
 
 def add_grid_and_labels(ax, xlabel: str = None, ylabel: str = None, title: str = None):
-    """グリッドとラベルの追加"""
+    """Add grid, axis labels, and title to an axis."""
     ax.grid(True, alpha=0.3)
     if xlabel:
         ax.set_xlabel(xlabel)

@@ -1,29 +1,29 @@
-# common ディレクトリ：共通処理・定数定義・ログ形式の集約
+# common directory: common logic, constants, and log schema
 
-このディレクトリは、ログ解析スクリプトにおける「共通処理」「定数」「ログ形式スキーマ」などを集約し、各スクリプト間での一貫性と再利用性を高めることを目的としています。
+This directory consolidates common utilities, constants, and log-format schemas used by the log-analysis scripts to improve consistency and reusability across the codebase.
 
-## 構成と役割
+## Structure and responsibilities
 
 - `config.py`
-  → 各種ログファイル名や色定義など、共通で使用する定数の定義
+  → Definitions of constants used across scripts, e.g. log filenames and color schemes.
 
 - `log_schema.py`
-  → 各ログファイルのカラム構成（スキーマ）を定義
-  例：`MAC_TX_COLUMNS = ["time", "event", "frameType", "dstMac"]`
+  → Column definitions (schemas) for each log file.
+  Example: `MAC_TX_COLUMNS = ["time", "event", "frameType", "dstMac"]`
 
 - `io_utils.py`
-  → ログCSVの読み込み、保存パス構築、存在チェックなどの I/O 関数
+  → I/O helpers for loading log CSVs, building save paths, and existence checks.
 
 - `frame_utils.py`
-  → フレーム種別の正規化、ブロードキャストアドレス判定、MAC表現整形などの補助処理
+  → Helpers for normalizing frame types, checking broadcast addresses, formatting MAC addresses, etc.
 
 - `plot_utils.py`
-  → 将来的に matplotlib ベースの可視化処理を記述予定
+  → Matplotlib-based visualization utilities (planned / placeholder).
 
 - `__init__.py`
-  → 空ファイル。将来的にパッケージ読み込み時の初期化が必要なら記述
+  → Empty for now. Add package initialization here if needed in the future.
 
-## 使用例
+## Example usage
 
 ```python
 from common.config import LOG_FILES
@@ -32,3 +32,5 @@ from common.frame_utils import normalize_frame_type
 
 df = load_csv("mac-txlog.csv")
 df["frameType"] = df["frameType"].map(normalize_frame_type)
+
+````

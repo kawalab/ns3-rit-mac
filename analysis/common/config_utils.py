@@ -6,7 +6,7 @@ import os
 
 class SimulationConfig:
     def __init__(self, simulation_params, base_script, ns3_working_dir="~/workspace/ns3-rit-mac", summary_dir="./summary"):
-        # パラメータの型確認・正規化
+        # Parameter type checking and normalization
         self.simulation_params = self._normalize_params(simulation_params)
         self.base_script = base_script
         self.ns3_working_dir = os.path.expanduser(ns3_working_dir)
@@ -18,7 +18,7 @@ class SimulationConfig:
         self.ns3_command = self.generate_ns3_command()
 
     def _normalize_params(self, params):
-        """パラメータの型を正規化"""
+        """Normalize parameter types"""
         numeric_params = {"BI", "TWD", "DWD", "Nodes", "Days", "DR", "AppPacketSize", "Seed"}
         normalized = {}
         for key, value in params.items():
@@ -26,7 +26,7 @@ class SimulationConfig:
                 try:
                     normalized[key] = int(value) if key != "DR" else float(value)
                 except (ValueError, TypeError):
-                    print(f"[WARNING] {key}の型変換失敗: {value}, デフォルト値を使用")
+                    print(f"[WARNING] Failed to convert type for {key}: {value}, using default value")
                     normalized[key] = 0
             else:
                 normalized[key] = str(value)
@@ -93,14 +93,14 @@ class SimulationConfig:
     def generate_ns3_command(self):
         scenario_args = f"--Placement={self.simulation_params['Placement']} --Density={self.simulation_params['Density']} --App={self.simulation_params['App']}"
 
-        # パラメータの順序を明示的に制御
+    # Explicitly control parameter ordering
         param_order = ['BI', 'TWD', 'DWD', 'Nodes', 'Days', 'DR', 'Seed', 'DataCsma', 'DataPreCs', 'BeaconCsma', 'BeaconPreCs', 'ContinuousTx', 'BeaconRandomize', 'CompactRitDataRequest', 'BeaconAck']
         ordered_args = []
         for key in param_order:
             if key in self.simulation_params and key not in ['Placement', 'Density', 'App']:
                 ordered_args.append(f"--{key}={self.simulation_params[key]}")
 
-        # 順序指定にない残りのパラメータも追加
+        # Append remaining parameters that are not in the specified order
         for key, value in self.simulation_params.items():
             if key not in param_order and key not in ['Placement', 'Density', 'App']:
                 ordered_args.append(f"--{key}={value}")
@@ -114,6 +114,6 @@ class SimulationConfig:
         return os.path.join(self.ns3_working_dir, "logs", self.parameter_dir, f"node-{node}", filename)
 
     def get_summary_path(self, filename):
-        # ログディレクトリ内にsummaryフォルダを作成: ns3_working_dir/logs/parameter_dir/summary/
+    # Create a summary folder inside the log directory: ns3_working_dir/logs/parameter_dir/summary/
         summary_dir = os.path.join(self.ns3_working_dir, "logs", self.parameter_dir, "summary")
         return os.path.join(summary_dir, filename)

@@ -6,15 +6,15 @@ def run_ns3_simulation(config):
     import subprocess
     try:
         result = subprocess.run(config.ns3_command, shell=True, check=True, text=True, capture_output=True, cwd=config.ns3_working_dir)
-        print("=== ns-3 実行結果 ===")
+        print("=== ns-3 Execution Result ===")
         print(result.stdout)
     except subprocess.CalledProcessError as e:
-        print("ns-3 実行に失敗しました:", e.stderr)
+        print("ns-3 execution failed:", e.stderr)
 
 def run_ns3_simulation_with_result(config, log_path=None):
     """
-    ns-3シミュレーションを実行し、結果（stdout, stderr, returncode）を返す。
-    log_pathを指定すると標準出力をファイル保存。
+    Run an ns-3 simulation and return the result (stdout, stderr, returncode).
+    If `log_path` is specified, save stdout to the given file.
     """
     import subprocess
     try:

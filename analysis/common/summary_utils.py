@@ -1,9 +1,9 @@
 """
-アプリ層・MAC層・PHY層の集計処理を提供する外部ユーティリティモジュール。
+External utility module providing aggregation for APP, MAC, and PHY layers.
 
-- 各層のログファイルを読み込み、主要な統計値（PDR、遅延、送受信数、状態比率など）を算出。
-- ノートブックや他の分析スクリプトから呼び出し可能な関数群として設計。
-- パラメータ・パス管理は SimulationConfig など外部クラス・モジュールに委譲。
+- Loads log files for each layer and computes key statistics (PDR, delay, tx/rx counts, state ratios, etc.).
+- Designed as a set of functions callable from notebooks and other analysis scripts.
+- Parameter and path management is delegated to external classes/modules (e.g., SimulationConfig).
 """
 
 import pandas as pd
@@ -12,18 +12,19 @@ from common.io_utils import read_log
 
 def summarize_app_node(node_id, app_txlog, app_rxlog, base_dir, parameter_dir, app_recv_node):
     """
-    アプリ層ログの集計関数。
-    指定ノードの送信(app-txlog)・受信(app-rxlog)ログから、PDR（受信率）・平均遅延・送受信数を算出。
+    Aggregate application-layer logs.
+    Compute PDR (packet delivery ratio), average delay, and tx/rx counts from the specified node's
+    transmit (app-txlog) and receive (app-rxlog) logs.
 
     Args:
-        node_id (str): 集計対象ノードID
-        app_txlog (str): 送信ログファイル名
-        app_rxlog (str): 受信ログファイル名
-        base_dir (str): ログのベースディレクトリ
-        parameter_dir (str): パラメータディレクトリ
-        app_recv_node (str): 受信ノードID
+        node_id (str): Node ID to summarize
+        app_txlog (str): Transmit log filename
+        app_rxlog (str): Receive log filename
+        base_dir (str): Base directory for logs
+        parameter_dir (str): Parameter-specific directory
+        app_recv_node (str): Receiving node ID
     Returns:
-        dict: 集計結果（PDR, 平均遅延, 送受信数など）
+        dict: Aggregation results (pdr, avg_delay, tx_total, rx_total, etc.)
     """
     rx_df = read_log(app_recv_node, app_rxlog, ["time", "uid"], base_dir, parameter_dir)
     tx_df = read_log(node_id, app_txlog, ["time", "uid"], base_dir, parameter_dir)
@@ -52,16 +53,16 @@ def summarize_app_node(node_id, app_txlog, app_rxlog, base_dir, parameter_dir, a
 
 def summarize_mac_node(node_id, mac_log_files, base_dir, parameter_dir):
     """
-    MAC層ログの集計関数。
-    指定ノードのMAC層各種ログから、送受信数・ドロップ数・待機時間・状態比率などを算出。
+    Aggregate MAC-layer logs.
+    From the specified node's MAC logs, compute tx/rx counts, drop counts, wait times, and state ratios.
 
     Args:
-        node_id (str): 集計対象ノードID
-        mac_log_files (dict): MAC層ログファイル名の辞書
-        base_dir (str): ログのベースディレクトリ
-        parameter_dir (str): パラメータディレクトリ
+        node_id (str): Node ID to summarize
+        mac_log_files (dict): Dictionary of MAC-layer log filenames
+        base_dir (str): Base directory for logs
+        parameter_dir (str): Parameter-specific directory
     Returns:
-        dict: 集計結果（送受信数、ドロップ数、待機時間、状態比率など）
+        dict: Aggregation results (tx/rx counts, drop counts, wait time stats, state ratios, etc.)
     """
     tx = read_log(node_id, mac_log_files["tx"], ["time", "type", "subtype", "src", "dst"], base_dir, parameter_dir)
     rx = read_log(node_id, mac_log_files["rx"], ["time", "status", "subtype", "src", "dst"], base_dir, parameter_dir)
@@ -138,15 +139,15 @@ def summarize_mac_node(node_id, mac_log_files, base_dir, parameter_dir):
 
 def summarize_phy_node(node_id, base_dir, parameter_dir):
     """
-    PHY層ログの集計関数。
-    指定ノードのPHY層ログから、送受信数・ドロップ数・状態比率などを算出。
+    Aggregate PHY-layer logs.
+    From the specified node's PHY logs, compute tx/rx counts, drop counts, and state ratios.
 
     Args:
-        node_id (str): 集計対象ノードID
-        base_dir (str): ログのベースディレクトリ
-        parameter_dir (str): パラメータディレクトリ
+        node_id (str): Node ID to summarize
+        base_dir (str): Base directory for logs
+        parameter_dir (str): Parameter-specific directory
     Returns:
-        dict: 集計結果（送受信数、ドロップ数、状態比率など）
+        dict: Aggregation results (tx/rx counts, drop counts, state ratios, etc.)
     """
     tx_df = read_log(node_id, "phy-txlog.csv", ["time", "event", "addr"], base_dir, parameter_dir)
     rx_df = read_log(node_id, "phy-rxlog.csv", ["time", "event", "addr", "val"], base_dir, parameter_dir)
@@ -181,22 +182,22 @@ def summarize_phy_node(node_id, base_dir, parameter_dir):
 
 def summarize_scenario(app_summary_df, phy_summary_df):
     """
-    シナリオレベルの統計サマリーを作成する関数。
-    APPサマリーとPHYサマリーから、ノード全体での統計値を算出。
+    Build a scenario-level statistical summary.
+    Compute statistics across nodes from APP and PHY summaries.
 
     Args:
-        app_summary_df (pd.DataFrame): アプリケーション層サマリーのDataFrame
-        phy_summary_df (pd.DataFrame): PHY層サマリーのDataFrame
+        app_summary_df (pd.DataFrame): Application-layer summary DataFrame
+        phy_summary_df (pd.DataFrame): PHY-layer summary DataFrame
 
     Returns:
-        dict: シナリオレベルの統計値
-            - PDR統計（送信ノードのみ対象）
-            - 遅延統計（送信ノードのみ対象）
-            - 起床時間統計（全ノード対象）
+        dict: Scenario-level statistics including:
+            - PDR statistics (for transmitting nodes only)
+            - Delay statistics (for transmitting nodes only)
+            - Wake-ratio statistics (for all nodes)
     """
     result = {}
 
-    # PDR統計（送信ノード: tx_total > 0）
+    # PDR statistics (transmitting nodes: tx_total > 0)
     try:
         tx_nodes = app_summary_df[app_summary_df['tx_total'] > 0]
         pdr_values = tx_nodes['pdr'].dropna()
@@ -214,14 +215,14 @@ def summarize_scenario(app_summary_df, phy_summary_df):
             result['pdr_std'] = None
             result['pdr_node_count'] = 0
     except Exception as e:
-        print(f"PDR統計計算失敗: {e}")
+        print(f"Failed to compute PDR statistics: {e}")
         result['pdr_mean'] = None
         result['pdr_min'] = None
         result['pdr_max'] = None
         result['pdr_std'] = None
         result['pdr_node_count'] = 0
 
-    # 遅延統計（送信ノード: tx_total > 0）
+    # Delay statistics (transmitting nodes: tx_total > 0)
     try:
         tx_nodes = app_summary_df[app_summary_df['tx_total'] > 0]
         delay_values = tx_nodes['avg_delay'].dropna()
@@ -239,14 +240,14 @@ def summarize_scenario(app_summary_df, phy_summary_df):
             result['delay_std'] = None
             result['delay_node_count'] = 0
     except Exception as e:
-        print(f"遅延統計計算失敗: {e}")
+        print(f"Failed to compute delay statistics: {e}")
         result['delay_mean'] = None
         result['delay_min'] = None
         result['delay_max'] = None
         result['delay_std'] = None
         result['delay_node_count'] = 0
 
-    # 起床時間統計（TRX_OFF_ratioから算出: wake_ratio = 1 - TRX_OFF_ratio）
+    # Wake-ratio statistics (computed from TRX_OFF_ratio: wake_ratio = 1 - TRX_OFF_ratio)
     try:
         if 'TRX_OFF_ratio' in phy_summary_df.columns:
             trx_off_values = phy_summary_df['TRX_OFF_ratio'].dropna()
@@ -267,14 +268,14 @@ def summarize_scenario(app_summary_df, phy_summary_df):
                 result['wake_ratio_std'] = None
                 result['wake_node_count'] = 0
         else:
-            print("PHYサマリーにTRX_OFF_ratioカラムが見つかりません")
+            print("TRX_OFF_ratio column not found in PHY summary")
             result['wake_ratio_mean'] = None
             result['wake_ratio_min'] = None
             result['wake_ratio_max'] = None
             result['wake_ratio_std'] = None
             result['wake_node_count'] = 0
     except Exception as e:
-        print(f"起床時間統計計算失敗: {e}")
+        print(f"Failed to compute wake ratio statistics: {e}")
         result['wake_ratio_mean'] = None
         result['wake_ratio_min'] = None
         result['wake_ratio_max'] = None

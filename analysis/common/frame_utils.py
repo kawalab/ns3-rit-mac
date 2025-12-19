@@ -4,14 +4,14 @@ Frame type and MAC address processing utilities.
 
 
 def is_broadcast(mac: str) -> bool:
-    """0xffff などのブロードキャストMAC判定"""
+    """Check whether a MAC address is a broadcast address (e.g., '0xffff')."""
     if isinstance(mac, str):
         return mac.lower() in ['0xffff', 'ffff', 'broadcast']
     return False
 
 
 def frame_type_color(frame_type: str) -> str:
-    """可視化用のフレーム種別ごとの色定義"""
+    """Color mapping for frame types used in visualization."""
     color_map = {
         'beacon': '#1f77b4',  # blue
         'data': '#ff7f0e',    # orange
@@ -24,12 +24,12 @@ def frame_type_color(frame_type: str) -> str:
 
 
 def normalize_frame_type(frame_type: str) -> str:
-    """フレーム種別の正規化"""
+    """Normalize a frame type string to a standard representation."""
     return frame_type.upper()
 
 
 def parse_mac_address(mac: str) -> str:
-    """MACアドレスの正規化"""
+    """Normalize a MAC address string (remove 0x prefix and uppercase)."""
     if isinstance(mac, str):
         # Remove 0x prefix if present
         if mac.startswith('0x'):

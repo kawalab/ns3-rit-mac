@@ -2,23 +2,23 @@ import os
 
 def check_existing_task_results(task_info, force_rerun=False):
     """
-    既存のタスク結果をチェックし、スキップ可能かを判定
+    Check existing task results and determine whether the task can be skipped.
 
     Args:
-        task_info (dict): タスク情報
-        force_rerun (bool): 強制実行フラグ（デフォルト: False）
+        task_info (dict): Task information
+        force_rerun (bool): Force rerun flag (default: False)
 
     Returns:
         dict: {
-            'should_skip': bool,           # スキップすべきかどうか
-            'existing_files': list,        # 存在するファイルリスト
-            'missing_files': list,         # 欠損ファイルリスト
-            'error_details': str,          # エラー詳細（エラー時のみ）
-            'file_status': dict            # 各ファイルの詳細ステータス
+            'should_skip': bool,           # Whether to skip
+            'existing_files': list,        # List of existing files
+            'missing_files': list,         # List of missing files
+            'error_details': str,          # Error details (only on error)
+            'file_status': dict            # Per-file status details
         }
     """
 
-    # 強制実行フラグチェック
+    # Check force-rerun flag
     if force_rerun:
         return {
             'should_skip': False,
@@ -28,10 +28,10 @@ def check_existing_task_results(task_info, force_rerun=False):
             'reason': 'Force rerun requested'
         }
 
-    # SimulationConfig作成
+    # Create SimulationConfig
     config = SimulationConfig(task_info["params"], task_info["base_script"])
 
-    # チェック対象ファイル定義
+    # Define files to check
     required_files = {
         'app_summary.csv': config.get_summary_path("app_summary.csv"),
         'mac_summary.csv': config.get_summary_path("mac_summary.csv"),
@@ -41,7 +41,7 @@ def check_existing_task_results(task_info, force_rerun=False):
 
     file_status = {}
 
-    # 各ファイルの状態をチェック
+    # Check status of each file
     for name, path in required_files.items():
         status = {
             'exists': False,
@@ -53,33 +53,33 @@ def check_existing_task_results(task_info, force_rerun=False):
         }
 
         try:
-            # ファイル存在チェック
+            # File existence check
             if os.path.exists(path):
                 status['exists'] = True
                 status['file_size'] = os.path.getsize(path)
 
-                # ファイルサイズチェック（0バイトファイルは無効）
+                # File size check (0-byte files are invalid)
                 if status['file_size'] > 0:
                     try:
-                        # CSV読み込みテスト
+                        # CSV read test
                         df = pd.read_csv(path)
                         status['readable'] = True
                         status['row_count'] = len(df)
                         status['has_data'] = len(df) > 0
                     except Exception as csv_error:
                         status['readable'] = False
-                        status['error'] = f"CSV読み込みエラー: {str(csv_error)}"
+                        status['error'] = f"CSV read error: {str(csv_error)}"
                 else:
-                    status['error'] = "空ファイル"
+                    status['error'] = "empty file"
             else:
-                status['error'] = "ファイルが存在しません"
+                status['error'] = "file not found"
 
         except Exception as e:
-            status['error'] = f"ファイルアクセスエラー: {str(e)}"
+            status['error'] = f"file access error: {str(e)}"
 
         file_status[name] = status
 
-    # 判定: 必須ファイルがすべて有効かチェック
+    # Determine if all required files are valid
     all_required_valid = all(
         file_status[name]['exists'] and
         file_status[name]['readable'] and
@@ -87,7 +87,7 @@ def check_existing_task_results(task_info, force_rerun=False):
         for name in required_files.keys()
     )
 
-    # 結果作成
+    # Build result
     existing_files = [name for name, status in file_status.items()
                      if status.get('exists', False) and status.get('readable', False) and status.get('has_data', False)]
     missing_files = [name for name, status in file_status.items()
