@@ -6,7 +6,7 @@ This repository provides the implementation and analysis scripts used in our stu
 **Receiver-Initiated (RIT) MAC protocol compliant with IEEE 802.15.4e-2012 and IEEE802.15.4-2020**, developed on top of the
 **ns-3 network simulator**.
 
-It accompanies and supports the ns-3 implementation used in: Murata et al., "An ns-3 Evaluation Framework for Receiver-Initiated MAC Protocols with Configurable Enhancement Modules across Various Network Scenarios", Sensors, 2025. https://doi.org/10.3390/s26010164
+It accompanies and supports the ns-3 implementation used in: Murata et al., "An ns-3 Evaluation Framework for Receiver-Initiated MAC Protocols with Configurable Enhancement Modules across Various Network Scenarios", Sensors, 2026. https://doi.org/10.3390/s26010164
 
 The repository contains only the **newly implemented or modified components** required to support
 RIT-based MAC operation, extracted from the original ns-3 source tree, as well as
