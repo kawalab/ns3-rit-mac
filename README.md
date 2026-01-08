@@ -38,6 +38,9 @@ production systems.
 │ │
 │ ├── lr-wpan/
 │ └── rit-wpan/
+|   ├── application/
+|   ├── examples/
+|   └── ...
 │
 └── README.md
 ```
@@ -101,13 +104,23 @@ This will automatically add and modify the required source files under src/.
 
 ### 3. Install Simulation Scenarios
 
-Copy the scenario files provided in the `example` directory into the `scratch` directory of ns-3.
+Copy the scenario files provided in the `examples` directory into the `scratch` directory of ns-3.
 
 ```
 ns-3/
 └── scratch/
     └── rit-xxx-scenario.cc
 ```
+
+*Note:*  
+The `examples` directory currently includes the following representative scenario files:
+
+- **`rit-wpan-data.cc`**  
+  A simple one-to-one communication scenario for testing basic RIT-based communication behavior.
+
+- **`rit-grid-coverage.cc`**  
+  A grid-based node deployment scenario used for the performance evaluation presented in the paper.
+
 
 ### 4. Build ns-3
 
