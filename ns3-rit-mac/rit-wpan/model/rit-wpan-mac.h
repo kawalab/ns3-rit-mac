@@ -23,7 +23,6 @@ namespace lrwpan
 {
 
 class RitWpanPreCs;
-class RitWpanPreCsB;
 
 /**
  * @brief Enum representing the MAC operation mode.
@@ -168,12 +167,10 @@ struct RitWpanMacModuleConfig
     // Data transmission options
     bool dataCsmaEnabled = false;
     bool dataPreCsEnabled = false;
-    bool dataPreCsBEnabled = false; //!< Enable Pre-CSB for data transmission
 
     // Beacon transmission options
     bool beaconCsmaEnabled = false;
     bool beaconPreCsEnabled = false;
-    bool beaconPreCsBEnabled = false; //!< Enable Pre-CSB for beacon transmission
 
     // Additional mechanisms
     bool continuousTxEnabled = false;
@@ -367,7 +364,6 @@ class RitWpanMac : public LrWpanMac
     Ptr<ClockDriftApplier> m_clockDriftApplier; //!< Used for clock drift correction
 
     Ptr<RitWpanPreCs> m_preCs;     //!< Pre-CS implementation
-    Ptr<RitWpanPreCsB> m_preCsB;   //!< Pre-CSB implementation
 
     RitWpanMacModuleConfig m_moduleConfig;
 

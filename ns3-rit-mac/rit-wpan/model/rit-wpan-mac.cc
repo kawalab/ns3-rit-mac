@@ -12,7 +12,6 @@
 
 #include "rit-sub-header.h"
 #include "rit-wpan-precs.h"
-#include "rit-wpan-precsb.h"
 
 #include "ns3/lr-wpan-constants.h"
 #include "ns3/lr-wpan-csmaca.h"
@@ -506,7 +505,6 @@ RitWpanMac::PdDataIndication(uint32_t psduLength, Ptr<Packet> p, uint8_t lqi)
                 // Currently we simply restart CSMA/CA after sending the ACK.
                 NS_LOG_DEBUG("Received a packet with ACK required while in CSMA. Cancel "
                              "current CSMA-CA");
-                m_preCsB->Cancel();
                 m_preCs->Cancel();
                 m_csmaCa->Cancel();
             }
@@ -1190,8 +1188,7 @@ RitWpanMac::DoSendRitDataRequest()
     ritDataRequestPacket->AddTrailer(macTrailer);
 
     // Transmit the beacon either with CSMA/CA (or Pre-CS variants), or directly.
-    if (m_moduleConfig.beaconCsmaEnabled || m_moduleConfig.beaconPreCsEnabled ||
-        m_moduleConfig.beaconPreCsBEnabled)
+    if (m_moduleConfig.beaconCsmaEnabled || m_moduleConfig.beaconPreCsEnabled)
     {
         NS_LOG_DEBUG("RIT beacon transmission with Unslotted CSMA/CA");
 
@@ -1272,8 +1269,7 @@ RitWpanMac::DoSendRitData()
                                                << "dst=" << macHdr.GetShortDstAddr());
 
     // Transmit the data either with CSMA/CA (or Pre-CS variants), or directly.
-    if (m_moduleConfig.dataCsmaEnabled || m_moduleConfig.dataPreCsEnabled ||
-        m_moduleConfig.dataPreCsBEnabled)
+    if (m_moduleConfig.dataCsmaEnabled || m_moduleConfig.dataPreCsEnabled)
     {
         NS_ASSERT_MSG(
             !(m_moduleConfig.dataCsmaEnabled && m_moduleConfig.dataPreCsEnabled),

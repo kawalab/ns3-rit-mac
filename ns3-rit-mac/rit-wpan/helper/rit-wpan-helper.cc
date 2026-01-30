@@ -820,10 +820,6 @@ RitWpanNetHelper::GetModuleShortName(const RitWpanMacModuleConfig& config) const
     {
         tags.emplace_back("precs");
     }
-    else if (config.dataPreCsBEnabled)
-    {
-        tags.emplace_back("precsb");
-    }
     else
     {
         tags.emplace_back("nocsma");
@@ -840,10 +836,6 @@ RitWpanNetHelper::GetModuleShortName(const RitWpanMacModuleConfig& config) const
     else if (config.beaconPreCsEnabled)
     {
         tags.emplace_back("bprecs");
-    }
-    else if (config.beaconPreCsBEnabled)
-    {
-        tags.emplace_back("bprecsb");
     }
     else
     {

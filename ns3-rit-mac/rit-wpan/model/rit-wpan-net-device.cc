@@ -67,7 +67,6 @@ RitWpanNetDevice::RitWpanNetDevice()
 
     m_csmaca = CreateObject<LrWpanCsmaCa>();
     m_precs = CreateObject<RitWpanPreCs>();
-    m_precsb = CreateObject<RitWpanPreCsB>();
 
     m_channel = nullptr;
     m_node = nullptr;
@@ -88,14 +87,11 @@ RitWpanNetDevice::DoDispose()
     m_nwk->Dispose();
     m_csmaca->Dispose();
     m_precs->Dispose();
-    m_precsb->Dispose();
-
     m_phy = nullptr;
     m_mac = nullptr;
     m_nwk = nullptr;
     m_csmaca = nullptr;
     m_precs = nullptr;
-    m_precsb = nullptr;
 
     m_channel = nullptr;
     m_node = nullptr;
@@ -126,7 +122,7 @@ RitWpanNetDevice::CompleteConfig()
     {
         return;
     }
-    if (!m_node || !m_phy || !m_mac || !m_nwk || !m_csmaca || !m_precs || !m_precsb)
+    if (!m_node || !m_phy || !m_mac || !m_nwk || !m_csmaca || !m_precs)
     {
         return;
     }
@@ -137,11 +133,9 @@ RitWpanNetDevice::CompleteConfig()
     m_mac->SetPhy(m_phy);
     m_mac->SetCsmaCa(m_csmaca);
     m_mac->SetPreCs(m_precs);
-    m_mac->SetPreCsB(m_precsb);
 
     m_csmaca->SetMac(m_mac);
     m_precs->SetMac(m_mac);
-    m_precsb->SetMac(m_mac);
 
     // PHY error model + device back-pointer.
     Ptr<LrWpanErrorModel> model = CreateObject<LrWpanErrorModel>();
@@ -172,15 +166,14 @@ RitWpanNetDevice::CompleteConfig()
     m_phy->SetPlmeSetAttributeConfirmCallback(
         MakeCallback(&RitWpanMac::PlmeSetAttributeConfirm, m_mac));
 
-    // Carrier sense chain (PreCsB -> PreCs -> CSMA/CA).
-    m_phy->SetPlmeCcaConfirmCallback(MakeCallback(&RitWpanPreCsB::PlmeCcaConfirm, m_precsb));
-    m_precsb->SetFallbackCcaConfirmCallback(MakeCallback(&RitWpanPreCs::PlmeCcaConfirm, m_precs));
+    // Carrier sense chain (PreCs -> CSMA/CA).
+    m_phy->SetPlmeCcaConfirmCallback(MakeCallback(&RitWpanPreCs::PlmeCcaConfirm, m_precs));
     m_precs->SetFallbackCcaConfirmCallback(MakeCallback(&LrWpanCsmaCa::PlmeCcaConfirm, m_csmaca));
 
     // State callbacks back to MAC.
     m_csmaca->SetLrWpanMacStateCallback(MakeCallback(&RitWpanMac::SetLrWpanMacState, m_mac));
     m_precs->SetLrWpanMacStateCallback(MakeCallback(&RitWpanMac::SetLrWpanMacState, m_mac));
-    m_precsb->SetLrWpanMacStateCallback(MakeCallback(&RitWpanMac::SetLrWpanMacState, m_mac));
+    m_precs->SetLrWpanMacStateCallback(MakeCallback(&RitWpanMac::SetLrWpanMacState, m_mac));
 
     // --- Apply RIT PIB parameters (stored in this NetDevice) ---
     Ptr<MacPibAttributes> pibAttr = Create<MacPibAttributes>();
@@ -291,21 +284,17 @@ RitWpanNetDevice::SetRitModuleConfig(const RitWpanMacModuleConfig& config)
     int dataTxModes = 0;
     dataTxModes += config.dataCsmaEnabled ? 1 : 0;
     dataTxModes += config.dataPreCsEnabled ? 1 : 0;
-    dataTxModes += config.dataPreCsBEnabled ? 1 : 0;
     if (dataTxModes > 1)
     {
-        NS_FATAL_ERROR("Invalid module config: only one of dataCsmaEnabled, dataPreCsEnabled, "
-                       "or dataPreCsBEnabled can be true.");
+        NS_FATAL_ERROR("Invalid module config: only one of dataCsmaEnabled or dataPreCsEnabled can be true.");
     }
 
     int beaconTxModes = 0;
     beaconTxModes += config.beaconCsmaEnabled ? 1 : 0;
     beaconTxModes += config.beaconPreCsEnabled ? 1 : 0;
-    beaconTxModes += config.beaconPreCsBEnabled ? 1 : 0;
     if (beaconTxModes > 1)
     {
-        NS_FATAL_ERROR("Invalid module config: only one of beaconCsmaEnabled, beaconPreCsEnabled, "
-                       "or beaconPreCsBEnabled can be true.");
+        NS_FATAL_ERROR("Invalid module config: only one of beaconCsmaEnabled or beaconPreCsEnabled can be true.");
     }
 
     m_moduleConfig = config;

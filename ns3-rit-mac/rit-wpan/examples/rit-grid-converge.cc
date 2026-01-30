@@ -63,8 +63,7 @@ struct ScenarioConfig
     bool beaconCsmaEnabled = false;
     bool dataPreCsEnabled = false;
     bool beaconPreCsEnabled = true;
-    bool dataPreCsBEnabled = false;
-    bool beaconPreCsBEnabled = false;
+    // Pre-CSB flags removed (experimental)
     bool continuousTxEnabled = false;
     bool beaconRandomizeEnabled = false;
     bool compactRitDataRequestEnabled = false;
@@ -98,8 +97,6 @@ BindCommandLine(CommandLine& cmd, ScenarioConfig& cfg)
     cmd.AddValue("BeaconCsma", "Enable CSMA for beacon transmission", cfg.beaconCsmaEnabled);
     cmd.AddValue("DataPreCs", "Enable Pre-CS for data transmission", cfg.dataPreCsEnabled);
     cmd.AddValue("BeaconPreCs", "Enable Pre-CS for beacon transmission", cfg.beaconPreCsEnabled);
-    cmd.AddValue("DataPreCsB", "Enable Pre-CSB for data transmission", cfg.dataPreCsBEnabled);
-    cmd.AddValue("BeaconPreCsB", "Enable Pre-CSB for beacon transmission", cfg.beaconPreCsBEnabled);
 
     cmd.AddValue("ContinuousTx", "Enable continuous transmission mode", cfg.continuousTxEnabled);
     cmd.AddValue("BeaconRandomize", "Enable beacon interval randomization", cfg.beaconRandomizeEnabled);
@@ -190,11 +187,8 @@ MakeModuleConfig(const ScenarioConfig& cfg)
     RitWpanMacModuleConfig m;
     m.dataCsmaEnabled = cfg.dataCsmaEnabled;
     m.dataPreCsEnabled = cfg.dataPreCsEnabled;
-    m.dataPreCsBEnabled = cfg.dataPreCsBEnabled;
-
     m.beaconCsmaEnabled = cfg.beaconCsmaEnabled;
     m.beaconPreCsEnabled = cfg.beaconPreCsEnabled;
-    m.beaconPreCsBEnabled = cfg.beaconPreCsBEnabled;
 
     m.continuousTxEnabled = cfg.continuousTxEnabled;
     m.beaconRandomizeEnabled = cfg.beaconRandomizeEnabled;

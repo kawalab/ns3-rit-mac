@@ -13,7 +13,6 @@
 #include "rit-wpan-mac.h"
 #include "rit-wpan-nwk.h"
 #include "rit-wpan-precs.h"
-#include "rit-wpan-precsb.h"
 
 #include <ns3/lr-wpan-csmaca.h>
 #include <ns3/lr-wpan-phy.h>
@@ -132,8 +131,7 @@ class RitWpanNetDevice : public NetDevice
     Ptr<RitWpanMac> m_mac;
     Ptr<RitSimpleRouting> m_nwk;
     Ptr<LrWpanCsmaCa> m_csmaca;
-    Ptr<RitWpanPreCs> m_precs;
-    Ptr<RitWpanPreCsB> m_precsb;
+  Ptr<RitWpanPreCs> m_precs;
 
     uint8_t m_rank;
     bool m_configComplete;
