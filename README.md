@@ -98,6 +98,7 @@ Using `ns3.46-rit-mac.patch`, it can be applied directly to a clean ns-3.46 sour
 ```bash
 cd ns-3.46
 git apply /path/to/ns3.46-rit-mac.patch
+git apply /path/to/fix-precsb.patch
 ```
 
 This will automatically add and modify the required source files under src/.
@@ -112,13 +113,13 @@ ns-3/
     └── rit-xxx-scenario.cc
 ```
 
-*Note:*  
+*Note:*
 The `examples` directory currently includes the following representative scenario files:
 
-- **`rit-wpan-data.cc`**  
+- **`rit-wpan-data.cc`**
   A simple one-to-one communication scenario for testing basic RIT-based communication behavior.
 
-- **`rit-grid-coverage.cc`**  
+- **`rit-grid-coverage.cc`**
   A grid-based node deployment scenario used for the performance evaluation presented in the paper.
 
 
