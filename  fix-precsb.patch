@@ -1,0 +1,264 @@
+From ae1ee64c5e57e07907dd851a5f5d9f505592d4aa Mon Sep 17 00:00:00 2001
+From: tomoya0528 <c1039548@planet.kanazawa-it.ac.jp>
+Date: Fri, 30 Jan 2026 10:44:11 +0900
+Subject: [PATCH] fix:  remove Pre-CSB (experimental module) flags and related
+ code from RitWpan modules
+
+---
+ .../rit-wpan/examples/rit-grid-converge.cc    |  8 +------
+ .../rit-wpan/helper/rit-wpan-helper.cc        |  8 -------
+ ns3-rit-mac/rit-wpan/model/rit-wpan-mac.cc    |  8 ++-----
+ ns3-rit-mac/rit-wpan/model/rit-wpan-mac.h     |  4 ----
+ .../rit-wpan/model/rit-wpan-net-device.cc     | 23 +++++--------------
+ .../rit-wpan/model/rit-wpan-net-device.h      |  4 +---
+ 6 files changed, 10 insertions(+), 45 deletions(-)
+
+diff --git a/ns3-rit-mac/rit-wpan/examples/rit-grid-converge.cc b/ns3-rit-mac/rit-wpan/examples/rit-grid-converge.cc
+index 7c9d9ed..90b1c08 100644
+--- a/ns3-rit-mac/rit-wpan/examples/rit-grid-converge.cc
++++ b/ns3-rit-mac/rit-wpan/examples/rit-grid-converge.cc
+@@ -63,8 +63,7 @@ struct ScenarioConfig
+     bool beaconCsmaEnabled = false;
+     bool dataPreCsEnabled = false;
+     bool beaconPreCsEnabled = true;
+-    bool dataPreCsBEnabled = false;
+-    bool beaconPreCsBEnabled = false;
++    // Pre-CSB flags removed (experimental)
+     bool continuousTxEnabled = false;
+     bool beaconRandomizeEnabled = false;
+     bool compactRitDataRequestEnabled = false;
+@@ -98,8 +97,6 @@ BindCommandLine(CommandLine& cmd, ScenarioConfig& cfg)
+     cmd.AddValue("BeaconCsma", "Enable CSMA for beacon transmission", cfg.beaconCsmaEnabled);
+     cmd.AddValue("DataPreCs", "Enable Pre-CS for data transmission", cfg.dataPreCsEnabled);
+     cmd.AddValue("BeaconPreCs", "Enable Pre-CS for beacon transmission", cfg.beaconPreCsEnabled);
+-    cmd.AddValue("DataPreCsB", "Enable Pre-CSB for data transmission", cfg.dataPreCsBEnabled);
+-    cmd.AddValue("BeaconPreCsB", "Enable Pre-CSB for beacon transmission", cfg.beaconPreCsBEnabled);
+
+     cmd.AddValue("ContinuousTx", "Enable continuous transmission mode", cfg.continuousTxEnabled);
+     cmd.AddValue("BeaconRandomize", "Enable beacon interval randomization", cfg.beaconRandomizeEnabled);
+@@ -190,11 +187,8 @@ MakeModuleConfig(const ScenarioConfig& cfg)
+     RitWpanMacModuleConfig m;
+     m.dataCsmaEnabled = cfg.dataCsmaEnabled;
+     m.dataPreCsEnabled = cfg.dataPreCsEnabled;
+-    m.dataPreCsBEnabled = cfg.dataPreCsBEnabled;
+-
+     m.beaconCsmaEnabled = cfg.beaconCsmaEnabled;
+     m.beaconPreCsEnabled = cfg.beaconPreCsEnabled;
+-    m.beaconPreCsBEnabled = cfg.beaconPreCsBEnabled;
+
+     m.continuousTxEnabled = cfg.continuousTxEnabled;
+     m.beaconRandomizeEnabled = cfg.beaconRandomizeEnabled;
+diff --git a/ns3-rit-mac/rit-wpan/helper/rit-wpan-helper.cc b/ns3-rit-mac/rit-wpan/helper/rit-wpan-helper.cc
+index e2de233..c1a04b3 100644
+--- a/ns3-rit-mac/rit-wpan/helper/rit-wpan-helper.cc
++++ b/ns3-rit-mac/rit-wpan/helper/rit-wpan-helper.cc
+@@ -820,10 +820,6 @@ RitWpanNetHelper::GetModuleShortName(const RitWpanMacModuleConfig& config) const
+     {
+         tags.emplace_back("precs");
+     }
+-    else if (config.dataPreCsBEnabled)
+-    {
+-        tags.emplace_back("precsb");
+-    }
+     else
+     {
+         tags.emplace_back("nocsma");
+@@ -841,10 +837,6 @@ RitWpanNetHelper::GetModuleShortName(const RitWpanMacModuleConfig& config) const
+     {
+         tags.emplace_back("bprecs");
+     }
+-    else if (config.beaconPreCsBEnabled)
+-    {
+-        tags.emplace_back("bprecsb");
+-    }
+     else
+     {
+         tags.emplace_back("bnocsma");
+diff --git a/ns3-rit-mac/rit-wpan/model/rit-wpan-mac.cc b/ns3-rit-mac/rit-wpan/model/rit-wpan-mac.cc
+index cc959f5..81a5be9 100644
+--- a/ns3-rit-mac/rit-wpan/model/rit-wpan-mac.cc
++++ b/ns3-rit-mac/rit-wpan/model/rit-wpan-mac.cc
+@@ -12,7 +12,6 @@
+
+ #include "rit-sub-header.h"
+ #include "rit-wpan-precs.h"
+-#include "rit-wpan-precsb.h"
+
+ #include "ns3/lr-wpan-constants.h"
+ #include "ns3/lr-wpan-csmaca.h"
+@@ -506,7 +505,6 @@ RitWpanMac::PdDataIndication(uint32_t psduLength, Ptr<Packet> p, uint8_t lqi)
+                 // Currently we simply restart CSMA/CA after sending the ACK.
+                 NS_LOG_DEBUG("Received a packet with ACK required while in CSMA. Cancel "
+                              "current CSMA-CA");
+-                m_preCsB->Cancel();
+                 m_preCs->Cancel();
+                 m_csmaCa->Cancel();
+             }
+@@ -1190,8 +1188,7 @@ RitWpanMac::DoSendRitDataRequest()
+     ritDataRequestPacket->AddTrailer(macTrailer);
+
+     // Transmit the beacon either with CSMA/CA (or Pre-CS variants), or directly.
+-    if (m_moduleConfig.beaconCsmaEnabled || m_moduleConfig.beaconPreCsEnabled ||
+-        m_moduleConfig.beaconPreCsBEnabled)
++    if (m_moduleConfig.beaconCsmaEnabled || m_moduleConfig.beaconPreCsEnabled)
+     {
+         NS_LOG_DEBUG("RIT beacon transmission with Unslotted CSMA/CA");
+
+@@ -1272,8 +1269,7 @@ RitWpanMac::DoSendRitData()
+                                                << "dst=" << macHdr.GetShortDstAddr());
+
+     // Transmit the data either with CSMA/CA (or Pre-CS variants), or directly.
+-    if (m_moduleConfig.dataCsmaEnabled || m_moduleConfig.dataPreCsEnabled ||
+-        m_moduleConfig.dataPreCsBEnabled)
++    if (m_moduleConfig.dataCsmaEnabled || m_moduleConfig.dataPreCsEnabled)
+     {
+         NS_ASSERT_MSG(
+             !(m_moduleConfig.dataCsmaEnabled && m_moduleConfig.dataPreCsEnabled),
+diff --git a/ns3-rit-mac/rit-wpan/model/rit-wpan-mac.h b/ns3-rit-mac/rit-wpan/model/rit-wpan-mac.h
+index 5ef74c5..5bfeed3 100644
+--- a/ns3-rit-mac/rit-wpan/model/rit-wpan-mac.h
++++ b/ns3-rit-mac/rit-wpan/model/rit-wpan-mac.h
+@@ -23,7 +23,6 @@ namespace lrwpan
+ {
+
+ class RitWpanPreCs;
+-class RitWpanPreCsB;
+
+ /**
+  * @brief Enum representing the MAC operation mode.
+@@ -168,12 +167,10 @@ struct RitWpanMacModuleConfig
+     // Data transmission options
+     bool dataCsmaEnabled = false;
+     bool dataPreCsEnabled = false;
+-    bool dataPreCsBEnabled = false; //!< Enable Pre-CSB for data transmission
+
+     // Beacon transmission options
+     bool beaconCsmaEnabled = false;
+     bool beaconPreCsEnabled = false;
+-    bool beaconPreCsBEnabled = false; //!< Enable Pre-CSB for beacon transmission
+
+     // Additional mechanisms
+     bool continuousTxEnabled = false;
+@@ -367,7 +364,6 @@ class RitWpanMac : public LrWpanMac
+     Ptr<ClockDriftApplier> m_clockDriftApplier; //!< Used for clock drift correction
+
+     Ptr<RitWpanPreCs> m_preCs;     //!< Pre-CS implementation
+-    Ptr<RitWpanPreCsB> m_preCsB;   //!< Pre-CSB implementation
+
+     RitWpanMacModuleConfig m_moduleConfig;
+
+diff --git a/ns3-rit-mac/rit-wpan/model/rit-wpan-net-device.cc b/ns3-rit-mac/rit-wpan/model/rit-wpan-net-device.cc
+index b7949e7..e510921 100644
+--- a/ns3-rit-mac/rit-wpan/model/rit-wpan-net-device.cc
++++ b/ns3-rit-mac/rit-wpan/model/rit-wpan-net-device.cc
+@@ -67,7 +67,6 @@ RitWpanNetDevice::RitWpanNetDevice()
+
+     m_csmaca = CreateObject<LrWpanCsmaCa>();
+     m_precs = CreateObject<RitWpanPreCs>();
+-    m_precsb = CreateObject<RitWpanPreCsB>();
+
+     m_channel = nullptr;
+     m_node = nullptr;
+@@ -88,14 +87,11 @@ RitWpanNetDevice::DoDispose()
+     m_nwk->Dispose();
+     m_csmaca->Dispose();
+     m_precs->Dispose();
+-    m_precsb->Dispose();
+-
+     m_phy = nullptr;
+     m_mac = nullptr;
+     m_nwk = nullptr;
+     m_csmaca = nullptr;
+     m_precs = nullptr;
+-    m_precsb = nullptr;
+
+     m_channel = nullptr;
+     m_node = nullptr;
+@@ -126,7 +122,7 @@ RitWpanNetDevice::CompleteConfig()
+     {
+         return;
+     }
+-    if (!m_node || !m_phy || !m_mac || !m_nwk || !m_csmaca || !m_precs || !m_precsb)
++    if (!m_node || !m_phy || !m_mac || !m_nwk || !m_csmaca || !m_precs)
+     {
+         return;
+     }
+@@ -137,11 +133,9 @@ RitWpanNetDevice::CompleteConfig()
+     m_mac->SetPhy(m_phy);
+     m_mac->SetCsmaCa(m_csmaca);
+     m_mac->SetPreCs(m_precs);
+-    m_mac->SetPreCsB(m_precsb);
+
+     m_csmaca->SetMac(m_mac);
+     m_precs->SetMac(m_mac);
+-    m_precsb->SetMac(m_mac);
+
+     // PHY error model + device back-pointer.
+     Ptr<LrWpanErrorModel> model = CreateObject<LrWpanErrorModel>();
+@@ -172,15 +166,14 @@ RitWpanNetDevice::CompleteConfig()
+     m_phy->SetPlmeSetAttributeConfirmCallback(
+         MakeCallback(&RitWpanMac::PlmeSetAttributeConfirm, m_mac));
+
+-    // Carrier sense chain (PreCsB -> PreCs -> CSMA/CA).
+-    m_phy->SetPlmeCcaConfirmCallback(MakeCallback(&RitWpanPreCsB::PlmeCcaConfirm, m_precsb));
+-    m_precsb->SetFallbackCcaConfirmCallback(MakeCallback(&RitWpanPreCs::PlmeCcaConfirm, m_precs));
++    // Carrier sense chain (PreCs -> CSMA/CA).
++    m_phy->SetPlmeCcaConfirmCallback(MakeCallback(&RitWpanPreCs::PlmeCcaConfirm, m_precs));
+     m_precs->SetFallbackCcaConfirmCallback(MakeCallback(&LrWpanCsmaCa::PlmeCcaConfirm, m_csmaca));
+
+     // State callbacks back to MAC.
+     m_csmaca->SetLrWpanMacStateCallback(MakeCallback(&RitWpanMac::SetLrWpanMacState, m_mac));
+     m_precs->SetLrWpanMacStateCallback(MakeCallback(&RitWpanMac::SetLrWpanMacState, m_mac));
+-    m_precsb->SetLrWpanMacStateCallback(MakeCallback(&RitWpanMac::SetLrWpanMacState, m_mac));
++    m_precs->SetLrWpanMacStateCallback(MakeCallback(&RitWpanMac::SetLrWpanMacState, m_mac));
+
+     // --- Apply RIT PIB parameters (stored in this NetDevice) ---
+     Ptr<MacPibAttributes> pibAttr = Create<MacPibAttributes>();
+@@ -291,21 +284,17 @@ RitWpanNetDevice::SetRitModuleConfig(const RitWpanMacModuleConfig& config)
+     int dataTxModes = 0;
+     dataTxModes += config.dataCsmaEnabled ? 1 : 0;
+     dataTxModes += config.dataPreCsEnabled ? 1 : 0;
+-    dataTxModes += config.dataPreCsBEnabled ? 1 : 0;
+     if (dataTxModes > 1)
+     {
+-        NS_FATAL_ERROR("Invalid module config: only one of dataCsmaEnabled, dataPreCsEnabled, "
+-                       "or dataPreCsBEnabled can be true.");
++        NS_FATAL_ERROR("Invalid module config: only one of dataCsmaEnabled or dataPreCsEnabled can be true.");
+     }
+
+     int beaconTxModes = 0;
+     beaconTxModes += config.beaconCsmaEnabled ? 1 : 0;
+     beaconTxModes += config.beaconPreCsEnabled ? 1 : 0;
+-    beaconTxModes += config.beaconPreCsBEnabled ? 1 : 0;
+     if (beaconTxModes > 1)
+     {
+-        NS_FATAL_ERROR("Invalid module config: only one of beaconCsmaEnabled, beaconPreCsEnabled, "
+-                       "or beaconPreCsBEnabled can be true.");
++        NS_FATAL_ERROR("Invalid module config: only one of beaconCsmaEnabled or beaconPreCsEnabled can be true.");
+     }
+
+     m_moduleConfig = config;
+diff --git a/ns3-rit-mac/rit-wpan/model/rit-wpan-net-device.h b/ns3-rit-mac/rit-wpan/model/rit-wpan-net-device.h
+index ad0214e..3402aa5 100644
+--- a/ns3-rit-mac/rit-wpan/model/rit-wpan-net-device.h
++++ b/ns3-rit-mac/rit-wpan/model/rit-wpan-net-device.h
+@@ -13,7 +13,6 @@
+ #include "rit-wpan-mac.h"
+ #include "rit-wpan-nwk.h"
+ #include "rit-wpan-precs.h"
+-#include "rit-wpan-precsb.h"
+
+ #include <ns3/lr-wpan-csmaca.h>
+ #include <ns3/lr-wpan-phy.h>
+@@ -132,8 +131,7 @@ class RitWpanNetDevice : public NetDevice
+     Ptr<RitWpanMac> m_mac;
+     Ptr<RitSimpleRouting> m_nwk;
+     Ptr<LrWpanCsmaCa> m_csmaca;
+-    Ptr<RitWpanPreCs> m_precs;
+-    Ptr<RitWpanPreCsB> m_precsb;
++  Ptr<RitWpanPreCs> m_precs;
+
+     uint8_t m_rank;
+     bool m_configComplete;
+--
+2.51.0
